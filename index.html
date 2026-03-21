@@ -122,6 +122,9 @@
 
     .nav-hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
     .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--text-primary); border-radius: 2px; transition: all 0.3s; }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
     /* ===== HERO ===== */
     .hero {
@@ -155,7 +158,7 @@
 
     .hero h1 {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(2.8rem, 6vw, 5.5rem);
+      font-size: clamp(1.8rem, 8vw, 5.5rem);
       font-weight: 800; line-height: 1.1;
       letter-spacing: -2px;
       margin-bottom: 24px;
@@ -483,7 +486,7 @@
     /* ===== TESTIMONIALS ===== */
     .testimonials-section { background: var(--bg-secondary); }
     .testimonials-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr));
       gap: 24px;
     }
     .testimonial-card {
@@ -744,7 +747,7 @@
       .why-grid, .expertise-content.active { grid-template-columns: 1fr; gap: 48px; }
       .contact-grid { grid-template-columns: 1fr; gap: 48px; }
       .footer-grid { grid-template-columns: 1fr 1fr; }
-      .engagements-grid { grid-template-columns: 1fr; }
+      .engagements-grid { grid-template-columns: repeat(2, 1fr); }
     }
     
     /* ===== RESPONSIVE 768px ===== */
@@ -756,6 +759,21 @@
       .form-row { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
       section { padding: 70px 5%; }
+
+      /* Hero stats sur mobile */
+      .hero-stats { gap: 24px; margin-top: 48px; }
+      .hero-stat-divider { display: none; }
+      .hero-stat-number { font-size: 1.6rem; }
+
+      /* Grilles */
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .engagements-grid { grid-template-columns: repeat(2, 1fr); }
+
+      /* Why section overflow */
+      .why-glow-orb { display: none; }
+
+      /* CTA section boutons en colonne */
+      .cta-section .hero-actions { flex-direction: column; align-items: stretch; width: 100%; max-width: 360px; margin: 0 auto; }
 
       .why-photo-wrap img { height: 320px; }
 
@@ -783,6 +801,8 @@
     /* ===== RESPONSIVE 480px — très petits écrans ===== */
     @media (max-width: 480px) {
       nav { padding: 0 4%; }
+
+      .hero { min-height: auto; padding-top: 110px; }
 
       .hero { padding: 120px 4% 60px; }
       .hero h1 { letter-spacing: -1px; }
@@ -824,6 +844,12 @@
 
       .footer-grid { gap: 32px; }
       .footer-bottom { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .footer-bottom > div:last-child { flex-wrap: wrap; gap: 12px; }
+
+      .engagements-grid { grid-template-columns: 1fr; }
+
+      .hero-stats { gap: 16px; margin-top: 40px; }
+      .hero-stat-number { font-size: 1.4rem; }
 
       .faq-question { font-size: 0.9rem; padding: 18px 20px; }
       .faq-answer-inner { padding: 0 20px 18px; }
@@ -966,6 +992,7 @@
   <a href="#equipe">Équipe</a>
   <a href="#faq">FAQ</a>
   <a href="#contact">Nous contacter</a>
+  <a href="#contact" style="background:var(--gradient-main);color:white;border-radius:8px;text-align:center;font-weight:700;border-bottom:none;padding:12px 0;">Devis gratuit →</a>
 </div>
 
 <!-- HERO -->
@@ -1612,7 +1639,7 @@
   </div>
   <div class="footer-bottom">
     <div>© 2026 TUYOUTECH — Tous droits réservés</div>
-    <div style="display:flex;gap:24px;">
+    <div style="display:flex;gap:16px;flex-wrap:wrap;">
       <a href="#" style="color:var(--text-muted);text-decoration:none;">Mentions légales</a>
       <a href="#" style="color:var(--text-muted);text-decoration:none;">Politique de confidentialité</a>
       <a href="#" style="color:var(--text-muted);text-decoration:none;">CGV</a>
@@ -1686,9 +1713,13 @@ document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 // ===== MOBILE MENU =====
 function toggleMenu() {
   document.getElementById('mobileMenu').classList.toggle('open');
+  document.querySelector('.nav-hamburger').classList.toggle('open');
 }
 document.querySelectorAll('#mobileMenu a').forEach(a => {
-  a.addEventListener('click', () => document.getElementById('mobileMenu').classList.remove('open'));
+  a.addEventListener('click', () => {
+    document.getElementById('mobileMenu').classList.remove('open');
+    document.querySelector('.nav-hamburger').classList.remove('open');
+  });
 });
 
 // ===== EXPERTISE TABS =====
