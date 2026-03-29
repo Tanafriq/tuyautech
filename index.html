@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TUYAUTECH — Génie Climatique</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -956,6 +957,52 @@
       display: block; margin-bottom: 16px;
     }
 
+
+    /* ===== SERVICE FEATURED (card unique horizontale) ===== */
+    .service-featured {
+      display: flex;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      max-width: 860px;
+      margin: 0 auto;
+      transition: all 0.3s;
+      position: relative;
+    }
+    .service-featured::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: var(--gradient-main);
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .service-featured:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-accent);
+      transform: translateY(-4px);
+    }
+    .service-featured:hover::before { opacity: 1; }
+    .service-featured-img {
+      width: 360px;
+      flex-shrink: 0;
+    }
+    .service-featured-img img {
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+      filter: brightness(0.75) saturate(1.1);
+    }
+    .service-featured-content {
+      padding: 40px 44px;
+    }
+    @media (max-width: 768px) {
+      .service-featured { flex-direction: column; }
+      .service-featured-img { width: 100%; height: 220px; }
+      .service-featured-content { padding: 28px 24px; }
+    }
+    @media (max-width: 480px) {
+      .service-featured-img { height: 180px; }
+      .service-featured-content { padding: 24px 18px; }
+    }
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
@@ -1026,83 +1073,20 @@
     <h2 class="section-title">Des solutions climatiques<br />complètes et sur mesure</h2>
     <p class="section-subtitle">De la conception à la maintenance, TUYAUTECH vous accompagne sur l'ensemble du cycle de vie de vos installations CVC.</p>
   </div>
-  <div class="services-grid">
-    <div class="service-card fade-up">
-      <img src="images/service-clim.jpg" alt="Système de climatisation" class="service-card-img" />
-      <div class="service-icon"><i class="fa-solid fa-snowflake"></i></div>
-      <div class="service-tag">Climatisation</div>
-      <h3>Systèmes de Climatisation</h3>
-      <p>Installation et maintenance de systèmes de climatisation pour tous types de bâtiments, du split system aux unités centralisées VRV/VRF.</p>
-      <ul>
-        <li>Split systems & multi-splits</li>
-        <li>Systèmes VRV / VRF</li>
-        <li>Climatisation centralisée</li>
-        <li>Climatisation de précision (data centers)</li>
-      </ul>
+  <div class="service-featured fade-up">
+    <div class="service-featured-img">
+      <img src="images/service-cvc-industriel.jpg" alt="Climatisation et chauffage industriel" />
     </div>
-    <div class="service-card fade-up">
-      <img src="images/service-chauffage.jpg" alt="Systèmes de chauffage" class="service-card-img" />
-      <div class="service-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
-      <div class="service-tag">Chauffage</div>
-      <h3>Systèmes de Chauffage</h3>
-      <p>Conception et installation de solutions de chauffage économiques et durables, intégrant les dernières technologies thermiques.</p>
+    <div class="service-featured-content">
+      <div class="service-icon"><i class="fa-solid fa-temperature-half"></i></div>
+      <div class="service-tag">Climatisation &amp; Chauffage</div>
+      <h3>Climatisation &amp; Chauffage Industriel</h3>
+      <p>Installation de systèmes CVC intégrés pour l'industrie et le tertiaire — du split system centralisé aux réseaux de chauffage haute puissance.</p>
       <ul>
-        <li>Chaudières gaz condensation</li>
-        <li>Pompes à chaleur Air/Eau</li>
-        <li>Planchers chauffants hydrauliques</li>
-        <li>Chauffage urbain et réseaux</li>
-      </ul>
-    </div>
-    <div class="service-card fade-up">
-      <img src="images/service-ventilation.jpg" alt="Ventilation et traitement d'air" class="service-card-img" />
-      <div class="service-icon"><i class="fa-solid fa-wind"></i></div>
-      <div class="service-tag">Ventilation</div>
-      <h3>Ventilation & Traitement d'Air</h3>
-      <p>Solutions de ventilation mécanique contrôlée et traitement de l'air garantissant qualité et hygiène dans vos espaces.</p>
-      <ul>
-        <li>VMC simple et double flux</li>
-        <li>Centrales de traitement d'air (CTA)</li>
-        <li>Réseaux aérauliques</li>
-        <li>Déshumidification & filtration</li>
-      </ul>
-    </div>
-    <div class="service-card fade-up">
-      <img src="images/service-froid.jpg" alt="Froid industriel" class="service-card-img" />
-      <div class="service-icon"><i class="fa-solid fa-temperature-arrow-down"></i></div>
-      <div class="service-tag">Froid industriel</div>
-      <h3>Froid Industriel & Commercial</h3>
-      <p>Systèmes frigorifiques haute performance pour l'industrie agroalimentaire, pharmaceutique et logistique du froid.</p>
-      <ul>
-        <li>Chambres froides positives/négatives</li>
+        <li>Systèmes VRV / VRF &amp; climatisation centralisée</li>
+        <li>Chaudières gaz condensation &amp; réseaux de chaleur</li>
+        <li>Pompes à chaleur Air/Eau haute puissance</li>
         <li>Groupes froids industriels</li>
-        <li>Tunnels de surgélation</li>
-        <li>Maintenance préventive frigorifique</li>
-      </ul>
-    </div>
-    <div class="service-card fade-up">
-      <img src="images/service-audit.jpg" alt="Audit énergétique" class="service-card-img" />
-      <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
-      <div class="service-tag">Audit énergétique</div>
-      <h3>Audit & Optimisation Énergétique</h3>
-      <p>Analyse complète de vos installations pour identifier les gisements d'économies d'énergie et réduire votre empreinte carbone.</p>
-      <ul>
-        <li>Audit thermique & énergétique</li>
-        <li>Diagnostic de performance</li>
-        <li>Plan d'amélioration énergétique</li>
-        <li>Suivi des consommations GTB/GTC</li>
-      </ul>
-    </div>
-    <div class="service-card fade-up">
-      <img src="images/service-maintenance.jpg" alt="Maintenance et contrats" class="service-card-img" />
-      <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
-      <div class="service-tag">Maintenance</div>
-      <h3>Maintenance & Contrats de Service</h3>
-      <p>Contrats de maintenance préventive et curative pour assurer la pérennité et la performance de vos installations climatiques.</p>
-      <ul>
-        <li>Maintenance préventive planifiée</li>
-        <li>Intervention curative 24h/7j</li>
-        <li>Télésurveillance des équipements</li>
-        <li>Contrats multisite personnalisés</li>
       </ul>
     </div>
   </div>
@@ -1594,7 +1578,7 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <a href="#" class="nav-logo" style="display:inline-flex;">
-        <div class="nav-logo-icon">TY</div>
+        <div class="nav-logo-icon"><img src="./images/logo.png"></div>
         <span class="nav-logo-text">TUYAU<span>TECH</span></span>
       </a>
       <p>Leader en génie climatique, TUYAUTECH conçoit et maintient des systèmes CVC haute performance pour tous types de bâtiments.</p>
