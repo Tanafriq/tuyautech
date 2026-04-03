@@ -522,7 +522,7 @@
     }
 
     /* ============================================
-       POURQUOI TUYAUTECH - OPTIMISÉ
+       POURQUOI TUYAUTECH
        ============================================ */
     .why-grid {
       display: grid; grid-template-columns: 1fr 1fr;
@@ -646,7 +646,7 @@
     .expertise-spec-val { font-size: 0.9rem; font-weight: 600; color: var(--accent-cyan); }
 
     /* ============================================
-       SECTEURS D'INTERVENTION - REDESIGN PREMIUM
+       SECTEURS D'INTERVENTION
        ============================================ */
     .secteurs-grid {
       display: grid;
@@ -907,7 +907,7 @@
     .faq-answer-inner { padding: 0 28px 22px; }
 
     /* ============================================
-       CONTACT - SECTION CORRIGÉE
+       CONTACT
        ============================================ */
     .contact-section { 
       background: var(--bg-primary); 
@@ -1000,14 +1000,14 @@
       display: block;
     }
 
-    /* FORMULAIRE - CORRECTION PRINCIPALE */
+    /* FORMULAIRE */
     .contact-form {
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 24px;
       padding: 44px 40px;
       width: 100%;
-      display: block !important; /* Force l'affichage */
+      display: block !important;
       visibility: visible !important;
       opacity: 1 !important;
       position: relative;
@@ -1092,7 +1092,7 @@
       box-shadow: var(--shadow-glow-lg);
     }
 
-    /* Form validation states */
+    /* Form validation states - ERROR */
     .form-group.error input,
     .form-group.error select,
     .form-group.error textarea {
@@ -1107,6 +1107,14 @@
     }
     .form-group.error .form-error-message { 
       display: block; 
+    }
+
+    /* ✅ CORRECTION BUG 3 — Form validation state SUCCESS (manquait) */
+    .form-group.success input,
+    .form-group.success select,
+    .form-group.success textarea {
+      border-color: var(--success);
+      background: rgba(16, 185, 129, 0.05);
     }
 
     /* ============================================
@@ -1220,7 +1228,7 @@
     @keyframes spin { to { transform: rotate(360deg); } }
 
     /* ============================================
-       ANIMATIONS FADE UP - VERSION OPTIMISÉE
+       ANIMATIONS FADE UP
        ============================================ */
     .fade-up {
       opacity: 0;
@@ -1234,7 +1242,6 @@
       transform: translateY(0);
     }
     
-    /* Animation plus rapide pour les sections critiques */
     .fade-up-fast {
       opacity: 0;
       transform: translateY(20px);
@@ -1269,7 +1276,7 @@
       .form-row { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
       section { padding: 70px 5%; }
-      .testimonials-grid, .engagements-grid { grid-template-columns: 1fr; }
+      .engagements-grid { grid-template-columns: 1fr; }
       .why-glow-orb { display: none; }
       .cta-section .hero-actions { flex-direction: column; align-items: stretch; width: 100%; max-width: 360px; margin: 0 auto; }
       .why-photo-wrap img { height: 320px; }
@@ -1352,7 +1359,7 @@
   
   <div class="nav-cta">
     <a href="#contact" class="btn-outline"><i class="fa-solid fa-phone" style="margin-right:6px;"></i>Contact</a>
-    <a href="#contact" class="btn-primary"><i class="fa-solid fa-file-signature" style="margin-right:6px;"></i>Devis gratuit →</a>
+    <a href="#contact" class="btn-primary"><i class="fa-solid fa-file-signature" style="margin-right:6px;"></i>Devis gratuit</a>
   </div>
   
   <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
@@ -1368,7 +1375,7 @@
   <a href="#faq"><i class="fa-solid fa-circle-question" style="width:20px;margin-right:10px;text-align:center;"></i>FAQ</a>
   <a href="#contact"><i class="fa-solid fa-envelope" style="width:20px;margin-right:10px;text-align:center;"></i>Nous contacter</a>
   <a href="#contact" style="background:var(--gradient-main);color:white;border-radius:8px;text-align:center;font-weight:700;border:none;padding:12px 0;">
-    <i class="fa-solid fa-file-signature" style="margin-right:8px;"></i>Demander un devis →
+    <i class="fa-solid fa-file-signature" style="margin-right:8px;"></i>Demander un devis
   </a>
 </div>
 
@@ -1388,7 +1395,7 @@
   
   <div class="hero-actions">
     <a href="#contact" class="btn-hero-primary">
-      <i class="fa-solid fa-paper-plane"></i> Parler de votre projet →
+      <i class="fa-solid fa-paper-plane"></i> Parler de votre projet
     </a>
     <a href="#metiers" class="btn-hero-secondary">
       <i class="fa-solid fa-play"></i> Découvrir nos métiers
@@ -1496,7 +1503,7 @@
   </div>
 </section>
 
-<!-- ========== POURQUOI TUYAUTECH - AVEC ANIMATION OPTIMISÉE ========== -->
+<!-- ========== POURQUOI TUYAUTECH ========== -->
 <section id="pourquoi" style="background: var(--bg-primary);" aria-labelledby="why-title">
   <div class="why-grid">
     <div class="why-visual fade-up-fast">
@@ -1609,7 +1616,7 @@
   </div>
 </section>
 
-<!-- ========== SECTEURS D'INTERVENTION - REDESIGN PREMIUM ========== -->
+<!-- ========== SECTEURS D'INTERVENTION ========== -->
 <section id="secteurs" style="background: var(--bg-secondary);" aria-labelledby="secteurs-title">
   <div class="section-header centered fade-up">
     <div class="section-badge"><i class="fa-solid fa-location-dot" style="margin-right:6px;"></i>Secteurs</div>
@@ -1619,7 +1626,6 @@
 
   <div class="secteurs-grid">
 
-    <!-- Card 1 : Tertiaire -->
     <article class="secteur-card">
       <div class="secteur-icon-wrapper">
         <div class="secteur-icon-bg"></div>
@@ -1642,7 +1648,6 @@
       </div>
     </article>
 
-    <!-- Card 2 : Hôtellerie -->
     <article class="secteur-card">
       <div class="secteur-icon-wrapper">
         <div class="secteur-icon-bg"></div>
@@ -1665,7 +1670,6 @@
       </div>
     </article>
 
-    <!-- Card 3 : Santé -->
     <article class="secteur-card">
       <div class="secteur-icon-wrapper">
         <div class="secteur-icon-bg"></div>
@@ -1833,12 +1837,12 @@
   <h2>Confiez votre projet<br />à une équipe experte</h2>
   <p>Nos chargés d'affaires analysent votre besoin et proposent solution technique adaptée.</p>
   <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1;">
-    <a href="#contact" class="btn-hero-primary"><i class="fa-solid fa-file-signature"></i> Demander un devis gratuit →</a>
-    <a href="tel:+33100000000" class="btn-hero-secondary"><i class="fa-solid fa-phone"></i> Appeler un expert</a>
+    <a href="#contact" class="btn-hero-primary"><i class="fa-solid fa-file-signature"></i> Demander un devis gratuit</a>
+    <a href="tel:+33621782698" class="btn-hero-secondary"><i class="fa-solid fa-phone"></i> Appeler un expert</a>
   </div>
 </section>
 
-<!-- ========== CONTACT - FORMULAIRE CORRIGÉ ========== -->
+<!-- ========== CONTACT ========== -->
 <section id="contact" class="contact-section" aria-labelledby="contact-title">
   <div class="contact-grid">
 
@@ -1859,7 +1863,7 @@
           </div>
           <div>
             <div class="contact-detail-label">Adresse</div>
-            <div class="contact-detail-val">12 Avenue de l'Innovation, 75008 Paris</div>
+            <div class="contact-detail-val">28 avenue Victor Hugo, 92220 Bagneux</div>
           </div>
         </div>
 
@@ -1869,7 +1873,7 @@
           </div>
           <div>
             <div class="contact-detail-label">Téléphone</div>
-            <div class="contact-detail-val">+33 (0)1 00 00 00 00</div>
+            <div class="contact-detail-val">+33 6 21 78 26 98</div>
           </div>
         </div>
 
@@ -1889,80 +1893,144 @@
           </div>
           <div>
             <div class="contact-detail-label">Horaires</div>
-            <div class="contact-detail-val">Lun–Ven : 8h–18h | Astreinte 24h/24</div>
+            <div class="contact-detail-val">Lun–Ven : 8h00 – 18h00 | Astreinte 24h/24</div>
+          </div>
+        </div>
+
+        <!-- ✅ CORRECTION BUG 5 — fa-company inexistant → remplacé par fa-briefcase -->
+        <div class="contact-detail">
+          <div class="contact-detail-icon">
+            <i class="fa-solid fa-briefcase"></i>
+          </div>
+          <div>
+            <div class="contact-detail-label">Société</div>
+            <div class="contact-detail-val">TUYAUTECH SARL</div>
           </div>
         </div>
 
       </div>
 
-      <img src="images/contact-building.jpg" alt="Siège social TUYAUTECH Paris" 
-           class="contact-side-img" loading="lazy" width="500" height="280" />
+      <img src="images/contact-building.jpg" alt="Siège social TUYAUTECH Paris" class="contact-side-img" loading="lazy" width="600" height="280" />
     </div>
 
-    <!-- FORMULAIRE - Maintenant correctement affiché -->
-    <form class="contact-form fade-up" id="contactForm" novalidate onsubmit="submitForm(event)">
-      
+    <!-- Formulaire de contact -->
+    <form
+      class="contact-form fade-up"
+      id="contactForm"
+      novalidate
+      aria-label="Formulaire de demande de devis"
+    >
+      <h3 style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;margin-bottom:8px;">
+        <i class="fa-solid fa-file-signature" style="color:var(--accent-cyan);margin-right:10px;"></i>
+        Demande de devis
+      </h3>
+      <p style="color:var(--text-secondary);font-size:0.88rem;margin-bottom:32px;">
+        Réponse sous 24h — Devis gratuit et sans engagement
+      </p>
+
+      <!-- Ligne 1 : Prénom / Nom -->
       <div class="form-row">
         <div class="form-group">
-          <label for="firstname">Prénom <span style="color:var(--error);">*</span></label>
-          <input type="text" id="firstname" placeholder="Jean" required 
-                 autocomplete="given-name" aria-describedby="firstname-error" />
+          <label for="firstname">Prénom *</label>
+          <input
+            type="text" id="firstname" name="firstname"
+            placeholder="Jean" required
+            autocomplete="given-name"
+            aria-describedby="firstname-error"
+          />
           <span id="firstname-error" class="form-error-message" role="alert"></span>
         </div>
         <div class="form-group">
-          <label for="lastname">Nom <span style="color:var(--error);">*</span></label>
-          <input type="text" id="lastname" placeholder="Dupont" required 
-                 autocomplete="family-name" aria-describedby="lastname-error" />
+          <label for="lastname">Nom *</label>
+          <input
+            type="text" id="lastname" name="lastname"
+            placeholder="Dupont" required
+            autocomplete="family-name"
+            aria-describedby="lastname-error"
+          />
           <span id="lastname-error" class="form-error-message" role="alert"></span>
         </div>
       </div>
 
+      <!-- Ligne 2 : Email / Téléphone -->
       <div class="form-row">
         <div class="form-group">
-          <label for="email">Email <span style="color:var(--error);">*</span></label>
-          <input type="email" id="email" placeholder="jean.dupont@entreprise.fr" required 
-                 autocomplete="email" aria-describedby="email-error" />
+          <label for="email">Email *</label>
+          <input
+            type="email" id="email" name="email"
+            placeholder="jean.dupont@exemple.com" required
+            autocomplete="email"
+            aria-describedby="email-error"
+          />
           <span id="email-error" class="form-error-message" role="alert"></span>
         </div>
         <div class="form-group">
           <label for="phone">Téléphone</label>
-          <input type="tel" id="phone" placeholder="+33 6 00 00 00 00" autocomplete="tel" />
+          <input
+            type="tel" id="phone" name="phone"
+            placeholder="+33 1 23 45 67 89"
+            autocomplete="tel"
+            aria-describedby="phone-error"
+          />
+          <span id="phone-error" class="form-error-message" role="alert"></span>
         </div>
       </div>
 
+      <!-- Type de projet -->
       <div class="form-group">
-        <label for="projectType">Type de projet <span style="color:var(--error);">*</span></label>
-        <select id="projectType" required aria-describedby="projecttype-error">
-          <option value="">Sélectionnez un domaine</option>
-          <option>Chauffage & Climatisation</option>
-          <option>Ventilation & Désenfumage</option>
-          <option>Plomberie & Réseaux sanitaires</option>
-          <option>Projet multi-lots CVC complet</option>
-          <option>Réhabilitation d'installation existante</option>
-          <option>Autre</option>
+        <label for="projectType">Type de projet *</label>
+        <!-- ✅ CORRECTION BUG 1 — id uniformisé "projectType-error" (cohérent avec JS) -->
+        <select id="projectType" name="projectType" required aria-describedby="projectType-error">
+          <option value="" disabled selected>Sélectionnez un type de projet</option>
+          <option value="neuf">Construction neuve</option>
+          <option value="rehabilitation">Réhabilitation / Rénovation</option>
+          <option value="extension">Extension</option>
+          <option value="maintenance">Maintenance / SAV</option>
+          <option value="autre">Autre</option>
         </select>
-        <span id="projecttype-error" class="form-error-message" role="alert"></span>
+        <!-- ✅ CORRECTION BUG 1 — était "projecttype-error" (minuscule), corrigé en "projectType-error" -->
+        <span id="projectType-error" class="form-error-message" role="alert"></span>
       </div>
 
+      <!-- Type d'opération -->
       <div class="form-group">
-        <label for="operationType">Type d'opération</label>
-        <select id="operationType">
-          <option>Construction neuve</option>
-          <option>Réhabilitation</option>
-          <option>Extension / Modification</option>
+        <label for="operationType">Secteur d'activité</label>
+        <!-- ✅ CORRECTION BUG 4 — Ajout des attributs value sur chaque option -->
+        <select id="operationType" name="operationType">
+          <option value="" disabled selected>Sélectionnez votre secteur</option>
+          <option value="tertiaire">Tertiaire / Bureaux</option>
+          <option value="hotellerie">Hôtellerie / Restauration</option>
+          <option value="sante">Santé / Médical</option>
+          <option value="industrie">Industrie / Logistique</option>
+          <option value="commerce">Commerce / Retail</option>
+          <option value="enseignement">Enseignement / Université</option>
+          <option value="autre">Autre</option>
         </select>
       </div>
 
+      <!-- Message -->
       <div class="form-group">
-        <label for="message">Votre message <span style="color:var(--error);">*</span></label>
-        <textarea id="message" placeholder="Décrivez votre projet : type de bâtiment, surface, contraintes, planning souhaité... Nous vous répondons sous 24h." 
-                  required aria-describedby="message-error" rows="5"></textarea>
+        <label for="message">Description du projet *</label>
+        <textarea
+          id="message" name="message"
+          placeholder="Décrivez votre projet : surface, localisation, contraintes particulières, délais souhaités..."
+          required
+          aria-describedby="message-error"
+          rows="5"
+        ></textarea>
         <span id="message-error" class="form-error-message" role="alert"></span>
       </div>
 
-      <button type="submit" class="form-submit">
-        <i class="fa-solid fa-paper-plane"></i> Envoyer ma demande →
+      <button type="submit" class="form-submit" id="formSubmitBtn">
+        <i class="fa-solid fa-paper-plane" style="margin-right:8px;"></i>
+        Envoyer ma demande
       </button>
+
+      <!-- Message de succès global -->
+      <div id="form-success-msg" style="display:none;margin-top:20px;padding:16px 20px;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);border-radius:12px;color:#10b981;font-size:0.9rem;text-align:center;">
+        <i class="fa-solid fa-circle-check" style="margin-right:8px;"></i>
+        Merci ! Votre message a été envoyé. Nous vous répondrons sous 24h.
+      </div>
 
     </form>
 
@@ -1971,501 +2039,394 @@
 
 </main>
 
-<!-- Back to Top -->
-<button class="back-to-top" id="backToTop" aria-label="Retour en haut" title="Retour en haut">
-  <i class="fa-solid fa-chevron-up"></i>
-</button>
-
 <!-- ========== FOOTER ========== -->
-<footer role="contentinfo">
+<footer>
   <div class="footer-grid">
-    <div class="footer-brand">
-      <a href="#" class="nav-logo" style="display:inline-flex;">
-        <div class="nav-logo-icon"><img src="./images/logo.png" alt="Logo" /></div>
+
+    <div class="footer-brand footer-col">
+      <div class="nav-logo" style="margin-bottom:0;">
+        <div class="nav-logo-icon"><img src="./images/logo.png" alt="Logo TUYAUTECH" /></div>
         <span class="nav-logo-text">TUYAU<span>TECH</span></span>
-      </a>
-      <p>Expert en génie climatique et plomberie, TUYAUTECH réalise et met en service des installations techniques performantes.</p>
+      </div>
+      <p>Expert en installations techniques CVC et plomberie pour tous types de bâtiments — tertiaire, hôtellerie, santé et industrie.</p>
       <div class="footer-socials">
         <a href="#" class="footer-social" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="#" class="footer-social" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="#" class="footer-social" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-        <a href="#" class="footer-social" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="footer-social" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" class="footer-social" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
       </div>
     </div>
+
     <div class="footer-col">
-      <h5><i class="fa-solid fa-wrench" style="color:var(--accent-cyan);margin-right:6px;"></i>Métiers</h5>
+      <h5>Métiers</h5>
       <ul>
-        <li><a href="#metiers"><i class="fa-solid fa-temperature-three-quarters" style="margin-right:6px;color:var(--accent-cyan);font-size:0.75rem;"></i>Chauffage & Climatisation</a></li>
-        <li><a href="#metiers"><i class="fa-solid fa-wind" style="margin-right:6px;color:var(--accent-cyan);font-size:0.75rem;"></i>Ventilation & Désenfumage</a></li>
-        <li><a href="#metiers"><i class="fa-solid fa-faucet-drip" style="margin-right:6px;color:var(--accent-cyan);font-size:0.75rem;"></i>Plomberie</a></li>
+        <li><a href="#metiers">Chauffage & Climatisation</a></li>
+        <li><a href="#metiers">Ventilation & Désenfumage</a></li>
+        <li><a href="#metiers">Plomberie sanitaire</a></li>
+        <li><a href="#expertise">Construction neuve</a></li>
+        <li><a href="#expertise">Réhabilitation</a></li>
       </ul>
     </div>
+
     <div class="footer-col">
-      <h5><i class="fa-solid fa-building" style="color:var(--accent-cyan);margin-right:6px;"></i>Secteurs</h5>
+      <h5>Secteurs</h5>
       <ul>
-        <li><a href="#"><i class="fa-solid fa-building" style="margin-right:6px;color:var(--accent-cyan);font-size:0.75rem;"></i>Tertiaire & Bureaux</a></li>
-        <li><a href="#"><i class="fa-solid fa-hotel" style="margin-right:6px;color:var(--accent-cyan);font-size:0.75rem;"></i>Hôtellerie</a></li>
-        <li><a href="#"><i class="fa-solid fa-hospital" style="margin-right:6px;color:var(--accent-cyan);font-size:0.75rem;"></i>Santé</a></li>
-        <li><a href="#"><i class="fa-solid fa-industry" style="margin-right:6px;color:var(--accent-cyan);font-size:0.75rem;"></i>Industrie</a></li>
+        <li><a href="#secteurs">Tertiaire & Bureaux</a></li>
+        <li><a href="#secteurs">Hôtellerie</a></li>
+        <li><a href="#secteurs">Santé & Médical</a></li>
+        <li><a href="#engagements">Nos engagements</a></li>
+        <li><a href="#faq">FAQ</a></li>
       </ul>
     </div>
+
     <div class="footer-col">
-      <h5><i class="fa-solid fa-company" style="color:var(--accent-cyan);margin-right:6px;"></i>Entreprise</h5>
+      <h5>Contact</h5>
       <ul>
-        <li><a href="#"><i class="fa-solid fa-circle-info" style="margin-right:6px;color:var(--accent-cyan);font-size:0.75rem;"></i>À propos</a></li>
-        <li><a href="#expertise"><i class="fa-solid fa-star" style="margin-right:6px;color:var(--accent-cyan);font-size:0.75rem;"></i>Notre expertise</a></li>
-        <li><a href="#"><i class="fa-solid fa-certificate" style="margin-right:6px;color:var(--accent-cyan);font-size:0.75rem;"></i>Certifications</a></li>
-        <li><a href="#contact"><i class="fa-solid fa-envelope" style="margin-right:6px;color:var(--accent-cyan);font-size:0.75rem;"></i>Contact</a></li>
+        <li><a href="tel:+33621782698"><i class="fa-solid fa-phone" style="margin-right:8px;color:var(--accent-cyan);"></i>+33 6 21 78 26 98</a></li>
+        <li><a href="mailto:contact@tuyautech.fr"><i class="fa-solid fa-envelope" style="margin-right:8px;color:var(--accent-cyan);"></i>contact@tuyautech.fr</a></li>
+        <li><a href="#contact"><i class="fa-solid fa-file-signature" style="margin-right:8px;color:var(--accent-cyan);"></i>Devis gratuit</a></li>
+        <li><a href="#contact"><i class="fa-solid fa-location-dot" style="margin-right:8px;color:var(--accent-cyan);"></i>Paris & Île-de-France</a></li>
       </ul>
     </div>
+
   </div>
+
   <div class="footer-bottom">
-    <div>© <script>document.write(new Date().getFullYear())</script> TUYAUTECH — Tous droits réservés</div>
-    <div style="display:flex;gap:16px;flex-wrap:wrap;">
-      <a href="#" style="color:var(--text-muted);text-decoration:none;">Mentions légales</a>
-      <a href="#" style="color:var(--text-muted);text-decoration:none;">Confidentialité</a>
-      <a href="#" style="color:var(--text-muted);text-decoration:none;">CGV</a>
+    <span>© 2024 TUYAUTECH SAS. Tous droits réservés.</span>
+    <div style="display:flex;gap:24px;flex-wrap:wrap;">
+      <a href="#" style="color:var(--text-muted);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--accent-cyan)'" onmouseout="this.style.color='var(--text-muted)'">Mentions légales</a>
+      <a href="#" style="color:var(--text-muted);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--accent-cyan)'" onmouseout="this.style.color='var(--text-muted)'">Politique de confidentialité</a>
+      <a href="#" style="color:var(--text-muted);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--accent-cyan)'" onmouseout="this.style.color='var(--text-muted)'">CGV</a>
     </div>
   </div>
 </footer>
 
-<!-- ========== JAVASCRIPT OPTIMISÉ ========== -->
+<!-- Bouton Retour en haut -->
+<button class="back-to-top" id="backToTop" aria-label="Retour en haut de page">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+<!-- ========== JAVASCRIPT ========== -->
 <script>
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    document.getElementById('pageLoader').classList.add('hidden');
-    // Déclencher immédiatement les animations pour les éléments visibles
-    initScrollAnimations();
-  }, 200); // Réduit de 300ms à 200ms
-});
-
-// ============================================
-// BACK TO TOP
-// ============================================
-const backToTopBtn = document.getElementById('backToTop');
-window.addEventListener('scroll', () => {
-  backToTopBtn.classList.toggle('visible', window.scrollY > 500);
-});
-backToTopBtn.addEventListener('click', () => {
-  window.scrollTo({top: 0, behavior: 'smooth'});
-});
-
-// ============================================
-// PARTICLES CANVAS
-// ============================================
-const canvas = document.getElementById('particle-canvas');
-const ctx = canvas.getContext('2d');
-let particles = [];
-
-function resizeCanvas() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
-resizeCanvas();
-window.addEventListener('resize', resizeCanvas);
-
-class Particle {
-  constructor() { this.reset(); }
-  reset() {
-    this.x = Math.random() * canvas.width;
-    this.y = Math.random() * canvas.height;
-    this.size = Math.random() * 1.5 + 0.3;
-    this.speedX = (Math.random() - 0.5) * 0.3;
-    this.speedY = -Math.random() * 0.4 - 0.1;
-    this.opacity = Math.random() * 0.5 + 0.1;
-    this.color = Math.random() > 0.5 ? '0,212,255' : '26,143,255';
-  }
-  update() {
-    this.x += this.speedX;
-    this.y += this.speedY;
-    if (this.y < -10 || this.x < -10 || this.x > canvas.width + 10) this.reset();
-  }
-  draw() {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(${this.color},${this.opacity})`;
-    ctx.fill();
-  }
-}
-
-// Créer les particules
-for (let i = 0; i < 120; i++) {
-  particles.push(new Particle());
-}
-
-function drawConnections() {
-  const maxDist = 120;
-  for (let i = 0; i < particles.length; i++) {
-    for (let j = i + 1; j < particles.length; j++) {
-      const dx = particles[i].x - particles[j].x;
-      const dy = particles[i].y - particles[j].y;
-      const dist = Math.sqrt(dx * dx + dy * dy);
-      if (dist < maxDist) {
-        ctx.beginPath();
-        ctx.strokeStyle = `rgba(0,212,255,${(1 - dist / maxDist) * 0.15})`;
-        ctx.lineWidth = 0.5;
-        ctx.moveTo(particles[i].x, particles[i].y);
-        ctx.lineTo(particles[j].x, particles[j].y);
-        ctx.stroke();
-      }
+  /* ============================================
+     PAGE LOADER
+     ============================================ */
+  window.addEventListener('load', () => {
+    const loader = document.getElementById('pageLoader');
+    if (loader) {
+      setTimeout(() => loader.classList.add('hidden'), 300);
     }
-  }
-}
-
-function animateParticles() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  particles.forEach(p => {
-    p.update();
-    p.draw();
   });
-  drawConnections();
-  requestAnimationFrame(animateParticles);
-}
-animateParticles();
 
-// ============================================
-// NAVBAR SCROLL EFFECT
-// ============================================
-window.addEventListener('scroll', () => {
-  const nav = document.getElementById('navbar');
-  nav.classList.toggle('scrolled', window.scrollY > 50);
-});
+  /* ============================================
+     NAVBAR SCROLL
+     ============================================ */
+  const navbar = document.getElementById('navbar');
+  const backToTop = document.getElementById('backToTop');
 
-// ============================================
-// SCROLL ANIMATIONS - VERSION OPTIMISÉE
-// ============================================
-function initScrollAnimations() {
-  const observerOptions = {
-    root: null,
-    rootMargin: '0px 0px -50px 0px',
-    threshold: 0.05
-  };
+  window.addEventListener('scroll', () => {
+    // ✅ CORRECTION BUG 6 — window.pageYOffset déprécié → remplacé par window.scrollY
+    const scrollY = window.scrollY;
+    navbar.classList.toggle('scrolled', scrollY > 50);
+    backToTop.classList.toggle('visible', scrollY > 400);
+  }, { passive: true });
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.add('visible');
-        }, 100);
-        
-        observer.unobserve(entry.target);
-      }
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  /* ============================================
+     MENU MOBILE
+     ============================================ */
+  function toggleMenu() {
+    const btn = document.querySelector('.nav-hamburger');
+    const menu = document.getElementById('mobileMenu');
+    const isOpen = btn.classList.toggle('open');
+    menu.classList.toggle('open', isOpen);
+    btn.setAttribute('aria-expanded', isOpen.toString());
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  }
+
+  // Fermer menu mobile au clic sur un lien
+  document.querySelectorAll('#mobileMenu a').forEach(link => {
+    link.addEventListener('click', () => {
+      const btn = document.querySelector('.nav-hamburger');
+      const menu = document.getElementById('mobileMenu');
+      btn.classList.remove('open');
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
     });
-  }, observerOptions);
-
-  document.querySelectorAll('.fade-up, .fade-up-fast').forEach(el => {
-    observer.observe(el);
   });
-  
-  checkVisibleElements(observer);
-}
 
-// Fonction pour vérifier les éléments déjà visibles au chargement
-function checkVisibleElements(observer) {
-  document.querySelectorAll('.fade-up, .fade-up-fast').forEach(el => {
-    const rect = el.getBoundingClientRect();
-    // Si l'élément est dans le viewport ou juste au-dessus
-    if (rect.top < window.innerHeight && rect.bottom > 0) {
-      setTimeout(() => {
-        el.classList.add('visible');
-      }, 50);
-      observer.unobserve(el);
+  /* ============================================
+     EXPERTISE TABS
+     ============================================ */
+  function switchTab(btn, tabId) {
+    document.querySelectorAll('.expertise-tab').forEach(t => {
+      t.classList.remove('active');
+      t.setAttribute('aria-selected', 'false');
+    });
+    document.querySelectorAll('.expertise-content').forEach(c => {
+      c.classList.remove('active');
+    });
+    btn.classList.add('active');
+    btn.setAttribute('aria-selected', 'true');
+    const target = document.getElementById(tabId);
+    if (target) target.classList.add('active');
+  }
+
+  /* ============================================
+     FAQ ACCORDION
+     ============================================ */
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const answer = item.querySelector('.faq-answer');
+    const isOpen = item.classList.contains('open');
+
+    // Fermer tous
+    document.querySelectorAll('.faq-item.open').forEach(openItem => {
+      openItem.classList.remove('open');
+      openItem.querySelector('.faq-answer').style.maxHeight = '0';
+      openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+    });
+
+    // Ouvrir si était fermé
+    if (!isOpen) {
+      item.classList.add('open');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+      btn.setAttribute('aria-expanded', 'true');
     }
-  });
-}
-
-// Initialiser les animations au chargement du DOM
-document.addEventListener('DOMContentLoaded', () => {
-  setTimeout(initScrollAnimations, 100);
-});
-
-// ============================================
-// MOBILE MENU
-// ============================================
-function toggleMenu() {
-  const menu = document.getElementById('mobileMenu');
-  const ham = document.querySelector('.nav-hamburger');
-  menu.classList.toggle('open');
-  ham.classList.toggle('open');
-  ham.setAttribute('aria-expanded', menu.classList.contains('open'));
-}
-
-document.querySelector('.nav-hamburger').addEventListener('keydown', (e) => {
-  if (e.key === 'Enter' || e.key === ' ') {
-    e.preventDefault();
-    toggleMenu();
   }
-});
 
-document.querySelectorAll('#mobileMenu a').forEach(a => {
-  a.addEventListener('click', () => {
-    document.getElementById('mobileMenu').classList.remove('open');
-    document.querySelector('.nav-hamburger').classList.remove('open');
-    document.querySelector('.nav-hamburger').setAttribute('aria-expanded', 'false');
-  });
-});
-
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && document.getElementById('mobileMenu').classList.contains('open')) {
-    toggleMenu();
+  function handleFaqKeydown(e, btn) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggleFaq(btn);
+    }
   }
-});
 
-// ============================================
-// EXPERTISE TABS
-// ============================================
-function switchTab(btn, tabId) {
-  // Retirer active de tous les tabs
-  document.querySelectorAll('.expertise-tab').forEach(t => {
-    t.classList.remove('active');
-    t.setAttribute('aria-selected', 'false');
-  });
-  
-  // Ajouter active au tab cliqué
-  btn.classList.add('active');
-  btn.setAttribute('aria-selected', 'true');
-  
-  // Cacher tous les contenus
-  document.querySelectorAll('.expertise-content').forEach(c => {
-    c.classList.remove('active', 'visible');
-  });
-  
-  // Afficher le contenu sélectionné
-  const tab = document.getElementById(tabId);
-  tab.classList.add('active');
-  
-  // Forcer le reflow puis ajouter visible pour l'animation
-  void tab.offsetWidth;
-  setTimeout(() => {
-    tab.classList.add('visible');
-  }, 10);
-  
-  // Observer les éléments internes pour animation
-  const observerOptions = {
-    rootMargin: '0px 0px -50px 0px',
-    threshold: 0.05
-  };
-  
-  const observer = new IntersectionObserver((entries) => {
+  /* ============================================
+     PARTICULES CANVAS
+     ============================================ */
+  (function initParticles() {
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced) return;
+
+    const canvas = document.getElementById('particle-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    let animFrameId;
+
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    class Particle {
+      constructor() { this.reset(); }
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 1.5 + 0.3;
+        this.speedX = (Math.random() - 0.5) * 0.4;
+        this.speedY = (Math.random() - 0.5) * 0.4;
+        this.opacity = Math.random() * 0.4 + 0.1;
+        this.life = 0;
+        this.maxLife = Math.random() * 200 + 100;
+      }
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        this.life++;
+        if (this.life > this.maxLife || this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
+          this.reset();
+        }
+      }
+      draw() {
+        ctx.save();
+        ctx.globalAlpha = this.opacity * (1 - this.life / this.maxLife);
+        ctx.fillStyle = '#00d4ff';
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      }
+    }
+
+    function init() {
+      resize();
+      particles = Array.from({ length: 60 }, () => new Particle());
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => { p.update(); p.draw(); });
+      animFrameId = requestAnimationFrame(animate);
+    }
+
+    window.addEventListener('resize', () => {
+      resize();
+    }, { passive: true });
+
+    init();
+    animate();
+  })();
+
+  /* ============================================
+     SCROLL ANIMATIONS (INTERSECTION OBSERVER)
+     ============================================ */
+  const fadeObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
+        fadeObserver.unobserve(entry.target);
       }
     });
-  }, observerOptions);
-  
-  tab.querySelectorAll('.fade-up, .fade-up-fast').forEach(el => {
-    el.classList.remove('visible'); // Reset pour rejouer l'animation
-    observer.observe(el);
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.fade-up, .fade-up-fast').forEach(el => {
+    fadeObserver.observe(el);
   });
-}
 
-// ============================================
-// FAQ ACCORDION
-// ============================================
-function toggleFaq(el) {
-  const item = el.parentElement;
-  const answer = item.querySelector('.faq-answer');
-  const isOpen = item.classList.contains('open');
-  
-  // Fermer tous les autres items
-  document.querySelectorAll('.faq-item.open').forEach(i => {
-    if (i !== item) {
-      i.classList.remove('open');
-      i.querySelector('.faq-answer').style.maxHeight = '0';
-      i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
-    }
-  });
-  
-  // Toggle l'item courant
-  if (!isOpen) {
-    item.classList.add('open');
-    answer.style.maxHeight = answer.scrollHeight + 'px';
-    el.setAttribute('aria-expanded', 'true');
-  } else {
-    item.classList.remove('open');
-    answer.style.maxHeight = '0';
-    el.setAttribute('aria-expanded', 'false');
+  /* ============================================
+     FORMULAIRE - VALIDATION
+     ============================================ */
+  function showError(id, msg) {
+    const input = document.getElementById(id);
+    if (!input) return;
+    const group = input.parentElement;
+    group.classList.add('error');
+    group.classList.remove('success');
+    const errEl = document.getElementById(id + '-error');
+    if (errEl) errEl.textContent = msg;
   }
-}
 
-function handleFaqKeydown(e, el) {
-  if (e.key === 'Enter' || e.key === ' ') {
-    e.preventDefault();
-    toggleFaq(el);
+  function showSuccess(id) {
+    const input = document.getElementById(id);
+    if (!input) return;
+    const group = input.parentElement;
+    group.classList.remove('error');
+    group.classList.add('success');
+    const errEl = document.getElementById(id + '-error');
+    if (errEl) errEl.textContent = '';
   }
-}
 
-// ============================================
-// FORM VALIDATION
-// ============================================
-function validateEmail(email) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
+  function clearError(id) {
+    const input = document.getElementById(id);
+    if (!input) return;
+    const group = input.parentElement;
+    group.classList.remove('error', 'success');
+    const errEl = document.getElementById(id + '-error');
+    if (errEl) errEl.textContent = '';
+  }
 
-function validatePhone(phone) {
-  return /^[+]?\d[\d\s()-]{6,}$/.test(phone) || phone === '';
-}
+  function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
 
-function showError(id, msg) {
-  const g = document.getElementById(id).parentElement;
-  g.classList.add('error');
-  g.classList.remove('success');
-  const e = document.getElementById(id + '-error');
-  if (e) e.textContent = msg;
-}
+  function validatePhone(phone) {
+    return phone === '' || /^[+\d\s\-().]{7,20}$/.test(phone);
+  }
 
-function clearError(id) {
-  document.getElementById(id).parentElement.classList.remove('error');
-  const e = document.getElementById(id + '-error');
-  if (e) e.textContent = '';
-}
-
-function showSuccess(id) {
-  document.getElementById(id).parentElement.classList.remove('error');
-  document.getElementById(id).parentElement.classList.add('success');
-}
-
-// Validation en temps réel
-['firstname', 'lastname', 'email', 'message'].forEach(id => {
-  const element = document.getElementById(id);
-  if (element) {
-    element.addEventListener('blur', function() {
+  // ✅ CORRECTION BUG 2 — 'phone' ajouté dans le tableau pour que la validation blur fonctionne
+  ['firstname', 'lastname', 'email', 'phone', 'message'].forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.addEventListener('blur', () => {
+      const val = el.value.trim();
       if (id === 'email') {
-        if (!validateEmail(this.value)) {
-          showError(id, 'Email invalide');
-        } else {
-          showSuccess(id);
-        }
+        if (!val) showError('email', 'L\'adresse email est requise.');
+        else if (!validateEmail(val)) showError('email', 'Format d\'email invalide.');
+        else showSuccess('email');
       } else if (id === 'phone') {
-        if (!validatePhone(this.value)) {
-          showError(id, 'Téléphone invalide');
-        } else if (this.value) {
-          showSuccess(id);
-        }
+        if (val && !validatePhone(val)) showError('phone', 'Numéro de téléphone invalide.');
+        else if (val) showSuccess('phone');
+        else clearError('phone');
+      } else if (id === 'message') {
+        if (!val) showError('message', 'Veuillez décrire votre projet.');
+        else if (val.length < 20) showError('message', 'Description trop courte (20 caractères min).');
+        else showSuccess('message');
       } else {
-        if (this.value.trim().length < 2) {
-          showError(id, 'Champ requis (min 2 caractères)');
-        } else {
-          showSuccess(id);
-        }
+        if (!val) showError(id, 'Ce champ est requis.');
+        else showSuccess(id);
       }
     });
-  }
-});
 
-function submitForm(e) {
-  e.preventDefault();
-  
-  const form = e.target;
-  const btn = form.querySelector('.form-submit');
-  
-  const fn = document.getElementById('firstname').value.trim();
-  const ln = document.getElementById('lastname').value.trim();
-  const em = document.getElementById('email').value.trim();
-  const ph = document.getElementById('phone').value.trim();
-  const pt = document.getElementById('projectType').value;
-  const msg = document.getElementById('message').value.trim();
-  
-  let valid = true;
-  
-  // Validation
-  if (fn.length < 2) {
-    showError('firstname', 'Prénom requis');
-    valid = false;
-  } else {
-    clearError('firstname');
-  }
-  
-  if (ln.length < 2) {
-    showError('lastname', 'Nom requis');
-    valid = false;
-  } else {
-    clearError('lastname');
-  }
-  
-  if (!validateEmail(em)) {
-    showError('email', 'Email invalide');
-    valid = false;
-  } else {
-    clearError('email');
-  }
-  
-  if (!pt) {
-    showError('projectType', 'Sélectionnez un type');
-    valid = false;
-  } else {
-    clearError('projectType');
-  }
-  
-  if (msg.length < 10) {
-    showError('message', 'Message trop court (min 10)');
-    valid = false;
-  } else {
-    clearError('message');
-  }
-  
-  if (!valid) {
-    // Scroller vers la première erreur
-    const err = form.querySelector('.form-group.error');
-    if (err) {
-      err.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      err.querySelector('input, textarea, select').focus();
-    }
-    return;
-  }
-  
-  // Simuler l'envoi
-  btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Envoi...';
-  btn.disabled = true;
-  
-  setTimeout(() => {
-    btn.innerHTML = '<i class="fa-solid fa-circle-check"></i> Message envoyé ! Nous répondons sous 24h.';
-    btn.style.background = 'linear-gradient(135deg,#10b981,#059669)';
-    btn.disabled = false;
-    
-    console.log('✅ Formulaire:', { fn, ln, em, ph, pt, msg });
-    
-    // Reset après 4 secondes
-    setTimeout(() => {
-      btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Envoyer ma demande →';
-      btn.style.background = '';
-      form.reset();
-      form.querySelectorAll('.form-group').forEach(g => {
-        g.classList.remove('success', 'error');
-      });
-    }, 4000);
-  }, 1500);
-}
-
-// ============================================
-// SMOOTH SCROLL
-// ============================================
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', function(e) {
-    const t = this.getAttribute('href');
-    if (t === '#') return;
-    
-    const target = document.querySelector(t);
-    if (target) {
-      e.preventDefault();
-      const nh = document.querySelector('.navbar').offsetHeight;
-      window.scrollTo({
-        top: target.getBoundingClientRect().top + window.pageYOffset - nh,
-        behavior: 'smooth'
-      });
-      history.pushState(null, null, t);
-    }
+    el.addEventListener('input', () => clearError(id));
   });
-});
 
-// ============================================
-// CONSOLE BRANDING
-// ============================================
-console.log('%c🔧 TUYAUTECH %c— Expert Génie Climatique', 
-  'color:#00d4ff;font-size:18px;font-weight:bold;', 
-  'color:#8892a4;font-size:12px;');
+  // Validation du select projectType au changement
+  document.getElementById('projectType').addEventListener('change', function() {
+    if (this.value) showSuccess('projectType');
+    else showError('projectType', 'Veuillez sélectionner un type de projet.');
+  });
+
+  function validateForm() {
+    let valid = true;
+
+    const firstname = document.getElementById('firstname').value.trim();
+    if (!firstname) { showError('firstname', 'Le prénom est requis.'); valid = false; }
+    else showSuccess('firstname');
+
+    const lastname = document.getElementById('lastname').value.trim();
+    if (!lastname) { showError('lastname', 'Le nom est requis.'); valid = false; }
+    else showSuccess('lastname');
+
+    const email = document.getElementById('email').value.trim();
+    if (!email) { showError('email', 'L\'adresse email est requise.'); valid = false; }
+    else if (!validateEmail(email)) { showError('email', 'Format d\'email invalide.'); valid = false; }
+    else showSuccess('email');
+
+    const phone = document.getElementById('phone').value.trim();
+    if (phone && !validatePhone(phone)) { showError('phone', 'Numéro de téléphone invalide.'); valid = false; }
+    else if (phone) showSuccess('phone');
+
+    const projectType = document.getElementById('projectType').value;
+    if (!projectType) { showError('projectType', 'Veuillez sélectionner un type de projet.'); valid = false; }
+    else showSuccess('projectType');
+
+    const message = document.getElementById('message').value.trim();
+    if (!message) { showError('message', 'Veuillez décrire votre projet.'); valid = false; }
+    else if (message.length < 20) { showError('message', 'Description trop courte (20 caractères min).'); valid = false; }
+    else showSuccess('message');
+
+    return valid;
+  }
+
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (!validateForm()) {
+      // Scroll vers la première erreur
+      const firstError = this.querySelector('.form-group.error');
+      if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+
+    const btn = document.getElementById('formSubmitBtn');
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin" style="margin-right:8px;"></i>Envoi en cours...';
+
+    // Simulation envoi (remplacer par appel API réel)
+    setTimeout(() => {
+      btn.innerHTML = '<i class="fa-solid fa-circle-check" style="margin-right:8px;"></i>Message envoyé !';
+      btn.style.background = 'var(--success)';
+
+      const successMsg = document.getElementById('form-success-msg');
+      if (successMsg) successMsg.style.display = 'block';
+
+      // Reset après 5 secondes
+      setTimeout(() => {
+        document.getElementById('contactForm').reset();
+        document.querySelectorAll('.form-group').forEach(g => g.classList.remove('error', 'success'));
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-paper-plane" style="margin-right:8px;"></i>Envoyer ma demande';
+        btn.style.background = '';
+        if (successMsg) successMsg.style.display = 'none';
+      }, 5000);
+    }, 1500);
+  });
+
 </script>
 
 </body>
