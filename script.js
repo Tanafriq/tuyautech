@@ -386,7 +386,7 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
         <strong>TVA intracommunautaire :</strong> FR02 931 138 143</p>
 
         <h3>Directeur de la publication</h3>
-        <p>[Nom du dirigeant], en qualité de gérant de TUYAUTECH SARL.</p>
+        <p>Mohamed YATTA, en qualité de gérant de TUYAUTECH SARL.</p>
 
         <h3>Hébergement</h3>
         <p><strong>Hébergeur :</strong> OVHcloud<br>
