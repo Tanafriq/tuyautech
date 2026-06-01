@@ -408,7 +408,7 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
       icon: 'fa-solid fa-shield-halved',
       body: `
         <h3>1. Responsable du traitement</h3>
-        <p>TUYAUTECH SARL, 28 avenue Victor Hugo, 92220 Bagneux — contact@tuyautech.fr</p>
+        <p>TUYAUTECH SARL, 28 avenue Victor Hugo, 92220 Bagneux - contact@tuyautech.fr</p>
 
         <h3>2. Données collectées</h3>
         <p>Lors de l'utilisation de notre formulaire de contact, nous collectons les données suivantes :</p>
@@ -435,7 +435,7 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
         <p>Vos données sont destinées exclusivement aux équipes internes de TUYAUTECH SARL. Elles ne sont jamais vendues, cédées ou louées à des tiers.</p>
 
         <h3>6. Vos droits (RGPD)</h3>
-        <p>Conformément au Règlement Général sur la Protection des Données (RGPD — UE 2016/679) et à la loi Informatique et Libertés, vous disposez des droits suivants :</p>
+        <p>Conformément au Règlement Général sur la Protection des Données (RGPD - UE 2016/679) et à la loi Informatique et Libertés, vous disposez des droits suivants :</p>
         <ul>
           <li><strong>Droit d'accès</strong> : obtenir une copie de vos données</li>
           <li><strong>Droit de rectification</strong> : corriger vos données inexactes</li>
@@ -482,7 +482,7 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
         <ul>
           <li><strong>Garantie de parfait achèvement :</strong> 1 an à compter de la réception (art. 1792-6 C. civ.)</li>
           <li><strong>Garantie biennale :</strong> 2 ans sur les équipements dissociables</li>
-          <li><strong>Garantie décennale :</strong> 10 ans sur les ouvrages (art. 1792 C. civ.) — assurance souscrite auprès de [Compagnie d'assurance, N° police : à compléter]</li>
+          <li><strong>Garantie décennale :</strong> 10 ans sur les ouvrages (art. 1792 C. civ.) - assurance souscrite auprès de [Compagnie d'assurance, N° police : à compléter]</li>
         </ul>
 
         <h3>7. Responsabilité</h3>

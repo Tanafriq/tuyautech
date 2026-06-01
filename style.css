@@ -1215,7 +1215,7 @@
       display: block; 
     }
 
-    /* ✅ CORRECTION BUG 3 — Form validation state SUCCESS (manquait) */
+    /* ✅ CORRECTION BUG 3 - Form validation state SUCCESS (manquait) */
     .form-group.success input,
     .form-group.success select,
     .form-group.success textarea {
