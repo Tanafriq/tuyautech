@@ -702,6 +702,8 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
 
   // ── Brancher les liens du footer ─────────────────────────────────────────
   // Cherche les liens par leur texte exact dans le footer-bottom
+  const yearEl = document.getElementById('footerYear');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
   document.querySelectorAll('.footer-bottom a').forEach(link => {
     const text = link.textContent.trim().toLowerCase();
     let key = null;
