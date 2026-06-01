@@ -381,9 +381,9 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
         <strong>Téléphone :</strong> +33 6 21 78 26 98<br>
         <strong>Email :</strong> contact@tuyautech.fr<br>
         <strong>Forme juridique :</strong> Société à responsabilité limitée (SARL)<br>
-        <strong>Capital social :</strong> [À compléter]<br>
-        <strong>SIRET :</strong> [À compléter]<br>
-        <strong>TVA intracommunautaire :</strong> [À compléter]</p>
+        <strong>Capital social :</strong> 1 000,00 € (fixe)<br>
+        <strong>SIRET :</strong> 931 138 143 00017<br>
+        <strong>TVA intracommunautaire :</strong> FR02 931 138 143</p>
 
         <h3>Directeur de la publication</h3>
         <p>[Nom du dirigeant], en qualité de gérant de TUYAUTECH SARL.</p>
@@ -482,7 +482,7 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
         <ul>
           <li><strong>Garantie de parfait achèvement :</strong> 1 an à compter de la réception (art. 1792-6 C. civ.)</li>
           <li><strong>Garantie biennale :</strong> 2 ans sur les équipements dissociables</li>
-          <li><strong>Garantie décennale :</strong> 10 ans sur les ouvrages (art. 1792 C. civ.) - assurance souscrite auprès de [Compagnie d'assurance, N° police : à compléter]</li>
+          <li><strong>Garantie décennale :</strong> 10 ans sur les ouvrages (art. 1792 C. civ.) - assurance souscrite auprès de notre assurance</li>
         </ul>
 
         <h3>7. Responsabilité</h3>
