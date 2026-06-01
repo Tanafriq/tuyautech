@@ -1015,7 +1015,26 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
       margin-top: 24px;
       flex-wrap: wrap;
     }
-    .cookie-settings-actions button { flex: 1; min-width: 120px; }
+    .cookie-settings-actions button {
+      flex: 1 1 0;
+      min-width: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+
+    @media (max-width: 400px) {
+      .cookie-settings-actions {
+        flex-direction: column;
+      }
+      .cookie-settings-actions button {
+        width: 100%;
+        white-space: normal;
+        text-align: center;
+      }
+    }
 
     @media (max-width: 600px) {
       #cookieBanner { padding: 16px 4%; }
