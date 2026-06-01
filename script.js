@@ -896,7 +896,7 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
       border-radius: 20px;
       max-width: 560px;
       margin: 0 auto;
-      padding: 44px 44px 36px;
+      padding: 44px 44px 44px;
       position: relative;
       animation: legalSlideUp 0.3s cubic-bezier(0.23,1,0.32,1);
     }
@@ -1012,34 +1012,51 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     .cookie-settings-actions {
       display: flex;
       gap: 10px;
-      margin-top: 24px;
+      margin-top: 28px;
       flex-wrap: wrap;
+      padding-top: 20px;
+      border-top: 1px solid var(--border, rgba(255,255,255,0.07));
     }
     .cookie-settings-actions button {
-      flex: 1 1 0;
       min-width: 0;
+      padding: 11px 16px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      font-family: inherit;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.2s;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      padding-left: 12px;
-      padding-right: 12px;
+    }
+    #cookieSettingsRefuse {
+      background: transparent;
+      border: 1px solid var(--border-accent, rgba(0,212,255,0.25));
+      color: var(--accent-cyan, #00d4ff);
+    }
+    #cookieSettingsRefuse:hover {
+      background: rgba(0,212,255,0.08);
+    }
+    #cookieSettingsSave {
+      background: var(--gradient-main, linear-gradient(135deg,#1a8fff,#00d4ff));
+      border: none;
+      color: white;
+      box-shadow: var(--shadow-glow-sm);
+    }
+    #cookieSettingsSave:hover {
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-glow-md);
     }
 
     @media (max-width: 400px) {
-      .cookie-settings-actions {
-        flex-direction: column;
-      }
-      .cookie-settings-actions button {
-        width: 100%;
-        white-space: normal;
-        text-align: center;
-      }
+      .cookie-settings-actions { flex-direction: column; }
+      .cookie-settings-actions button { width: 100%; white-space: normal; text-align: center; }
     }
-
     @media (max-width: 600px) {
       #cookieBanner { padding: 16px 4%; }
       #cookieBannerActions { width: 100%; justify-content: flex-end; }
-      #cookieSettingsBox { padding: 32px 20px 28px; }
+      #cookieSettingsBox { padding: 32px 20px 32px; }
     }
   `;
   document.head.appendChild(style);
@@ -1088,7 +1105,6 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
       </h2>
       <p>Choisissez les catégories de cookies que vous autorisez. Votre choix est sauvegardé pendant 6 mois.</p>
 
-      <!-- Catégorie 1 : Nécessaires (toujours actifs) -->
       <div class="cookie-category">
         <div class="cookie-category-header">
           <span class="cookie-category-title">
@@ -1099,7 +1115,6 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
         <p>Indispensables au fonctionnement du site : mémorisation du thème (clair/sombre), préférences d'affichage, sécurité de session. Ils ne peuvent pas être désactivés.</p>
       </div>
 
-      <!-- Catégorie 2 : Analytiques -->
       <div class="cookie-category">
         <div class="cookie-category-header">
           <span class="cookie-category-title">
@@ -1113,7 +1128,6 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
         <p>Permettent de mesurer l'audience et d'analyser le comportement des visiteurs pour améliorer le site (ex. : pages visitées, durée de visite). Aucun outil tiers n'est actuellement activé.</p>
       </div>
 
-      <!-- Catégorie 3 : Marketing -->
       <div class="cookie-category">
         <div class="cookie-category-header">
           <span class="cookie-category-title">
@@ -1128,8 +1142,8 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
       </div>
 
       <div class="cookie-settings-actions">
-        <button class="cookie-btn-refuse" id="cookieSettingsRefuse">Tout refuser</button>
-        <button class="cookie-btn-accept" id="cookieSettingsSave">
+        <button id="cookieSettingsRefuse">Tout refuser</button>
+        <button id="cookieSettingsSave">
           <i class="fa-solid fa-check" style="margin-right:6px;"></i>Enregistrer mes choix
         </button>
       </div>
