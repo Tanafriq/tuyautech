@@ -425,6 +425,12 @@ body {
   object-fit: cover;
 }
 
+.nav-logo-icon picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .nav-logo-text {
   font-family: var(--font-display);
   font-size: 1.2rem;
