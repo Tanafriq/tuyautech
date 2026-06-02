@@ -89,7 +89,10 @@
     <!-- ═══════════════════════════════════════════
        CSS
   ═══════════════════════════════════════════ -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="style.css">
+    </noscript>
 
     <!-- ═══════════════════════════════════════════
        DONNÉES STRUCTURÉES JSON-LD (SEO LOCAL + RICH RESULTS)
@@ -334,7 +337,12 @@
     <!-- ========== NAVBAR ========== -->
     <nav class="navbar" id="navbar" role="navigation" aria-label="Navigation principale">
         <a href="#" class="nav-logo">
-            <div class="nav-logo-icon"><img src="./images/logo.png" alt="Logo TUYAUTECH" width="38" height="38" /></div>
+            <div class="nav-logo-icon">
+                <picture>
+                    <source srcset="./images/logo.webp" type="image/webp">
+                    <img src="./images/logo.png" alt="Logo TUYAUTECH" width="38" height="38">
+                </picture>
+            </div>
             <span class="nav-logo-text">TUYAU<span>TECH</span></span>
         </a>
 
@@ -462,8 +470,10 @@
             <div class="services-grid fade-up">
 
                 <article class="service-card" tabindex="0">
-                    <img src="images/service-cvc-industriel.webp" alt="Installation CVC" class="service-card-img"
-                        loading="lazy" width="420" height="180" />
+                    <img src="images/service-cvc-industriel-800.webp" srcset="images/service-cvc-industriel-400.webp 400w,
+             images/service-cvc-industriel-800.webp 800w" sizes="(max-width: 768px) 100vw, 735px" alt="Ventilation"
+                        class="service-card-img" loading="lazy" decoding="async" width="420" height="180">
+
                     <div class="service-icon"><i class="fa-solid fa-temperature-three-quarters"></i></div>
                     <div class="service-tag">Confort thermique</div>
                     <h3>Chauffage & Climatisation</h3>
@@ -478,8 +488,9 @@
                 </article>
 
                 <article class="service-card" tabindex="0">
-                    <img src="images/service-ventilation.webp" alt="Ventilation" class="service-card-img" loading="lazy"
-                        width="420" height="180" />
+                    <img src="images/service-ventilation-800.webp" srcset="images/service-ventilation-400.webp 400w,
+             images/service-ventilation-800.webp 800w" sizes="(max-width: 768px) 100vw, 735px" alt="Ventilation"
+                        class="service-card-img" loading="lazy" decoding="async" width="420" height="180">
                     <div class="service-icon"><i class="fa-solid fa-wind"></i></div>
                     <div class="service-tag">Traitement de l'air</div>
                     <h3>Ventilation & Désenfumage</h3>
@@ -494,8 +505,9 @@
                 </article>
 
                 <article class="service-card" tabindex="0">
-                    <img src="images/service-plomberie.webp" alt="Plomberie" class="service-card-img" loading="lazy"
-                        width="420" height="180" />
+                    <img src="images/service-plomberie-800.webp" srcset="images/service-plomberie-400.webp 400w,
+             images/service-plomberie-800.webp 800w" sizes="(max-width: 768px) 100vw, 735px" alt="Ventilation"
+                        class="service-card-img" loading="lazy" decoding="async" width="420" height="180">
                     <div class="service-icon"><i class="fa-solid fa-faucet-drip"></i></div>
                     <div class="service-tag">Réseaux sanitaires</div>
                     <h3>Plomberie</h3>

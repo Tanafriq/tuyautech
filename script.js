@@ -76,6 +76,12 @@ function toggleFaq(btn) {
   const answer = item.querySelector('.faq-answer');
   const isOpen = item.classList.contains('open');
 
+  const heights = {};
+  document.querySelectorAll('.faq-item.open').forEach(openItem => {
+    heights[openItem.dataset.faqId] = openItem.querySelector('.faq-answer').scrollHeight;
+  });
+  const newHeight = answer.scrollHeight;
+
   document.querySelectorAll('.faq-item.open').forEach(openItem => {
     openItem.classList.remove('open');
     openItem.querySelector('.faq-answer').style.maxHeight = '0';
@@ -84,7 +90,7 @@ function toggleFaq(btn) {
 
   if (!isOpen) {
     item.classList.add('open');
-    answer.style.maxHeight = answer.scrollHeight + 'px';
+    answer.style.maxHeight = newHeight + 'px';
     btn.setAttribute('aria-expanded', 'true');
   }
 }
@@ -169,8 +175,10 @@ function handleFaqKeydown(e, btn) {
 const fadeObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      fadeObserver.unobserve(entry.target);
+      requestAnimationFrame(() => {
+        entry.target.classList.add('visible');
+        fadeObserver.unobserve(entry.target);
+      });
     }
   });
 }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
