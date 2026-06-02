@@ -57,8 +57,8 @@
   --accent-teal: #006e8a;
   --accent-glow: rgba(0, 127, 168, 0.12);
   --text-primary: #0d1117;
-  --text-secondary: #4a5568;
-  --text-muted: #8a95a3;
+  --text-secondary: #3d4a5c;
+  --text-muted: #5a6578;
   --border: rgba(0, 0, 0, 0.08);
   --border-accent: rgba(0, 127, 168, 0.3);
   --success: #0e9562;
@@ -230,6 +230,23 @@
 
 [data-theme="light"] .why-photo-stat-lbl {
   color: #4a5568;
+}
+
+[data-theme="light"] .section-badge {
+  color: #004f6a;
+  background: rgba(0, 127, 168, 0.10);
+}
+
+[data-theme="light"] .nav-links a {
+  color: #374151;
+}
+
+[data-theme="light"] .expertise-tab {
+  color: #374151;
+}
+
+[data-theme="light"] .secteur-description {
+  color: #374151;
 }
 
 /* Transition douce au changement de thème */
@@ -841,9 +858,9 @@ section {
   border-radius: 100px;
   background: rgba(0, 212, 255, 0.08);
   border: 1px solid var(--border-accent);
+  color: var(--accent-cyan);
   font-size: 0.75rem;
   font-weight: 700;
-  color: var(--accent-cyan);
   text-transform: uppercase;
   letter-spacing: 1.5px;
   margin-bottom: 20px;
@@ -1428,7 +1445,7 @@ section {
 
 .secteur-description {
   font-size: 0.92rem;
-  color: #8892a4;
+  color: var(--text-secondary);
   line-height: 1.7;
   margin-bottom: 28px;
   transition: color 0.3s ease;
@@ -1517,7 +1534,7 @@ section {
   align-items: center;
   gap: 6px;
   font-size: 0.75rem;
-  color: #8892a4;
+  color: var(--text-secondary);
 }
 
 .stat-item i {
