@@ -13,7 +13,7 @@
   --accent-glow: rgba(0, 212, 255, 0.15);
   --text-primary: #f0f4ff;
   --text-secondary: #8892a4;
-  --text-muted: #4a5568;
+  --text-muted: #6b7a8d;
   --border: rgba(255, 255, 255, 0.07);
   --border-accent: rgba(0, 212, 255, 0.25);
   --success: #10b981;
@@ -367,7 +367,6 @@ body {
   pointer-events: none;
   z-index: 0;
   opacity: 0.6;
-  will-change: transform;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -884,7 +883,7 @@ section {
 .partners-label {
   text-align: center;
   font-size: 0.8rem;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 600;
@@ -918,7 +917,7 @@ section {
   gap: 10px;
   font-weight: 700;
   font-size: 1rem;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   white-space: nowrap;
   font-family: var(--font-display);
   transition: color 0.3s;
@@ -2020,7 +2019,7 @@ footer {
   color: var(--accent-cyan);
 }
 
-.footer-col h5 {
+.footer-col h3 {
   font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -2056,7 +2055,7 @@ footer {
   flex-wrap: wrap;
   gap: 16px;
   font-size: 0.85rem;
-  color: var(--text-muted);
+  color: var(--text-secondary);
 }
 
 @media (max-width: 480px) {
@@ -2086,7 +2085,7 @@ footer {
 }
 
 .developer-credit {
-  color: var(--text-muted);
+  color: var(--text-secondary);
   font-size: 0.85rem;
   margin: 0;
   display: flex;
@@ -2500,4 +2499,17 @@ footer {
     opacity: 1 !important;
     transform: none !important;
   }
+}
+
+/* Performance — rendu différé des sections hors écran */
+.services-section,
+.secteurs-section,
+.why-section,
+.expertise-section,
+.engagements-section,
+.certifications-section,
+.faq-section,
+.contact-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 600px;
 }

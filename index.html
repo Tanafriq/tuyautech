@@ -66,16 +66,25 @@
     <!-- ═══════════════════════════════════════════
        FONTS
   ═══════════════════════════════════════════ -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+            rel="stylesheet">
+    </noscript>
 
     <!-- ═══════════════════════════════════════════
        FONT AWESOME
   ═══════════════════════════════════════════ -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </noscript>
 
     <!-- ═══════════════════════════════════════════
        CSS
@@ -325,7 +334,7 @@
     <!-- ========== NAVBAR ========== -->
     <nav class="navbar" id="navbar" role="navigation" aria-label="Navigation principale">
         <a href="#" class="nav-logo">
-            <div class="nav-logo-icon"><img src="./images/logo.png" alt="Logo TUYAUTECH" /></div>
+            <div class="nav-logo-icon"><img src="./images/logo.png" alt="Logo TUYAUTECH" width="38" height="38" /></div>
             <span class="nav-logo-text">TUYAU<span>TECH</span></span>
         </a>
 
@@ -509,8 +518,8 @@
                 <div class="why-visual fade-up-fast">
                     <div class="why-glow-orb"></div>
                     <div class="why-photo-wrap">
-                        <img src="images/why-engineer.webp" alt="Équipe TUYAUTECH" loading="lazy" width="600"
-                            height="460" />
+                        <img src="images/why-engineer.webp" alt="Ingénieur CVC TUYAUTECH" loading="lazy"
+                            decoding="async" width="600" height="400" />
                         <div class="why-photo-overlay">
                             <div class="why-photo-stat">
                                 <div class="why-photo-stat-item">
@@ -535,7 +544,7 @@
                     <div class="why-feature">
                         <div class="why-feature-icon"><i class="fa-solid fa-ruler-combined"></i></div>
                         <div class="why-feature-text">
-                            <h4>Maîtrise de bout en bout</h4>
+                            <h3>Maîtrise de bout en bout</h3>
                             <p>De la mise en œuvre à la mise en service, nos équipes maîtrisent chaque étape du projet.
                             </p>
                         </div>
@@ -544,7 +553,7 @@
                     <div class="why-feature">
                         <div class="why-feature-icon"><i class="fa-solid fa-leaf"></i></div>
                         <div class="why-feature-text">
-                            <h4>Sobriété énergétique</h4>
+                            <h3>Sobriété énergétique</h3>
                             <p>Nous concevons des installations haute performance intégrant les dernières
                                 réglementations (RE2020).</p>
                         </div>
@@ -553,7 +562,7 @@
                     <div class="why-feature">
                         <div class="why-feature-icon"><i class="fa-solid fa-users-gear"></i></div>
                         <div class="why-feature-text">
-                            <h4>Équipe qualifiée</h4>
+                            <h3>Équipe qualifiée</h3>
                             <p>Nos techniciens sont formés et certifiés sur les dernières technologies du génie
                                 climatique.</p>
                         </div>
@@ -572,7 +581,7 @@
                 </p>
             </div>
 
-            <div class="expertise-tabs fade-up">
+            <div class="expertise-tabs fade-up" role="tablist" aria-label="Types d'expertise">
                 <button class="expertise-tab active" onclick="switchTab(this, 'tab-neuf')" role="tab"
                     aria-selected="true" aria-controls="tab-neuf" id="tab-neuf-btn">
                     <i class="fa-solid fa-building"></i> Construction Neuve
@@ -1110,7 +1119,8 @@
 
             <div class="footer-brand footer-col">
                 <div class="nav-logo" style="margin-bottom:0;">
-                    <div class="nav-logo-icon"><img src="./images/logo.png" alt="Logo TUYAUTECH" /></div>
+                    <div class="nav-logo-icon"><img src="./images/logo.png" alt="Logo TUYAUTECH" width="38"
+                            height="38" /></div>
                     <span class="nav-logo-text">TUYAU<span>TECH</span></span>
                 </div>
                 <p>Expert en installations techniques CVC et plomberie pour tous types de bâtiments - tertiaire,
@@ -1123,7 +1133,7 @@
             </div>
 
             <div class="footer-col">
-                <h5>Métiers</h5>
+                <h3>Métiers</h3>
                 <ul>
                     <li><a href="#metiers">Chauffage & Climatisation</a></li>
                     <li><a href="#metiers">Ventilation & Désenfumage</a></li>
@@ -1134,7 +1144,7 @@
             </div>
 
             <div class="footer-col">
-                <h5>Secteurs</h5>
+                <h3>Secteurs</h3>
                 <ul>
                     <li><a href="#secteurs">Tertiaire & Bureaux</a></li>
                     <li><a href="#secteurs">Hôtellerie</a></li>
@@ -1145,7 +1155,7 @@
             </div>
 
             <div class="footer-col">
-                <h5>Contact</h5>
+                <h3>Contact</h3>
                 <ul>
                     <li><a href="tel:+33621782698"><i class="fa-solid fa-phone"
                                 style="margin-right:8px;color:var(--accent-cyan);"></i>+33 6 21 78 26 98</a></li>
@@ -1163,13 +1173,13 @@
         <div class="footer-bottom">
             <span>© <span id="footerYear"></span> TUYAUTECH. Tous droits réservés.</span>
             <div style="display:flex;gap:24px;flex-wrap:wrap;">
-                <a href="#" style="color:var(--text-muted);text-decoration:none;transition:color 0.2s;"
+                <a href="#" style="color:var(--text-secondary);text-decoration:none;transition:color 0.2s;"
                     onmouseover="this.style.color='var(--accent-cyan)'"
                     onmouseout="this.style.color='var(--text-muted)'">Mentions légales</a>
-                <a href="#" style="color:var(--text-muted);text-decoration:none;transition:color 0.2s;"
+                <a href="#" style="color:var(--text-secondary);text-decoration:none;transition:color 0.2s;"
                     onmouseover="this.style.color='var(--accent-cyan)'"
                     onmouseout="this.style.color='var(--text-muted)'">Politique de confidentialité</a>
-                <a href="#" style="color:var(--text-muted);text-decoration:none;transition:color 0.2s;"
+                <a href="#" style="color:var(--text-secondary);text-decoration:none;transition:color 0.2s;"
                     onmouseover="this.style.color='var(--accent-cyan)'"
                     onmouseout="this.style.color='var(--text-muted)'">CGV</a>
                 <span class="developer-credit">Développé par
@@ -1204,4 +1214,5 @@
     <!-- ========== JAVASCRIPT ========== -->
     <script src="script.js"></script>
 </body>
+
 </html>

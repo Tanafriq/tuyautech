@@ -1,10 +1,10 @@
 /* ============================================
      PAGE LOADER
      ============================================ */
-window.addEventListener('load', () => {
+document.addEventListener('DOMContentLoaded', () => {
   const loader = document.getElementById('pageLoader');
   if (loader) {
-    setTimeout(() => loader.classList.add('hidden'), 300);
+    loader.classList.add('hidden'); // immédiat, pas de délai
   }
 });
 
@@ -147,7 +147,8 @@ function handleFaqKeydown(e, btn) {
 
   function init() {
     resize();
-    particles = Array.from({ length: 60 }, () => new Particle());
+    const particleCount = window.innerWidth < 768 ? 20 : 60;
+    particles = Array.from({ length: particleCount }, () => new Particle());
   }
 
   function animate() {
@@ -172,7 +173,7 @@ const fadeObserver = new IntersectionObserver((entries) => {
       fadeObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+}, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
 
 document.querySelectorAll('.fade-up, .fade-up-fast').forEach(el => {
   fadeObserver.observe(el);
