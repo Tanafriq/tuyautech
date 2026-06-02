@@ -361,13 +361,14 @@
         </div>
 
         <div class="nav-mobile-actions">
-            <button class="theme-toggle" id="themeToggle" aria-label="Basculer le thème" title="Mode clair / sombre">
+            <button type="button" class="theme-toggle" id="themeToggle" aria-label="Basculer le thème"
+                title="Mode clair / sombre">
                 <svg id="themeIcon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                     <path
                         d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2a7 7 0 1 1 0-14 7 7 0 0 1 0 14zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM1 11h3v2H1v-2zm19 0h3v2h-3v-2zM4.222 3.808l1.414 1.414-2.12 2.122-1.415-1.414 2.121-2.122zm14.142 14.142l1.414 1.414-2.12 2.122-1.415-1.414 2.121-2.122zM3.808 19.778l1.414-1.414 2.122 2.12-1.414 1.415-2.122-2.121zm14.142-14.142l1.414-1.414 2.122 2.12-1.414 1.415-2.122-2.121z" />
                 </svg>
             </button>
-            <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false"
+            <button type="button" class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false"
                 aria-controls="mobileMenu">
                 <span></span><span></span><span></span>
             </button>
@@ -375,7 +376,7 @@
     </nav>
 
     <!-- Menu Mobile -->
-    <div class="mobile-menu" id="mobileMenu">
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Navigation mobile">
         <a href="#metiers">Métiers</a>
         <a href="#secteurs">Secteurs</a>
         <a href="#engagements">Engagements</a>
@@ -385,846 +386,895 @@
             style="background:var(--gradient-main);color:white;border-radius:8px;text-align:center;font-weight:700;border:none;padding:12px 0;">
             <i class="fa-solid fa-file-signature" style="margin-right:8px;"></i>Demander un devis
         </a>
-    </div>
-
-    <!-- ========== MAIN CONTENT ========== -->
-    <main id="main-content">
-
-        <!-- ========== HERO ========== -->
-        <section class="hero" aria-labelledby="hero-title">
-            <div class="hero-badge">Expert en Génie Climatique & Plomberie</div>
-
-            <h1 id="hero-title">
-                Des installations techniques<br />au service de vos projets
-                <span class="gradient-text">les plus ambitieux</span>
-            </h1>
-
-            <p>TUYAUTECH réalise et met en service des installations de chauffage, climatisation, ventilation et
-                plomberie pour les projets tertiaires, hôteliers, industriels et de santé.</p>
-
-            <div class="hero-actions">
-                <a href="#contact" class="btn-hero-primary">
-                    <i class="fa-solid fa-paper-plane"></i> Parler de votre projet
-                </a>
-                <a href="#metiers" class="btn-hero-secondary">
-                    <i class="fa-solid fa-play"></i> Découvrir nos métiers
-                </a>
-            </div>
-
-            <div class="hero-stats" aria-label="Statistiques clés">
-                <div class="hero-stat">
-                    <div class="hero-stat-number" aria-label="CVC">CVC</div>
-                    <div class="hero-stat-label">Chauffage · Ventilation · Climatisation</div>
-                </div>
-                <div class="hero-stat-divider" aria-hidden="true"></div>
-                <div class="hero-stat">
-                    <div class="hero-stat-number" aria-label="PLB">PLB</div>
-                    <div class="hero-stat-label">Plomberie & Réseaux sanitaires</div>
-                </div>
-            </div>
-
-            <div class="hero-trust" aria-label="Indicateurs de confiance">
-                <span class="hero-trust-item"><i class="fa-solid fa-circle-check"></i> Certifié RGE</span>
-                <span class="hero-trust-item"><i class="fa-solid fa-shield-halved"></i> Qualibat</span>
-                <span class="hero-trust-item"><i class="fa-solid fa-clock"></i> Réponse sous 24h</span>
-            </div>
-        </section>
-
-        <!-- ========== MARQUEE DOMAINES ========== -->
-        <div class="partners-section">
-            <p class="partners-label">Nos domaines d'intervention</p>
-            <div class="marquee-wrapper">
-                <div class="marquee-track">
-                    <div class="marquee-item"><span class="marquee-item-icon">🌡️</span> Chauffage</div>
-                    <div class="marquee-item"><span class="marquee-item-icon">❄️</span> Climatisation</div>
-                    <div class="marquee-item"><span class="marquee-item-icon">💨</span> Ventilation</div>
-                    <div class="marquee-item"><span class="marquee-item-icon">🔥</span> Désenfumage</div>
-                    <div class="marquee-item"><span class="marquee-item-icon">🚿</span> Plomberie</div>
-                    <div class="marquee-item"><span class="marquee-item-icon">🏨</span> Hôtellerie</div>
-                    <div class="marquee-item"><span class="marquee-item-icon">🏢</span> Tertiaire</div>
-                    <div class="marquee-item"><span class="marquee-item-icon">🏥</span> Santé</div>
-                    <div class="marquee-item"><span class="marquee-item-icon">🏗️</span> Construction neuve</div>
-                    <div class="marquee-item"><span class="marquee-item-icon">🌡️</span> Chauffage</div>
-                    <div class="marquee-item"><span class="marquee-item-icon">❄️</span> Climatisation</div>
-                    <div class="marquee-item"><span class="marquee-item-icon">💨</span> Ventilation</div>
-                    <div class="marquee-item"><span class="marquee-item-icon">🔥</span> Désenfumage</div>
-                    <div class="marquee-item"><span class="marquee-item-icon">🚿</span> Plomberie</div>
-                    <div class="marquee-item"><span class="marquee-item-icon">🏨</span> Hôtellerie</div>
-                    <div class="marquee-item"><span class="marquee-item-icon">🏢</span> Tertiaire</div>
-                    <div class="marquee-item"><span class="marquee-item-icon">🏥</span> Santé</div>
-                    <div class="marquee-item"><span class="marquee-item-icon">🏗️</span> Construction neuve</div>
-                </div>
-            </div>
         </div>
 
-        <!-- ========== SERVICES / MÉTIERS ========== -->
-        <section id="metiers" class="services-section" aria-labelledby="services-title">
-            <div class="section-header centered fade-up">
-                <div class="section-badge"><i class="fa-solid fa-wrench" style="margin-right:6px;"></i>Nos Métiers</div>
-                <h2 id="services-title" class="section-title">Une offre technique complète<br />du lot fluides au lot
-                    froid</h2>
-                <p class="section-subtitle">TUYAUTECH intervient sur l'ensemble des corps d'état du génie climatique, de
-                    la réalisation à la mise en service.</p>
+        <!-- ========== MAIN CONTENT ========== -->
+        <main id="main-content">
+
+            <!-- ========== HERO ========== -->
+            <section class="hero" aria-labelledby="hero-title">
+                <div class="hero-badge">Expert en Génie Climatique & Plomberie</div>
+
+                <h1 id="hero-title">
+                    Des installations techniques<br />au service de vos projets
+                    <span class="gradient-text">les plus ambitieux</span>
+                </h1>
+
+                <p>TUYAUTECH réalise et met en service des installations de chauffage, climatisation, ventilation et
+                    plomberie pour les projets tertiaires, hôteliers, industriels et de santé.</p>
+
+                <div class="hero-actions">
+                    <a href="#contact" class="btn-hero-primary">
+                        <i class="fa-solid fa-paper-plane"></i> Parler de votre projet
+                    </a>
+                    <a href="#metiers" class="btn-hero-secondary">
+                        <i class="fa-solid fa-play"></i> Découvrir nos métiers
+                    </a>
+                </div>
+
+                <div class="hero-stats" aria-label="Statistiques clés">
+                    <div class="hero-stat">
+                        <div class="hero-stat-number" aria-label="CVC">CVC</div>
+                        <div class="hero-stat-label">Chauffage · Ventilation · Climatisation</div>
+                    </div>
+                    <div class="hero-stat-divider" aria-hidden="true"></div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number" aria-label="PLB">PLB</div>
+                        <div class="hero-stat-label">Plomberie & Réseaux sanitaires</div>
+                    </div>
+                </div>
+
+                <div class="hero-trust" aria-label="Indicateurs de confiance">
+                    <span class="hero-trust-item"><i class="fa-solid fa-circle-check"></i> Certifié RGE</span>
+                    <span class="hero-trust-item"><i class="fa-solid fa-shield-halved"></i> Qualibat</span>
+                    <span class="hero-trust-item"><i class="fa-solid fa-clock"></i> Réponse sous 24h</span>
+                </div>
+            </section>
+
+            <!-- ========== MARQUEE DOMAINES ========== -->
+            <div class="partners-section">
+                <p class="partners-label">Nos domaines d'intervention</p>
+                <div class="marquee-wrapper">
+                    <div class="marquee-track">
+                        <div class="marquee-item"><span class="marquee-item-icon">🌡️</span> Chauffage</div>
+                        <div class="marquee-item"><span class="marquee-item-icon">❄️</span> Climatisation</div>
+                        <div class="marquee-item"><span class="marquee-item-icon">💨</span> Ventilation</div>
+                        <div class="marquee-item"><span class="marquee-item-icon">🔥</span> Désenfumage</div>
+                        <div class="marquee-item"><span class="marquee-item-icon">🚿</span> Plomberie</div>
+                        <div class="marquee-item"><span class="marquee-item-icon">🏨</span> Hôtellerie</div>
+                        <div class="marquee-item"><span class="marquee-item-icon">🏢</span> Tertiaire</div>
+                        <div class="marquee-item"><span class="marquee-item-icon">🏥</span> Santé</div>
+                        <div class="marquee-item"><span class="marquee-item-icon">🏗️</span> Construction neuve</div>
+                        <div class="marquee-item"><span class="marquee-item-icon">🌡️</span> Chauffage</div>
+                        <div class="marquee-item"><span class="marquee-item-icon">❄️</span> Climatisation</div>
+                        <div class="marquee-item"><span class="marquee-item-icon">💨</span> Ventilation</div>
+                        <div class="marquee-item"><span class="marquee-item-icon">🔥</span> Désenfumage</div>
+                        <div class="marquee-item"><span class="marquee-item-icon">🚿</span> Plomberie</div>
+                        <div class="marquee-item"><span class="marquee-item-icon">🏨</span> Hôtellerie</div>
+                        <div class="marquee-item"><span class="marquee-item-icon">🏢</span> Tertiaire</div>
+                        <div class="marquee-item"><span class="marquee-item-icon">🏥</span> Santé</div>
+                        <div class="marquee-item"><span class="marquee-item-icon">🏗️</span> Construction neuve</div>
+                    </div>
+                </div>
             </div>
 
-            <div class="services-grid fade-up">
+            <!-- ========== SERVICES / MÉTIERS ========== -->
+            <section id="metiers" class="services-section" aria-labelledby="services-title">
+                <div class="section-header centered fade-up">
+                    <div class="section-badge"><i class="fa-solid fa-wrench" style="margin-right:6px;"></i>Nos Métiers
+                    </div>
+                    <h2 id="services-title" class="section-title">Une offre technique complète<br />du lot fluides au
+                        lot
+                        froid</h2>
+                    <p class="section-subtitle">TUYAUTECH intervient sur l'ensemble des corps d'état du génie
+                        climatique, de
+                        la réalisation à la mise en service.</p>
+                </div>
 
-                <article class="service-card" tabindex="0">
-                    <img src="images/service-cvc-industriel-800.webp" srcset="images/service-cvc-industriel-400.webp 400w,
-             images/service-cvc-industriel-800.webp 800w" sizes="(max-width: 768px) 100vw, 735px" alt="Ventilation"
-                        class="service-card-img" loading="lazy" decoding="async" width="420" height="180">
+                <div class="services-grid fade-up">
 
-                    <div class="service-icon"><i class="fa-solid fa-temperature-three-quarters"></i></div>
-                    <div class="service-tag">Confort thermique</div>
-                    <h3>Chauffage & Climatisation</h3>
-                    <p>Installation de systèmes de production et distribution thermique adaptés aux bâtiments
-                        tertiaires, hôteliers et industriels.</p>
-                    <ul>
-                        <li>Pompes à chaleur & chaudières</li>
-                        <li>Groupes de production d'eau glacée</li>
-                        <li>Systèmes VRF multi-zones</li>
-                        <li>Réseaux de distribution et régulation</li>
-                    </ul>
-                </article>
+                    <article class="service-card" tabindex="0">
+                        <img src="images/service-cvc-industriel-800.webp" srcset="images/service-cvc-industriel-400.webp 400w,
+             images/service-cvc-industriel-800.webp 800w" sizes="(max-width: 768px) 100vw, 735px"
+                            alt="Installation CVC industriel" class="service-card-img" loading="lazy" decoding="async"
+                            width="420" height="180">
 
-                <article class="service-card" tabindex="0">
-                    <img src="images/service-ventilation-800.webp" srcset="images/service-ventilation-400.webp 400w,
+                        <div class="service-icon"><i class="fa-solid fa-temperature-three-quarters"></i></div>
+                        <div class="service-tag">Confort thermique</div>
+                        <h3>Chauffage & Climatisation</h3>
+                        <p>Installation de systèmes de production et distribution thermique adaptés aux bâtiments
+                            tertiaires, hôteliers et industriels.</p>
+                        <ul>
+                            <li>Pompes à chaleur & chaudières</li>
+                            <li>Groupes de production d'eau glacée</li>
+                            <li>Systèmes VRF multi-zones</li>
+                            <li>Réseaux de distribution et régulation</li>
+                        </ul>
+                    </article>
+
+                    <article class="service-card" tabindex="0">
+                        <img src="images/service-ventilation-800.webp" srcset="images/service-ventilation-400.webp 400w,
              images/service-ventilation-800.webp 800w" sizes="(max-width: 768px) 100vw, 735px" alt="Ventilation"
-                        class="service-card-img" loading="lazy" decoding="async" width="420" height="180">
-                    <div class="service-icon"><i class="fa-solid fa-wind"></i></div>
-                    <div class="service-tag">Traitement de l'air</div>
-                    <h3>Ventilation & Désenfumage</h3>
-                    <p>Installation de systèmes de ventilation performants et dispositifs de désenfumage conformes aux
-                        exigences réglementaires.</p>
-                    <ul>
-                        <li>CTA et VMC double flux</li>
-                        <li>Désenfumage naturel et mécanique</li>
-                        <li>Réseaux aérauliques et gaines</li>
-                        <li>Équilibrage et mise en service</li>
-                    </ul>
-                </article>
+                            class="service-card-img" loading="lazy" decoding="async" width="420" height="180">
+                        <div class="service-icon"><i class="fa-solid fa-wind"></i></div>
+                        <div class="service-tag">Traitement de l'air</div>
+                        <h3>Ventilation & Désenfumage</h3>
+                        <p>Installation de systèmes de ventilation performants et dispositifs de désenfumage conformes
+                            aux
+                            exigences réglementaires.</p>
+                        <ul>
+                            <li>CTA et VMC double flux</li>
+                            <li>Désenfumage naturel et mécanique</li>
+                            <li>Réseaux aérauliques et gaines</li>
+                            <li>Équilibrage et mise en service</li>
+                        </ul>
+                    </article>
 
-                <article class="service-card" tabindex="0">
-                    <img src="images/service-plomberie-800.webp" srcset="images/service-plomberie-400.webp 400w,
-             images/service-plomberie-800.webp 800w" sizes="(max-width: 768px) 100vw, 735px" alt="Ventilation"
-                        class="service-card-img" loading="lazy" decoding="async" width="420" height="180">
-                    <div class="service-icon"><i class="fa-solid fa-faucet-drip"></i></div>
-                    <div class="service-tag">Réseaux sanitaires</div>
-                    <h3>Plomberie</h3>
-                    <p>Réalisation des réseaux sanitaires complets : eau froide, eau chaude sanitaire, production ECS
-                        collective.</p>
-                    <ul>
-                        <li>Colonnes EF / ECS / EU</li>
-                        <li>Production d'eau chaude sanitaire</li>
-                        <li>Appareillages et équipements</li>
-                        <li>Traitement de l'eau</li>
-                    </ul>
-                </article>
+                    <article class="service-card" tabindex="0">
+                        <img src="images/service-plomberie-800.webp" srcset="images/service-plomberie-400.webp 400w,
+             images/service-plomberie-800.webp 800w" sizes="(max-width: 768px) 100vw, 735px"
+                            alt="Plomberie et réseaux sanitaires" class="service-card-img" loading="lazy"
+                            decoding="async" width="420" height="180">
+                        <div class="service-icon"><i class="fa-solid fa-faucet-drip"></i></div>
+                        <div class="service-tag">Réseaux sanitaires</div>
+                        <h3>Plomberie</h3>
+                        <p>Réalisation des réseaux sanitaires complets : eau froide, eau chaude sanitaire, production
+                            ECS
+                            collective.</p>
+                        <ul>
+                            <li>Colonnes EF / ECS / EU</li>
+                            <li>Production d'eau chaude sanitaire</li>
+                            <li>Appareillages et équipements</li>
+                            <li>Traitement de l'eau</li>
+                        </ul>
+                    </article>
 
-            </div>
-        </section>
+                </div>
+            </section>
 
-        <!-- ========== POURQUOI TUYAUTECH ========== -->
-        <section id="pourquoi" style="background: var(--bg-primary);" aria-labelledby="why-title">
-            <div class="why-grid">
-                <div class="why-visual fade-up-fast">
-                    <div class="why-glow-orb"></div>
-                    <div class="why-photo-wrap">
-                        <img src="images/why-engineer.webp" alt="Ingénieur CVC TUYAUTECH" loading="lazy"
-                            decoding="async" width="600" height="400" />
-                        <div class="why-photo-overlay">
-                            <div class="why-photo-stat">
-                                <div class="why-photo-stat-item">
-                                    <div class="why-photo-stat-num">Neuf</div>
-                                    <div class="why-photo-stat-lbl">Construction & grands projets</div>
-                                </div>
-                                <div class="why-photo-stat-item">
-                                    <div class="why-photo-stat-num">Réhab.</div>
-                                    <div class="why-photo-stat-lbl">Rénovation & mise aux normes</div>
+            <!-- ========== POURQUOI TUYAUTECH ========== -->
+            <section id="pourquoi" style="background: var(--bg-primary);" aria-labelledby="why-title">
+                <div class="why-grid">
+                    <div class="why-visual fade-up-fast">
+                        <div class="why-glow-orb"></div>
+                        <div class="why-photo-wrap">
+                            <img src="images/why-engineer.webp" alt="Ingénieur CVC TUYAUTECH" loading="lazy"
+                                decoding="async" width="600" height="400" />
+                            <div class="why-photo-overlay">
+                                <div class="why-photo-stat">
+                                    <div class="why-photo-stat-item">
+                                        <div class="why-photo-stat-num">Neuf</div>
+                                        <div class="why-photo-stat-lbl">Construction & grands projets</div>
+                                    </div>
+                                    <div class="why-photo-stat-item">
+                                        <div class="why-photo-stat-num">Réhab.</div>
+                                        <div class="why-photo-stat-lbl">Rénovation & mise aux normes</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="why-features fade-up-fast">
-                    <div class="section-badge"><i class="fa-solid fa-star" style="margin-right:6px;"></i>Pourquoi
-                        TUYAUTECH</div>
-                    <h2 id="why-title" class="section-title" style="margin-bottom:40px;">Un partenaire technique<br />de
-                        confiance pour vos projets</h2>
+                    <div class="why-features fade-up-fast">
+                        <div class="section-badge"><i class="fa-solid fa-star" style="margin-right:6px;"></i>Pourquoi
+                            TUYAUTECH</div>
+                        <h2 id="why-title" class="section-title" style="margin-bottom:40px;">Un partenaire
+                            technique<br />de
+                            confiance pour vos projets</h2>
 
-                    <div class="why-feature">
-                        <div class="why-feature-icon"><i class="fa-solid fa-ruler-combined"></i></div>
-                        <div class="why-feature-text">
-                            <h3>Maîtrise de bout en bout</h3>
-                            <p>De la mise en œuvre à la mise en service, nos équipes maîtrisent chaque étape du projet.
-                            </p>
+                        <div class="why-feature">
+                            <div class="why-feature-icon"><i class="fa-solid fa-ruler-combined"></i></div>
+                            <div class="why-feature-text">
+                                <h3>Maîtrise de bout en bout</h3>
+                                <p>De la mise en œuvre à la mise en service, nos équipes maîtrisent chaque étape du
+                                    projet.
+                                </p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="why-feature">
-                        <div class="why-feature-icon"><i class="fa-solid fa-leaf"></i></div>
-                        <div class="why-feature-text">
-                            <h3>Sobriété énergétique</h3>
-                            <p>Nous concevons des installations haute performance intégrant les dernières
-                                réglementations (RE2020).</p>
+                        <div class="why-feature">
+                            <div class="why-feature-icon"><i class="fa-solid fa-leaf"></i></div>
+                            <div class="why-feature-text">
+                                <h3>Sobriété énergétique</h3>
+                                <p>Nous concevons des installations haute performance intégrant les dernières
+                                    réglementations (RE2020).</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="why-feature">
-                        <div class="why-feature-icon"><i class="fa-solid fa-users-gear"></i></div>
-                        <div class="why-feature-text">
-                            <h3>Équipe qualifiée</h3>
-                            <p>Nos techniciens sont formés et certifiés sur les dernières technologies du génie
-                                climatique.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========== EXPERTISE TABS ========== -->
-        <section id="expertise" class="expertise-section" aria-labelledby="expertise-title">
-            <div class="section-header fade-up">
-                <div class="section-badge"><i class="fa-solid fa-lightbulb" style="margin-right:6px;"></i>Expertise
-                </div>
-                <h2 id="expertise-title" class="section-title">Des compétences techniques<br />sur tous les fronts</h2>
-                <p class="section-subtitle">Nos domaines d'expertise couvrent l'ensemble du cycle de vie du bâtiment.
-                </p>
-            </div>
-
-            <div class="expertise-tabs fade-up" role="tablist" aria-label="Types d'expertise">
-                <button class="expertise-tab active" onclick="switchTab(this, 'tab-neuf')" role="tab"
-                    aria-selected="true" aria-controls="tab-neuf" id="tab-neuf-btn">
-                    <i class="fa-solid fa-building"></i> Construction Neuve
-                </button>
-                <button class="expertise-tab" onclick="switchTab(this, 'tab-rehab')" role="tab" aria-selected="false"
-                    aria-controls="tab-rehab" id="tab-rehab-btn">
-                    <i class="fa-solid fa-screwdriver-wrench"></i> Réhabilitation
-                </button>
-            </div>
-
-            <div id="tab-neuf" class="expertise-content active fade-up" role="tabpanel" aria-labelledby="tab-neuf-btn">
-                <div class="expertise-info">
-                    <h3><i class="fa-solid fa-building" style="color:var(--accent-cyan);margin-right:10px;"></i>Projets
-                        de construction neuve</h3>
-                    <p>TUYAUTECH intervient sur les grandes opérations neuves - bureaux, hôtels, centres commerciaux,
-                        établissements de santé.</p>
-                    <div class="expertise-list">
-                        <div class="expertise-list-item">
-                            <div class="check"><i class="fa-solid fa-check"></i></div>Études d'exécution CVC & plomberie
-                        </div>
-                        <div class="expertise-list-item">
-                            <div class="check"><i class="fa-solid fa-check"></i></div>Coordination multi-lots et
-                            interfaces GO
-                        </div>
-                        <div class="expertise-list-item">
-                            <div class="check"><i class="fa-solid fa-check"></i></div>Réseaux aérauliques, hydrauliques,
-                            sanitaires
-                        </div>
-                        <div class="expertise-list-item">
-                            <div class="check"><i class="fa-solid fa-check"></i></div>Mise en service, essais et
-                            réglages
-                        </div>
-                        <div class="expertise-list-item">
-                            <div class="check"><i class="fa-solid fa-check"></i></div>Remise DOE complets et plans
-                            recollement
+                        <div class="why-feature">
+                            <div class="why-feature-icon"><i class="fa-solid fa-users-gear"></i></div>
+                            <div class="why-feature-text">
+                                <h3>Équipe qualifiée</h3>
+                                <p>Nos techniciens sont formés et certifiés sur les dernières technologies du génie
+                                    climatique.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="expertise-visual">
-                    <img src="images/expertise-neuf.webp" alt="Chantier neuf" class="expertise-tab-img" loading="lazy"
-                        width="500" height="260" />
-                    <div class="expertise-spec"><span class="expertise-spec-label">Secteurs</span><span
-                            class="expertise-spec-val">Tertiaire, Hôtellerie, Santé</span></div>
-                    <div class="expertise-spec"><span class="expertise-spec-label">Conformité</span><span
-                            class="expertise-spec-val">RE2020 & DTU</span></div>
-                    <div class="expertise-spec"><span class="expertise-spec-label">Livraison</span><span
-                            class="expertise-spec-val">Clé en main possible</span></div>
-                    <div class="expertise-spec"><span class="expertise-spec-label">Remise DOE</span><span
-                            class="expertise-spec-val">Numérique inclus</span></div>
-                </div>
-            </div>
+            </section>
 
-            <div id="tab-rehab" class="expertise-content fade-up" role="tabpanel" aria-labelledby="tab-rehab-btn">
-                <div class="expertise-info">
-                    <h3><i class="fa-solid fa-screwdriver-wrench"
-                            style="color:var(--accent-cyan);margin-right:10px;"></i>Réhabilitation & rénovation</h3>
-                    <p>TUYAUTECH intervient en milieu occupé ou à haute contrainte pour moderniser les installations
-                        existantes.</p>
-                    <div class="expertise-list">
-                        <div class="expertise-list-item">
-                            <div class="check"><i class="fa-solid fa-check"></i></div>Diagnostic préalable et audit
-                            technique
-                        </div>
-                        <div class="expertise-list-item">
-                            <div class="check"><i class="fa-solid fa-check"></i></div>Remplacement d'équipements en
-                            exploitation
-                        </div>
-                        <div class="expertise-list-item">
-                            <div class="check"><i class="fa-solid fa-check"></i></div>Mise aux normes réglementaires
-                        </div>
-                        <div class="expertise-list-item">
-                            <div class="check"><i class="fa-solid fa-check"></i></div>Optimisation énergétique des
-                            installations
-                        </div>
-                        <div class="expertise-list-item">
-                            <div class="check"><i class="fa-solid fa-check"></i></div>Travaux en phases et phasages
-                            garantis
-                        </div>
+            <!-- ========== EXPERTISE TABS ========== -->
+            <section id="expertise" class="expertise-section" aria-labelledby="expertise-title">
+                <div class="section-header fade-up">
+                    <div class="section-badge"><i class="fa-solid fa-lightbulb" style="margin-right:6px;"></i>Expertise
                     </div>
-                </div>
-                <div class="expertise-visual">
-                    <img src="images/expertise-rehab.webp" alt="Réhabilitation" class="expertise-tab-img" loading="lazy"
-                        width="500" height="260" />
-                    <div class="expertise-spec"><span class="expertise-spec-label">Site occupé</span><span
-                            class="expertise-spec-val"><i class="fa-solid fa-circle-check"
-                                style="color:var(--success);"></i> Oui</span></div>
-                    <div class="expertise-spec"><span class="expertise-spec-label">Diagnostic</span><span
-                            class="expertise-spec-val"><i class="fa-solid fa-circle-check"
-                                style="color:var(--success);"></i> Inclus</span></div>
-                    <div class="expertise-spec"><span class="expertise-spec-label">RE2020</span><span
-                            class="expertise-spec-val"><i class="fa-solid fa-circle-check"
-                                style="color:var(--success);"></i> Garantie</span></div>
-                    <div class="expertise-spec"><span class="expertise-spec-label">Réduction énergie</span><span
-                            class="expertise-spec-val" style="color:var(--success);">jusqu'à -50%</span></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========== SECTEURS D'INTERVENTION ========== -->
-        <section id="secteurs" style="background: var(--bg-secondary);" aria-labelledby="secteurs-title">
-            <div class="section-header centered fade-up">
-                <div class="section-badge"><i class="fa-solid fa-location-dot" style="margin-right:6px;"></i>Secteurs
-                </div>
-                <h2 id="secteurs-title" class="section-title">Des références dans tous<br />les types de bâtiments</h2>
-                <p class="section-subtitle">TUYAUTECH accompagne des maîtres d'ouvrage, promoteurs et entreprises
-                    générales sur des projets variés et exigeants.</p>
-            </div>
-
-            <div class="secteurs-grid">
-
-                <article class="secteur-card">
-                    <div class="secteur-icon-wrapper">
-                        <div class="secteur-icon-bg"></div>
-                        <div class="secteur-icon"><i class="fa-solid fa-building"></i></div>
-                    </div>
-                    <span class="secteur-category">Tertiaire</span>
-                    <h3 class="secteur-title">Bureaux & Sièges Sociaux</h3>
-                    <p class="secteur-description">Bureaux, sièges sociaux, parcs tertiaires. Des installations CVC
-                        haute performance avec comptage énergétique intelligent et conformité RE2020.</p>
-                    <div class="secteur-meta">
-                        <div class="secteur-avatar">TER</div>
-                        <div class="secteur-info">
-                            <div class="secteur-name">Tertiaire & Bureaux</div>
-                            <div class="secteur-type">Neuf & Réhabilitation</div>
-                        </div>
-                    </div>
-                    <div class="secteur-stats">
-                        <span class="stat-item"><i class="fa-solid fa-check"></i> RE2020</span>
-                        <span class="stat-item"><i class="fa-solid fa-check"></i> Smart Building</span>
-                        <span class="stat-item"><i class="fa-solid fa-check"></i> HQE</span>
-                    </div>
-                </article>
-
-                <article class="secteur-card">
-                    <div class="secteur-icon-wrapper">
-                        <div class="secteur-icon-bg"></div>
-                        <div class="secteur-icon"><i class="fa-solid fa-hotel"></i></div>
-                    </div>
-                    <span class="secteur-category">Hôtellerie</span>
-                    <h3 class="secteur-title">Hôtels & Résidences</h3>
-                    <p class="secteur-description">Hôtels, résidences de luxe et structures d'hébergement. Confort
-                        thermique discret, fiabilité des équipements et qualité de finition premium.</p>
-                    <div class="secteur-meta">
-                        <div class="secteur-avatar">HÔT</div>
-                        <div class="secteur-info">
-                            <div class="secteur-name">Hôtellerie</div>
-                            <div class="secteur-type">Projets haut de gamme</div>
-                        </div>
-                    </div>
-                    <div class="secteur-stats">
-                        <span class="stat-item"><i class="fa-solid fa-check"></i> Confort acoustique</span>
-                        <span class="stat-item"><i class="fa-solid fa-check"></i> Zoning précis</span>
-                        <span class="stat-item"><i class="fa-solid fa-check"></i> 24h/24</span>
-                    </div>
-                </article>
-
-                <article class="secteur-card">
-                    <div class="secteur-icon-wrapper">
-                        <div class="secteur-icon-bg"></div>
-                        <div class="secteur-icon"><i class="fa-solid fa-hospital"></i></div>
-                    </div>
-                    <span class="secteur-category">Santé</span>
-                    <h3 class="secteur-title">Établissements Médicaux</h3>
-                    <p class="secteur-description">Établissements hospitaliers, cliniques et EHPAD. Systèmes spécialisés
-                        respectant exigences sanitaires, réglementaires et continuité de service.</p>
-                    <div class="secteur-meta">
-                        <div class="secteur-avatar">SAN</div>
-                        <div class="secteur-info">
-                            <div class="secteur-name">Santé & Médical</div>
-                            <div class="secteur-type">Interventions contrôlées</div>
-                        </div>
-                    </div>
-                    <div class="secteur-stats">
-                        <span class="stat-item"><i class="fa-solid fa-check"></i> Normes ISO</span>
-                        <span class="stat-item"><i class="fa-solid fa-check"></i> Air stérile</span>
-                        <span class="stat-item"><i class="fa-solid fa-check"></i> Secours</span>
-                    </div>
-                </article>
-
-            </div>
-        </section>
-
-        <!-- ========== ENGAGEMENTS ========== -->
-        <section id="engagements" style="background: var(--bg-primary);" aria-labelledby="engagements-title">
-            <div class="section-header centered fade-up">
-                <div class="section-badge"><i class="fa-solid fa-heart" style="margin-right:6px;"></i>Nos Engagements
-                </div>
-                <h2 id="engagements-title" class="section-title">Des valeurs au cœur<br />de chaque intervention</h2>
-                <p class="section-subtitle">TUYAUTECH s'engage à délivrer bien plus qu'une prestation technique.</p>
-            </div>
-
-            <div class="engagements-grid fade-up">
-                <div class="engagement-card">
-                    <div class="engagement-icon"><i class="fa-solid fa-medal"></i></div>
-                    <h3>Qualité d'exécution</h3>
-                    <p>Des installations réalisées avec exigence, méthode et suivi rigoureux à chaque phase du chantier.
-                    </p>
-                </div>
-                <div class="engagement-card">
-                    <div class="engagement-icon"><i class="fa-solid fa-seedling"></i></div>
-                    <h3>Sobriété énergétique</h3>
-                    <p>Nous concevons des installations performantes qui réduisent consommation d'énergie et empreinte
-                        carbone.</p>
-                </div>
-                <div class="engagement-card">
-                    <div class="engagement-icon"><i class="fa-solid fa-bolt"></i></div>
-                    <h3>Réactivité terrain</h3>
-                    <p>Une organisation opérationnelle capable de répondre rapidement aux contraintes et ajustements de
-                        planning.</p>
-                </div>
-                <div class="engagement-card">
-                    <div class="engagement-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                    <h3>Sécurité & conformité</h3>
-                    <p>Toutes nos interventions respectent les réglementations. Équipes habilitées et formées aux normes
-                        de sécurité.</p>
-                </div>
-                <div class="engagement-card">
-                    <div class="engagement-icon"><i class="fa-solid fa-handshake"></i></div>
-                    <h3>Transparence client</h3>
-                    <p>Des devis détaillés, communication régulière à chaque étape et traçabilité complète des travaux.
-                    </p>
-                </div>
-                <div class="engagement-card">
-                    <div class="engagement-icon"><i class="fa-solid fa-rotate"></i></div>
-                    <h3>Amélioration continue</h3>
-                    <p>Nous évaluons nos performances et mettons en œuvre actions correctives pour progresser sur chaque
-                        projet.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========== CERTIFICATIONS ========== -->
-        <section style="background: var(--bg-secondary);" aria-labelledby="certifications-title">
-            <div class="section-header centered fade-up">
-                <div class="section-badge"><i class="fa-solid fa-certificate"
-                        style="margin-right:6px;"></i>Certifications</div>
-                <h2 id="certifications-title" class="section-title">Qualifications professionnelles</h2>
-                <p class="section-subtitle">TUYAUTECH respecte les exigences de chaque qualification reconnue du
-                    secteur.</p>
-            </div>
-
-            <div class="certs-grid fade-up">
-                <div class="cert-card">
-                    <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
-                    <div class="cert-name">Qualibat</div>
-                    <div class="cert-desc">Certification nationale attestant compétences techniques en génie climatique.
-                    </div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon"><i class="fa-solid fa-circle-check"></i></div>
-                    <div class="cert-name">QualiPac</div>
-                    <div class="cert-desc">Exigences pour installation pompes à chaleur, standards qualité garantis.
-                    </div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon"><i class="fa-solid fa-earth-europe"></i></div>
-                    <div class="cert-name">RGE</div>
-                    <div class="cert-desc">Reconnu Garant de l'Environnement permettant aides de l'État.</div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon"><i class="fa-solid fa-wrench"></i></div>
-                    <div class="cert-name">OPQIBI</div>
-                    <div class="cert-desc">Référentiels maîtrise d'œuvre fluides, ingénierie reconnue secteur.</div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon"><i class="fa-solid fa-check-double"></i></div>
-                    <div class="cert-name">ISO 9001</div>
-                    <div class="cert-desc">Norme internationale assurant cohérence et amélioration continue processus.
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========== FAQ ========== -->
-        <section id="faq" class="faq-section" aria-labelledby="faq-title">
-            <div class="section-header centered fade-up">
-                <div class="section-badge"><i class="fa-solid fa-circle-question" style="margin-right:6px;"></i>FAQ
-                </div>
-                <h2 id="faq-title" class="section-title">Questions fréquentes</h2>
-                <p class="section-subtitle">Tout ce que vous devez savoir avant de nous confier votre projet.</p>
-            </div>
-
-            <div class="faq-list fade-up" role="list">
-                <div class="faq-item" role="listitem">
-                    <button class="faq-question" onclick="toggleFaq(this)" onkeydown="handleFaqKeydown(event,this)"
-                        aria-expanded="false">
-                        Sur quels types de projets intervenez-vous ?
-                        <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">TUYAUTECH intervient principalement sur des projets tertiaires,
-                            hôteliers, industriels et de santé, en construction neuve comme en réhabilitation. Nous
-                            prenons en charge les lots CVC, ventilation et plomberie.</div>
-                    </div>
-                </div>
-                <div class="faq-item" role="listitem">
-                    <button class="faq-question" onclick="toggleFaq(this)" onkeydown="handleFaqKeydown(event,this)"
-                        aria-expanded="false">
-                        Intervenez-vous en milieu occupé ?
-                        <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">Oui, nos équipes sont expérimentées dans les interventions en site
-                            occupé. Nous planifions les travaux en phases pour garantir continuité d'exploitation et
-                            réduire nuisances.</div>
-                    </div>
-                </div>
-                <div class="faq-item" role="listitem">
-                    <button class="faq-question" onclick="toggleFaq(this)" onkeydown="handleFaqKeydown(event,this)"
-                        aria-expanded="false">
-                        Quels sont vos délais d'intervention ?
-                        <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">Les délais varient selon complexité du projet. Grâce à notre
-                            organisation, nous nous adaptons aux plannings les plus contraints. Contactez-nous pour
-                            évaluation précise.</div>
-                    </div>
-                </div>
-                <div class="faq-item" role="listitem">
-                    <button class="faq-question" onclick="toggleFaq(this)" onkeydown="handleFaqKeydown(event,this)"
-                        aria-expanded="false">
-                        Vos installations respectent-elles la RE2020 ?
-                        <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">Absolument. Toutes nos réalisations intègrent exigences RE2020.
-                            Nous utilisons outils simulation thermique et énergétique pour garantir conformité.</div>
-                    </div>
-                </div>
-                <div class="faq-item" role="listitem">
-                    <button class="faq-question" onclick="toggleFaq(this)" onkeydown="handleFaqKeydown(event,this)"
-                        aria-expanded="false">
-                        Comment demander un devis ?
-                        <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">Vous pouvez nous contacter via formulaire ci-dessous, téléphone ou
-                            email. Notre équipe répondra sous 24h avec proposition adaptée à votre projet.</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========== CTA BANNER ========== -->
-        <section class="cta-section">
-            <div class="section-badge" style="margin-bottom:24px;"><i class="fa-solid fa-rocket"
-                    style="margin-right:6px;"></i>Votre prochain projet</div>
-            <h2>Confiez votre projet<br />à une équipe experte</h2>
-            <p>Nos chargés d'affaires analysent votre besoin et proposent solution technique adaptée.</p>
-            <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1;">
-                <a href="#contact" class="btn-hero-primary"><i class="fa-solid fa-file-signature"></i> Demander un devis
-                    gratuit</a>
-                <a href="tel:+33621782698" class="btn-hero-secondary"><i class="fa-solid fa-phone"></i> Appeler un
-                    expert</a>
-            </div>
-        </section>
-
-        <!-- ========== CONTACT ========== -->
-        <section id="contact" class="contact-section" aria-labelledby="contact-title">
-            <div class="contact-grid">
-
-                <!-- Infos contact -->
-                <div class="contact-info fade-up">
-                    <div class="section-badge">Contact</div>
-                    <h2 id="contact-title">
-                        Parlons de<br />
-                        <span
-                            style="background:var(--gradient-main);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">votre
-                            projet</span>
+                    <h2 id="expertise-title" class="section-title">Des compétences techniques<br />sur tous les fronts
                     </h2>
-                    <p>Notre équipe d'experts est disponible pour répondre à toutes vos questions et vous proposer la
-                        solution technique la mieux adaptée.</p>
-
-                    <div class="contact-details">
-
-                        <div class="contact-detail">
-                            <div class="contact-detail-icon">
-                                <i class="fa-solid fa-location-dot"></i>
-                            </div>
-                            <div>
-                                <div class="contact-detail-label">Adresse</div>
-                                <div class="contact-detail-val">28 avenue Victor Hugo, 92220 Bagneux</div>
-                            </div>
-                        </div>
-
-                        <div class="contact-detail">
-                            <div class="contact-detail-icon">
-                                <i class="fa-solid fa-phone"></i>
-                            </div>
-                            <div>
-                                <div class="contact-detail-label">Téléphone</div>
-                                <div class="contact-detail-val">+33 6 21 78 26 98</div>
-                            </div>
-                        </div>
-
-                        <div class="contact-detail">
-                            <div class="contact-detail-icon">
-                                <i class="fa-solid fa-envelope"></i>
-                            </div>
-                            <div>
-                                <div class="contact-detail-label">Email</div>
-                                <div class="contact-detail-val">contact@tuyautech.com</div>
-                            </div>
-                        </div>
-
-                        <div class="contact-detail">
-                            <div class="contact-detail-icon">
-                                <i class="fa-solid fa-clock"></i>
-                            </div>
-                            <div>
-                                <div class="contact-detail-label">Horaires</div>
-                                <div class="contact-detail-val">Lun-Ven : 8h00 - 18h00 | Astreinte 24h/24</div>
-                            </div>
-                        </div>
-
-                        <div class="contact-detail">
-                            <div class="contact-detail-icon">
-                                <i class="fa-solid fa-briefcase"></i>
-                            </div>
-                            <div>
-                                <div class="contact-detail-label">Société</div>
-                                <div class="contact-detail-val">TUYAUTECH SARL</div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <img src="images/contact-building.webp" alt="Siège social TUYAUTECH Paris" class="contact-side-img"
-                        loading="lazy" width="600" height="280" />
-                </div>
-
-                <!-- Formulaire de contact -->
-                <form class="contact-form fade-up" id="contactForm" novalidate
-                    aria-label="Formulaire de demande de devis">
-                    <h3 style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;margin-bottom:8px;">
-                        <i class="fa-solid fa-file-signature" style="color:var(--accent-cyan);margin-right:10px;"></i>
-                        Demande de devis
-                    </h3>
-                    <p style="color:var(--text-secondary);font-size:0.88rem;margin-bottom:32px;">
-                        Réponse sous 24h - Devis gratuit et sans engagement
+                    <p class="section-subtitle">Nos domaines d'expertise couvrent l'ensemble du cycle de vie du
+                        bâtiment.
                     </p>
+                </div>
 
-                    <!-- Ligne 1 : Prénom / Nom -->
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="firstname">Prénom *</label>
-                            <input type="text" id="firstname" name="firstname" placeholder="Jean" required
-                                autocomplete="given-name" aria-describedby="firstname-error" />
-                            <span id="firstname-error" class="form-error-message" role="alert"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="lastname">Nom *</label>
-                            <input type="text" id="lastname" name="lastname" placeholder="Dupont" required
-                                autocomplete="family-name" aria-describedby="lastname-error" />
-                            <span id="lastname-error" class="form-error-message" role="alert"></span>
-                        </div>
-                    </div>
-
-                    <!-- Ligne 2 : Email / Téléphone -->
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" placeholder="jean.dupont@exemple.com" required
-                                autocomplete="email" aria-describedby="email-error" />
-                            <span id="email-error" class="form-error-message" role="alert"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Téléphone</label>
-                            <input type="tel" id="phone" name="phone" placeholder="+33 1 23 45 67 89" autocomplete="tel"
-                                aria-describedby="phone-error" />
-                            <span id="phone-error" class="form-error-message" role="alert"></span>
-                        </div>
-                    </div>
-
-                    <!-- Type de projet -->
-                    <div class="form-group">
-                        <label for="projectType">Type de projet *</label>
-                        <select id="projectType" name="projectType" required aria-describedby="projectType-error">
-                            <option value="" disabled selected>Sélectionnez un type de projet</option>
-                            <option value="neuf">Construction neuve</option>
-                            <option value="rehabilitation">Réhabilitation / Rénovation</option>
-                            <option value="extension">Extension</option>
-                            <option value="autre">Autre</option>
-                        </select>
-                        <span id="projectType-error" class="form-error-message" role="alert"></span>
-                    </div>
-
-                    <!-- Type d'opération -->
-                    <div class="form-group">
-                        <label for="operationType">Secteur d'activité</label>
-                        <select id="operationType" name="operationType">
-                            <option value="" disabled selected>Sélectionnez votre secteur</option>
-                            <option value="tertiaire">Tertiaire / Bureaux</option>
-                            <option value="hotellerie">Hôtellerie / Restauration</option>
-                            <option value="sante">Santé / Médical</option>
-                            <option value="industrie">Industrie / Logistique</option>
-                            <option value="commerce">Commerce / Retail</option>
-                            <option value="enseignement">Enseignement / Université</option>
-                            <option value="autre">Autre</option>
-                        </select>
-                    </div>
-
-                    <!-- Message -->
-                    <div class="form-group">
-                        <label for="message">Description du projet *</label>
-                        <textarea id="message" name="message"
-                            placeholder="Décrivez votre projet : surface, localisation, contraintes particulières, délais souhaités..."
-                            required aria-describedby="message-error" rows="5"></textarea>
-                        <span id="message-error" class="form-error-message" role="alert"></span>
-                    </div>
-
-                    <button type="submit" class="form-submit" id="formSubmitBtn">
-                        <i class="fa-solid fa-paper-plane" style="margin-right:8px;"></i>
-                        Envoyer ma demande
+                <div class="expertise-tabs fade-up" role="tablist" aria-label="Types d'expertise">
+                    <button class="expertise-tab active" onclick="switchTab(this, 'tab-neuf')" role="tab"
+                        aria-selected="true" aria-controls="tab-neuf" id="tab-neuf-btn">
+                        <i class="fa-solid fa-building"></i> Construction Neuve
                     </button>
+                    <button class="expertise-tab" onclick="switchTab(this, 'tab-rehab')" role="tab"
+                        aria-selected="false" aria-controls="tab-rehab" id="tab-rehab-btn">
+                        <i class="fa-solid fa-screwdriver-wrench"></i> Réhabilitation
+                    </button>
+                </div>
 
-                    <!-- Message de succès global -->
-                    <div id="form-success-msg"
-                        style="display:none;margin-top:20px;padding:16px 20px;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);border-radius:12px;color:#10b981;font-size:0.9rem;text-align:center;">
-                        <i class="fa-solid fa-circle-check" style="margin-right:8px;"></i>
-                        Merci ! Votre message a été envoyé. Nous vous répondrons sous 24h.
+                <div id="tab-neuf" class="expertise-content active fade-up" role="tabpanel"
+                    aria-labelledby="tab-neuf-btn">
+                    <div class="expertise-info">
+                        <h3><i class="fa-solid fa-building"
+                                style="color:var(--accent-cyan);margin-right:10px;"></i>Projets
+                            de construction neuve</h3>
+                        <p>TUYAUTECH intervient sur les grandes opérations neuves - bureaux, hôtels, centres
+                            commerciaux,
+                            établissements de santé.</p>
+                        <div class="expertise-list">
+                            <div class="expertise-list-item">
+                                <div class="check"><i class="fa-solid fa-check"></i></div>Études d'exécution CVC &
+                                plomberie
+                            </div>
+                            <div class="expertise-list-item">
+                                <div class="check"><i class="fa-solid fa-check"></i></div>Coordination multi-lots et
+                                interfaces GO
+                            </div>
+                            <div class="expertise-list-item">
+                                <div class="check"><i class="fa-solid fa-check"></i></div>Réseaux aérauliques,
+                                hydrauliques,
+                                sanitaires
+                            </div>
+                            <div class="expertise-list-item">
+                                <div class="check"><i class="fa-solid fa-check"></i></div>Mise en service, essais et
+                                réglages
+                            </div>
+                            <div class="expertise-list-item">
+                                <div class="check"><i class="fa-solid fa-check"></i></div>Remise DOE complets et plans
+                                recollement
+                            </div>
+                        </div>
+                    </div>
+                    <div class="expertise-visual">
+                        <img src="images/expertise-neuf.webp" alt="Chantier neuf" class="expertise-tab-img"
+                            loading="lazy" decoding="async" width="500" height="260" />
+                        <div class="expertise-spec"><span class="expertise-spec-label">Secteurs</span><span
+                                class="expertise-spec-val">Tertiaire, Hôtellerie, Santé</span></div>
+                        <div class="expertise-spec"><span class="expertise-spec-label">Conformité</span><span
+                                class="expertise-spec-val">RE2020 & DTU</span></div>
+                        <div class="expertise-spec"><span class="expertise-spec-label">Livraison</span><span
+                                class="expertise-spec-val">Clé en main possible</span></div>
+                        <div class="expertise-spec"><span class="expertise-spec-label">Remise DOE</span><span
+                                class="expertise-spec-val">Numérique inclus</span></div>
+                    </div>
+                </div>
+
+                <div id="tab-rehab" class="expertise-content fade-up" role="tabpanel" aria-labelledby="tab-rehab-btn">
+                    <div class="expertise-info">
+                        <h3><i class="fa-solid fa-screwdriver-wrench"
+                                style="color:var(--accent-cyan);margin-right:10px;"></i>Réhabilitation & rénovation</h3>
+                        <p>TUYAUTECH intervient en milieu occupé ou à haute contrainte pour moderniser les installations
+                            existantes.</p>
+                        <div class="expertise-list">
+                            <div class="expertise-list-item">
+                                <div class="check"><i class="fa-solid fa-check"></i></div>Diagnostic préalable et audit
+                                technique
+                            </div>
+                            <div class="expertise-list-item">
+                                <div class="check"><i class="fa-solid fa-check"></i></div>Remplacement d'équipements en
+                                exploitation
+                            </div>
+                            <div class="expertise-list-item">
+                                <div class="check"><i class="fa-solid fa-check"></i></div>Mise aux normes réglementaires
+                            </div>
+                            <div class="expertise-list-item">
+                                <div class="check"><i class="fa-solid fa-check"></i></div>Optimisation énergétique des
+                                installations
+                            </div>
+                            <div class="expertise-list-item">
+                                <div class="check"><i class="fa-solid fa-check"></i></div>Travaux en phases et phasages
+                                garantis
+                            </div>
+                        </div>
+                    </div>
+                    <div class="expertise-visual">
+                        <img src="images/expertise-rehab.webp" alt="Réhabilitation" class="expertise-tab-img"
+                            loading="lazy" decoding="async" width="500" height="260" />
+                        <div class="expertise-spec"><span class="expertise-spec-label">Site occupé</span><span
+                                class="expertise-spec-val"><i class="fa-solid fa-circle-check"
+                                    style="color:var(--success);"></i> Oui</span></div>
+                        <div class="expertise-spec"><span class="expertise-spec-label">Diagnostic</span><span
+                                class="expertise-spec-val"><i class="fa-solid fa-circle-check"
+                                    style="color:var(--success);"></i> Inclus</span></div>
+                        <div class="expertise-spec"><span class="expertise-spec-label">RE2020</span><span
+                                class="expertise-spec-val"><i class="fa-solid fa-circle-check"
+                                    style="color:var(--success);"></i> Garantie</span></div>
+                        <div class="expertise-spec"><span class="expertise-spec-label">Réduction énergie</span><span
+                                class="expertise-spec-val" style="color:var(--success);">jusqu'à -50%</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== SECTEURS D'INTERVENTION ========== -->
+            <section id="secteurs" style="background: var(--bg-secondary);" aria-labelledby="secteurs-title">
+                <div class="section-header centered fade-up">
+                    <div class="section-badge"><i class="fa-solid fa-location-dot"
+                            style="margin-right:6px;"></i>Secteurs
+                    </div>
+                    <h2 id="secteurs-title" class="section-title">Des références dans tous<br />les types de bâtiments
+                    </h2>
+                    <p class="section-subtitle">TUYAUTECH accompagne des maîtres d'ouvrage, promoteurs et entreprises
+                        générales sur des projets variés et exigeants.</p>
+                </div>
+
+                <div class="secteurs-grid">
+
+                    <article class="secteur-card">
+                        <div class="secteur-icon-wrapper">
+                            <div class="secteur-icon-bg"></div>
+                            <div class="secteur-icon"><i class="fa-solid fa-building"></i></div>
+                        </div>
+                        <span class="secteur-category">Tertiaire</span>
+                        <h3 class="secteur-title">Bureaux & Sièges Sociaux</h3>
+                        <p class="secteur-description">Bureaux, sièges sociaux, parcs tertiaires. Des installations CVC
+                            haute performance avec comptage énergétique intelligent et conformité RE2020.</p>
+                        <div class="secteur-meta">
+                            <div class="secteur-avatar">TER</div>
+                            <div class="secteur-info">
+                                <div class="secteur-name">Tertiaire & Bureaux</div>
+                                <div class="secteur-type">Neuf & Réhabilitation</div>
+                            </div>
+                        </div>
+                        <div class="secteur-stats">
+                            <span class="stat-item"><i class="fa-solid fa-check"></i> RE2020</span>
+                            <span class="stat-item"><i class="fa-solid fa-check"></i> Smart Building</span>
+                            <span class="stat-item"><i class="fa-solid fa-check"></i> HQE</span>
+                        </div>
+                    </article>
+
+                    <article class="secteur-card">
+                        <div class="secteur-icon-wrapper">
+                            <div class="secteur-icon-bg"></div>
+                            <div class="secteur-icon"><i class="fa-solid fa-hotel"></i></div>
+                        </div>
+                        <span class="secteur-category">Hôtellerie</span>
+                        <h3 class="secteur-title">Hôtels & Résidences</h3>
+                        <p class="secteur-description">Hôtels, résidences de luxe et structures d'hébergement. Confort
+                            thermique discret, fiabilité des équipements et qualité de finition premium.</p>
+                        <div class="secteur-meta">
+                            <div class="secteur-avatar">HÔT</div>
+                            <div class="secteur-info">
+                                <div class="secteur-name">Hôtellerie</div>
+                                <div class="secteur-type">Projets haut de gamme</div>
+                            </div>
+                        </div>
+                        <div class="secteur-stats">
+                            <span class="stat-item"><i class="fa-solid fa-check"></i> Confort acoustique</span>
+                            <span class="stat-item"><i class="fa-solid fa-check"></i> Zoning précis</span>
+                            <span class="stat-item"><i class="fa-solid fa-check"></i> 24h/24</span>
+                        </div>
+                    </article>
+
+                    <article class="secteur-card">
+                        <div class="secteur-icon-wrapper">
+                            <div class="secteur-icon-bg"></div>
+                            <div class="secteur-icon"><i class="fa-solid fa-hospital"></i></div>
+                        </div>
+                        <span class="secteur-category">Santé</span>
+                        <h3 class="secteur-title">Établissements Médicaux</h3>
+                        <p class="secteur-description">Établissements hospitaliers, cliniques et EHPAD. Systèmes
+                            spécialisés
+                            respectant exigences sanitaires, réglementaires et continuité de service.</p>
+                        <div class="secteur-meta">
+                            <div class="secteur-avatar">SAN</div>
+                            <div class="secteur-info">
+                                <div class="secteur-name">Santé & Médical</div>
+                                <div class="secteur-type">Interventions contrôlées</div>
+                            </div>
+                        </div>
+                        <div class="secteur-stats">
+                            <span class="stat-item"><i class="fa-solid fa-check"></i> Normes ISO</span>
+                            <span class="stat-item"><i class="fa-solid fa-check"></i> Air stérile</span>
+                            <span class="stat-item"><i class="fa-solid fa-check"></i> Secours</span>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- ========== ENGAGEMENTS ========== -->
+            <section id="engagements" style="background: var(--bg-primary);" aria-labelledby="engagements-title">
+                <div class="section-header centered fade-up">
+                    <div class="section-badge"><i class="fa-solid fa-heart" style="margin-right:6px;"></i>Nos
+                        Engagements
+                    </div>
+                    <h2 id="engagements-title" class="section-title">Des valeurs au cœur<br />de chaque intervention
+                    </h2>
+                    <p class="section-subtitle">TUYAUTECH s'engage à délivrer bien plus qu'une prestation technique.</p>
+                </div>
+
+                <div class="engagements-grid fade-up">
+                    <div class="engagement-card">
+                        <div class="engagement-icon"><i class="fa-solid fa-medal"></i></div>
+                        <h3>Qualité d'exécution</h3>
+                        <p>Des installations réalisées avec exigence, méthode et suivi rigoureux à chaque phase du
+                            chantier.
+                        </p>
+                    </div>
+                    <div class="engagement-card">
+                        <div class="engagement-icon"><i class="fa-solid fa-seedling"></i></div>
+                        <h3>Sobriété énergétique</h3>
+                        <p>Nous concevons des installations performantes qui réduisent consommation d'énergie et
+                            empreinte
+                            carbone.</p>
+                    </div>
+                    <div class="engagement-card">
+                        <div class="engagement-icon"><i class="fa-solid fa-bolt"></i></div>
+                        <h3>Réactivité terrain</h3>
+                        <p>Une organisation opérationnelle capable de répondre rapidement aux contraintes et ajustements
+                            de
+                            planning.</p>
+                    </div>
+                    <div class="engagement-card">
+                        <div class="engagement-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3>Sécurité & conformité</h3>
+                        <p>Toutes nos interventions respectent les réglementations. Équipes habilitées et formées aux
+                            normes
+                            de sécurité.</p>
+                    </div>
+                    <div class="engagement-card">
+                        <div class="engagement-icon"><i class="fa-solid fa-handshake"></i></div>
+                        <h3>Transparence client</h3>
+                        <p>Des devis détaillés, communication régulière à chaque étape et traçabilité complète des
+                            travaux.
+                        </p>
+                    </div>
+                    <div class="engagement-card">
+                        <div class="engagement-icon"><i class="fa-solid fa-rotate"></i></div>
+                        <h3>Amélioration continue</h3>
+                        <p>Nous évaluons nos performances et mettons en œuvre actions correctives pour progresser sur
+                            chaque
+                            projet.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== CERTIFICATIONS ========== -->
+            <section style="background: var(--bg-secondary);" aria-labelledby="certifications-title">
+                <div class="section-header centered fade-up">
+                    <div class="section-badge"><i class="fa-solid fa-certificate"
+                            style="margin-right:6px;"></i>Certifications</div>
+                    <h2 id="certifications-title" class="section-title">Qualifications professionnelles</h2>
+                    <p class="section-subtitle">TUYAUTECH respecte les exigences de chaque qualification reconnue du
+                        secteur.</p>
+                </div>
+
+                <div class="certs-grid fade-up">
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
+                        <div class="cert-name">Qualibat</div>
+                        <div class="cert-desc">Certification nationale attestant compétences techniques en génie
+                            climatique.
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fa-solid fa-circle-check"></i></div>
+                        <div class="cert-name">QualiPac</div>
+                        <div class="cert-desc">Exigences pour installation pompes à chaleur, standards qualité garantis.
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fa-solid fa-earth-europe"></i></div>
+                        <div class="cert-name">RGE</div>
+                        <div class="cert-desc">Reconnu Garant de l'Environnement permettant aides de l'État.</div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fa-solid fa-wrench"></i></div>
+                        <div class="cert-name">OPQIBI</div>
+                        <div class="cert-desc">Référentiels maîtrise d'œuvre fluides, ingénierie reconnue secteur.</div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fa-solid fa-check-double"></i></div>
+                        <div class="cert-name">ISO 9001</div>
+                        <div class="cert-desc">Norme internationale assurant cohérence et amélioration continue
+                            processus.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== FAQ ========== -->
+            <section id="faq" class="faq-section" aria-labelledby="faq-title">
+                <div class="section-header centered fade-up">
+                    <div class="section-badge"><i class="fa-solid fa-circle-question" style="margin-right:6px;"></i>FAQ
+                    </div>
+                    <h2 id="faq-title" class="section-title">Questions fréquentes</h2>
+                    <p class="section-subtitle">Tout ce que vous devez savoir avant de nous confier votre projet.</p>
+                </div>
+
+                <div class="faq-list fade-up" role="list">
+                    <div class="faq-item" role="listitem">
+                        <button class="faq-question" onclick="toggleFaq(this)" onkeydown="handleFaqKeydown(event,this)"
+                            aria-expanded="false">
+                            Sur quels types de projets intervenez-vous ?
+                            <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">TUYAUTECH intervient principalement sur des projets
+                                tertiaires,
+                                hôteliers, industriels et de santé, en construction neuve comme en réhabilitation. Nous
+                                prenons en charge les lots CVC, ventilation et plomberie.</div>
+                        </div>
+                    </div>
+                    <div class="faq-item" role="listitem">
+                        <button class="faq-question" onclick="toggleFaq(this)" onkeydown="handleFaqKeydown(event,this)"
+                            aria-expanded="false">
+                            Intervenez-vous en milieu occupé ?
+                            <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">Oui, nos équipes sont expérimentées dans les interventions en
+                                site
+                                occupé. Nous planifions les travaux en phases pour garantir continuité d'exploitation et
+                                réduire nuisances.</div>
+                        </div>
+                    </div>
+                    <div class="faq-item" role="listitem">
+                        <button class="faq-question" onclick="toggleFaq(this)" onkeydown="handleFaqKeydown(event,this)"
+                            aria-expanded="false">
+                            Quels sont vos délais d'intervention ?
+                            <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">Les délais varient selon complexité du projet. Grâce à notre
+                                organisation, nous nous adaptons aux plannings les plus contraints. Contactez-nous pour
+                                évaluation précise.</div>
+                        </div>
+                    </div>
+                    <div class="faq-item" role="listitem">
+                        <button class="faq-question" onclick="toggleFaq(this)" onkeydown="handleFaqKeydown(event,this)"
+                            aria-expanded="false">
+                            Vos installations respectent-elles la RE2020 ?
+                            <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">Absolument. Toutes nos réalisations intègrent exigences
+                                RE2020.
+                                Nous utilisons outils simulation thermique et énergétique pour garantir conformité.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item" role="listitem">
+                        <button class="faq-question" onclick="toggleFaq(this)" onkeydown="handleFaqKeydown(event,this)"
+                            aria-expanded="false">
+                            Comment demander un devis ?
+                            <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">Vous pouvez nous contacter via formulaire ci-dessous,
+                                téléphone ou
+                                email. Notre équipe répondra sous 24h avec proposition adaptée à votre projet.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== CTA BANNER ========== -->
+            <section class="cta-section">
+                <div class="section-badge" style="margin-bottom:24px;"><i class="fa-solid fa-rocket"
+                        style="margin-right:6px;"></i>Votre prochain projet</div>
+                <h2>Confiez votre projet<br />à une équipe experte</h2>
+                <p>Nos chargés d'affaires analysent votre besoin et proposent solution technique adaptée.</p>
+                <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1;">
+                    <a href="#contact" class="btn-hero-primary"><i class="fa-solid fa-file-signature"></i> Demander un
+                        devis
+                        gratuit</a>
+                    <a href="tel:+33621782698" class="btn-hero-secondary"><i class="fa-solid fa-phone"></i> Appeler un
+                        expert</a>
+                </div>
+            </section>
+
+            <!-- ========== CONTACT ========== -->
+            <section id="contact" class="contact-section" aria-labelledby="contact-title">
+                <div class="contact-grid">
+
+                    <!-- Infos contact -->
+                    <div class="contact-info fade-up">
+                        <div class="section-badge">Contact</div>
+                        <h2 id="contact-title">
+                            Parlons de<br />
+                            <span
+                                style="background:var(--gradient-main);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">votre
+                                projet</span>
+                        </h2>
+                        <p>Notre équipe d'experts est disponible pour répondre à toutes vos questions et vous proposer
+                            la
+                            solution technique la mieux adaptée.</p>
+
+                        <div class="contact-details">
+
+                            <div class="contact-detail">
+                                <div class="contact-detail-icon">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <div class="contact-detail-label">Adresse</div>
+                                    <div class="contact-detail-val">28 avenue Victor Hugo, 92220 Bagneux</div>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail">
+                                <div class="contact-detail-icon">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <div class="contact-detail-label">Téléphone</div>
+                                    <div class="contact-detail-val">+33 6 21 78 26 98</div>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail">
+                                <div class="contact-detail-icon">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <div class="contact-detail-label">Email</div>
+                                    <div class="contact-detail-val">contact@tuyautech.com</div>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail">
+                                <div class="contact-detail-icon">
+                                    <i class="fa-solid fa-clock"></i>
+                                </div>
+                                <div>
+                                    <div class="contact-detail-label">Horaires</div>
+                                    <div class="contact-detail-val">Lun-Ven : 8h00 - 18h00 | Astreinte 24h/24</div>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail">
+                                <div class="contact-detail-icon">
+                                    <i class="fa-solid fa-briefcase"></i>
+                                </div>
+                                <div>
+                                    <div class="contact-detail-label">Société</div>
+                                    <div class="contact-detail-val">TUYAUTECH SARL</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <img src="images/contact-building.webp" alt="Siège social TUYAUTECH Paris"
+                            class="contact-side-img" loading="lazy" decoding="async" width="600" height="280" />
+
                     </div>
 
-                </form>
+                    <!-- Formulaire de contact -->
+                    <form class="contact-form fade-up" id="contactForm" novalidate
+                        aria-label="Formulaire de demande de devis">
+                        <h3 style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;margin-bottom:8px;">
+                            <i class="fa-solid fa-file-signature"
+                                style="color:var(--accent-cyan);margin-right:10px;"></i>
+                            Demande de devis
+                        </h3>
+                        <p style="color:var(--text-secondary);font-size:0.88rem;margin-bottom:32px;">
+                            Réponse sous 24h - Devis gratuit et sans engagement
+                        </p>
 
-            </div>
-        </section>
+                        <!-- Ligne 1 : Prénom / Nom -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstname">Prénom *</label>
+                                <input type="text" id="firstname" name="firstname" placeholder="Jean" required
+                                    autocomplete="given-name" aria-describedby="firstname-error" />
+                                <span id="firstname-error" class="form-error-message" role="alert"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastname">Nom *</label>
+                                <input type="text" id="lastname" name="lastname" placeholder="Dupont" required
+                                    autocomplete="family-name" aria-describedby="lastname-error" />
+                                <span id="lastname-error" class="form-error-message" role="alert"></span>
+                            </div>
+                        </div>
 
-    </main>
+                        <!-- Ligne 2 : Email / Téléphone -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" placeholder="jean.dupont@exemple.com"
+                                    required autocomplete="email" aria-describedby="email-error" />
+                                <span id="email-error" class="form-error-message" role="alert"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Téléphone</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+33 1 23 45 67 89"
+                                    autocomplete="tel" aria-describedby="phone-error" />
+                                <span id="phone-error" class="form-error-message" role="alert"></span>
+                            </div>
+                        </div>
 
-    <!-- ========== FOOTER ========== -->
-    <footer>
-        <div class="footer-grid">
+                        <!-- Type de projet -->
+                        <div class="form-group">
+                            <label for="projectType">Type de projet *</label>
+                            <select id="projectType" name="projectType" required aria-describedby="projectType-error">
+                                <option value="" disabled selected>Sélectionnez un type de projet</option>
+                                <option value="neuf">Construction neuve</option>
+                                <option value="rehabilitation">Réhabilitation / Rénovation</option>
+                                <option value="extension">Extension</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                            <span id="projectType-error" class="form-error-message" role="alert"></span>
+                        </div>
 
-            <div class="footer-brand footer-col">
-                <div class="nav-logo" style="margin-bottom:0;">
-                    <div class="nav-logo-icon"><img src="./images/logo.png" alt="Logo TUYAUTECH" width="38"
-                            height="38" /></div>
-                    <span class="nav-logo-text">TUYAU<span>TECH</span></span>
+                        <!-- Type d'opération -->
+                        <div class="form-group">
+                            <label for="operationType">Secteur d'activité</label>
+                            <select id="operationType" name="operationType" aria-describedby="operationType-error">
+                                <option value="" disabled selected>Sélectionnez votre secteur</option>
+                                <option value="tertiaire">Tertiaire / Bureaux</option>
+                                <option value="hotellerie">Hôtellerie / Restauration</option>
+                                <option value="sante">Santé / Médical</option>
+                                <option value="industrie">Industrie / Logistique</option>
+                                <option value="commerce">Commerce / Retail</option>
+                                <option value="enseignement">Enseignement / Université</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                            <span id="operationType-error" class="form-error-message" role="alert"></span>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="form-group">
+                            <label for="message">Description du projet *</label>
+                            <textarea id="message" name="message"
+                                placeholder="Décrivez votre projet : surface, localisation, contraintes particulières, délais souhaités..."
+                                required aria-describedby="message-error" rows="5"></textarea>
+                            <span id="message-error" class="form-error-message" role="alert"></span>
+                        </div>
+
+                        <button type="submit" class="form-submit" id="formSubmitBtn">
+                            <i class="fa-solid fa-paper-plane" style="margin-right:8px;"></i>
+                            Envoyer ma demande
+                        </button>
+
+                        <!-- Message de succès global -->
+                        <div id="form-success-msg"
+                            style="display:none;margin-top:20px;padding:16px 20px;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);border-radius:12px;color:#10b981;font-size:0.9rem;text-align:center;">
+                            <i class="fa-solid fa-circle-check" style="margin-right:8px;"></i>
+                            Merci ! Votre message a été envoyé. Nous vous répondrons sous 24h.
+                        </div>
+
+                    </form>
+
                 </div>
-                <p>Expert en installations techniques CVC et plomberie pour tous types de bâtiments - tertiaire,
-                    hôtellerie, santé et industrie.</p>
-                <div class="footer-socials">
-                    <a href="#" class="footer-social" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#" class="footer-social" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="#" class="footer-social" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </section>
+
+        </main>
+
+        <!-- ========== FOOTER ========== -->
+        <footer>
+            <div class="footer-grid">
+
+                <div class="footer-brand footer-col">
+                    <div class="nav-logo" style="margin-bottom:0;">
+                        <div class="nav-logo-icon">
+                            <picture style="display:flex;align-items:center;">
+                                <source srcset="./images/logo.webp" type="image/webp">
+                                <img src="./images/logo.png" alt="Logo TUYAUTECH" width="38" height="38" />
+                            </picture>
+                        </div>
+                        <span class="nav-logo-text">TUYAU<span>TECH</span></span>
+                    </div>
+                    <p>Expert en installations techniques CVC et plomberie pour tous types de bâtiments - tertiaire,
+                        hôtellerie, santé et industrie.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social" aria-label="LinkedIn"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="footer-social" aria-label="Twitter"><i
+                                class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="footer-social" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Métiers</h3>
+                    <ul>
+                        <li><a href="#metiers">Chauffage & Climatisation</a></li>
+                        <li><a href="#metiers">Ventilation & Désenfumage</a></li>
+                        <li><a href="#metiers">Plomberie sanitaire</a></li>
+                        <li><a href="#expertise">Construction neuve</a></li>
+                        <li><a href="#expertise">Réhabilitation</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Secteurs</h3>
+                    <ul>
+                        <li><a href="#secteurs">Tertiaire & Bureaux</a></li>
+                        <li><a href="#secteurs">Hôtellerie</a></li>
+                        <li><a href="#secteurs">Santé & Médical</a></li>
+                        <li><a href="#engagements">Nos engagements</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><a href="tel:+33621782698"><i class="fa-solid fa-phone"
+                                    style="margin-right:8px;color:var(--accent-cyan);"></i>+33 6 21 78 26 98</a></li>
+                        <li><a href="mailto:contact@tuyautech.com"><i class="fa-solid fa-envelope"
+                                    style="margin-right:8px;color:var(--accent-cyan);"></i>contact@tuyautech.com</a>
+                        </li>
+                        <li><a href="#contact"><i class="fa-solid fa-file-signature"
+                                    style="margin-right:8px;color:var(--accent-cyan);"></i>Devis gratuit</a></li>
+                        <li><a href="#contact"><i class="fa-solid fa-location-dot"
+                                    style="margin-right:8px;color:var(--accent-cyan);"></i>Paris & Île-de-France</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <span>© <span id="footerYear"></span> TUYAUTECH. Tous droits réservés.</span>
+                <div style="display:flex;gap:24px;flex-wrap:wrap;">
+                    <a href="#" style="color:var(--text-secondary);text-decoration:none;transition:color 0.2s;"
+                        onmouseover="this.style.color='var(--accent-cyan)'"
+                        onmouseout="this.style.color='var(--text-secondary)'">Mentions légales</a>
+                    <a href="#" style="color:var(--text-secondary);text-decoration:none;transition:color 0.2s;"
+                        onmouseover="this.style.color='var(--accent-cyan)'"
+                        onmouseout="this.style.color='var(--text-secondary)'">Politique de confidentialité</a>
+                    <a href="#" style="color:var(--text-secondary);text-decoration:none;transition:color 0.2s;"
+                        onmouseover="this.style.color='var(--accent-cyan)'"
+                        onmouseout="this.style.color='var(--text-secondary)'">CGV</a>
+                    <span class="developer-credit">Développé par
+                        <a href="mailto:slimanelami@proton.me" class="developer-link"
+                            title="Contacter le développeur">SL</a>
+                    </span>
                 </div>
             </div>
-
-            <div class="footer-col">
-                <h3>Métiers</h3>
-                <ul>
-                    <li><a href="#metiers">Chauffage & Climatisation</a></li>
-                    <li><a href="#metiers">Ventilation & Désenfumage</a></li>
-                    <li><a href="#metiers">Plomberie sanitaire</a></li>
-                    <li><a href="#expertise">Construction neuve</a></li>
-                    <li><a href="#expertise">Réhabilitation</a></li>
-                </ul>
+            <div style="display:none;" aria-hidden="true">
+                TUYAUTECH - Entreprise génie climatique CVC et plomberie intervenant dans toute l'Île-de-France :
+                Paris 75001 75002 75003 75004 75005 75006 75007 75008 75009 75010 75011 75012 75013 75014 75015 75016
+                75017
+                75018 75019 75020 -
+                Hauts-de-Seine 92 : Bagneux, Nanterre, Boulogne-Billancourt, Levallois-Perret, Neuilly-sur-Seine,
+                Courbevoie, Issy-les-Moulineaux, Colombes, Rueil-Malmaison, Asnières-sur-Seine, Clichy, Montrouge,
+                Antony,
+                Clamart, Châtillon -
+                Seine-Saint-Denis 93 : Saint-Denis, Montreuil, Aubervilliers, Aulnay-sous-Bois, Noisy-le-Grand, Bobigny,
+                Pantin, Épinay-sur-Seine -
+                Val-de-Marne 94 : Créteil, Vincennes, Ivry-sur-Seine, Champigny-sur-Marne, Vitry-sur-Seine,
+                Saint-Maur-des-Fossés -
+                Yvelines 78 : Versailles, Saint-Germain-en-Laye, Mantes-la-Jolie, Poissy, Sartrouville -
+                Essonne 91 : Évry-Courcouronnes, Corbeil-Essonnes, Palaiseau, Massy, Les Ulis -
+                Val-d'Oise 95 : Cergy, Argenteuil, Sarcelles, Pontoise, Garges-lès-Gonesse -
+                Seine-et-Marne 77 : Melun, Meaux, Chelles, Marne-la-Vallée, Lagny-sur-Marne
             </div>
+        </footer>
 
-            <div class="footer-col">
-                <h3>Secteurs</h3>
-                <ul>
-                    <li><a href="#secteurs">Tertiaire & Bureaux</a></li>
-                    <li><a href="#secteurs">Hôtellerie</a></li>
-                    <li><a href="#secteurs">Santé & Médical</a></li>
-                    <li><a href="#engagements">Nos engagements</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                </ul>
-            </div>
+        <!-- Bouton Retour en haut -->
+        <button type="button" class="back-to-top" id="backToTop" aria-label="Retour en haut de page">
+            <i class="fa-solid fa-chevron-up"></i>
+        </button>
 
-            <div class="footer-col">
-                <h3>Contact</h3>
-                <ul>
-                    <li><a href="tel:+33621782698"><i class="fa-solid fa-phone"
-                                style="margin-right:8px;color:var(--accent-cyan);"></i>+33 6 21 78 26 98</a></li>
-                    <li><a href="mailto:contact@tuyautech.com"><i class="fa-solid fa-envelope"
-                                style="margin-right:8px;color:var(--accent-cyan);"></i>contact@tuyautech.com</a></li>
-                    <li><a href="#contact"><i class="fa-solid fa-file-signature"
-                                style="margin-right:8px;color:var(--accent-cyan);"></i>Devis gratuit</a></li>
-                    <li><a href="#contact"><i class="fa-solid fa-location-dot"
-                                style="margin-right:8px;color:var(--accent-cyan);"></i>Paris & Île-de-France</a></li>
-                </ul>
-            </div>
-
-        </div>
-
-        <div class="footer-bottom">
-            <span>© <span id="footerYear"></span> TUYAUTECH. Tous droits réservés.</span>
-            <div style="display:flex;gap:24px;flex-wrap:wrap;">
-                <a href="#" style="color:var(--text-secondary);text-decoration:none;transition:color 0.2s;"
-                    onmouseover="this.style.color='var(--accent-cyan)'"
-                    onmouseout="this.style.color='var(--text-muted)'">Mentions légales</a>
-                <a href="#" style="color:var(--text-secondary);text-decoration:none;transition:color 0.2s;"
-                    onmouseover="this.style.color='var(--accent-cyan)'"
-                    onmouseout="this.style.color='var(--text-muted)'">Politique de confidentialité</a>
-                <a href="#" style="color:var(--text-secondary);text-decoration:none;transition:color 0.2s;"
-                    onmouseover="this.style.color='var(--accent-cyan)'"
-                    onmouseout="this.style.color='var(--text-muted)'">CGV</a>
-                <span class="developer-credit">Développé par
-                    <a href="mailto:slimanelami@proton.me" class="developer-link"
-                        title="Contacter le développeur">SL</a>
-                </span>
-            </div>
-        </div>
-        <div style="display:none;" aria-hidden="true">
-            TUYAUTECH - Entreprise génie climatique CVC et plomberie intervenant dans toute l'Île-de-France :
-            Paris 75001 75002 75003 75004 75005 75006 75007 75008 75009 75010 75011 75012 75013 75014 75015 75016 75017
-            75018 75019 75020 -
-            Hauts-de-Seine 92 : Bagneux, Nanterre, Boulogne-Billancourt, Levallois-Perret, Neuilly-sur-Seine,
-            Courbevoie, Issy-les-Moulineaux, Colombes, Rueil-Malmaison, Asnières-sur-Seine, Clichy, Montrouge, Antony,
-            Clamart, Châtillon -
-            Seine-Saint-Denis 93 : Saint-Denis, Montreuil, Aubervilliers, Aulnay-sous-Bois, Noisy-le-Grand, Bobigny,
-            Pantin, Épinay-sur-Seine -
-            Val-de-Marne 94 : Créteil, Vincennes, Ivry-sur-Seine, Champigny-sur-Marne, Vitry-sur-Seine,
-            Saint-Maur-des-Fossés -
-            Yvelines 78 : Versailles, Saint-Germain-en-Laye, Mantes-la-Jolie, Poissy, Sartrouville -
-            Essonne 91 : Évry-Courcouronnes, Corbeil-Essonnes, Palaiseau, Massy, Les Ulis -
-            Val-d'Oise 95 : Cergy, Argenteuil, Sarcelles, Pontoise, Garges-lès-Gonesse -
-            Seine-et-Marne 77 : Melun, Meaux, Chelles, Marne-la-Vallée, Lagny-sur-Marne
-        </div>
-    </footer>
-
-    <!-- Bouton Retour en haut -->
-    <button class="back-to-top" id="backToTop" aria-label="Retour en haut de page">
-        <i class="fa-solid fa-chevron-up"></i>
-    </button>
-
-    <!-- ========== JAVASCRIPT ========== -->
-    <script src="script.js"></script>
+        <!-- ========== JAVASCRIPT ========== -->
+        <script src="script.js"></script>
 </body>
 
 </html>
