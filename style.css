@@ -980,8 +980,8 @@ section {
   padding: 0 0 32px 0;
   /* padding top = 0 car image en haut */
   transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1),
-              box-shadow 0.35s cubic-bezier(0.23, 1, 0.32, 1),
-              opacity 0.3s ease;
+    box-shadow 0.35s cubic-bezier(0.23, 1, 0.32, 1),
+    opacity 0.3s ease;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -2658,7 +2658,7 @@ footer {
 }
 
 /* Performance — rendu différé des sections hors écran */
-.services-section,
+/* .services-section,
 .secteurs-section,
 .why-section,
 .expertise-section,
@@ -2668,6 +2668,27 @@ footer {
 .contact-section {
   content-visibility: auto;
   contain-intrinsic-size: 0 600px;
+} */
+
+/* ✅ Empêche le CLS causé par fade-up */
+.fade-up,
+.fade-up-fast {
+  /* Réserver l'espace même quand invisible */
+  opacity: 0;
+  transform: translateY(30px);
+  /* Ajouter will-change pour indiquer au navigateur de préparer la couche */
+  will-change: transform, opacity;
+  /* CRUCIAL : content-visibility ne doit pas masquer la hauteur */
+  contain: layout style;
+  /* ← retirer "size" qui cause le CLS */
+}
+
+.fade-up.visible,
+.fade-up-fast.visible {
+  opacity: 1;
+  transform: translateY(0);
+  will-change: auto;
+  /* libérer après animation */
 }
 
 @font-face {
@@ -2685,7 +2706,9 @@ footer {
   font-weight: 400;
 }
 
-.fa-solid, .fa-brands, .fa-regular {
+.fa-solid,
+.fa-brands,
+.fa-regular {
   display: inline-block;
   width: 1em;
   min-height: 1em;
