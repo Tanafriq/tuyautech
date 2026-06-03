@@ -2191,6 +2191,31 @@ footer {
   .service-card-body {
     padding: 22px 24px 0;
   }
+  
+  .hero-stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .hero-stat-divider {
+    display: none; /* Le séparateur vertical n'a plus de sens en colonne */
+  }
+
+  .hero-stat {
+    text-align: center;
+  }
+
+  /* ─── HERO TRUST ─── */
+  .hero-trust {
+    align-items: center;   /* forcer le centrage en colonne */
+    width: 100%;
+  }
+
+  .hero-trust-item {
+    justify-content: center;
+  }
 }
 
 .developer-link {
