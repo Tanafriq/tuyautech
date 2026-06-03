@@ -517,7 +517,7 @@ body {
   font-size: 0.88rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: background 0.2s ease, border-color 0.2s ease;
   text-decoration: none;
 }
 
@@ -534,7 +534,7 @@ body {
   font-size: 0.88rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-decoration: none;
   box-shadow: var(--shadow-glow-sm);
 }
@@ -979,9 +979,7 @@ section {
   border-radius: 20px;
   padding: 0 0 32px 0;
   /* padding top = 0 car image en haut */
-  transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1),
-    box-shadow 0.35s cubic-bezier(0.23, 1, 0.32, 1),
-    opacity 0.3s ease;
+  transition: transform 0.35s cubic-bezier(0.23,1,0.32,1), box-shadow 0.35s cubic-bezier(0.23,1,0.32,1);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -1420,7 +1418,7 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 24px;
   padding: 36px 32px;
-  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 0.5s cubic-bezier(0.23,1,0.32,1), box-shadow 0.5s cubic-bezier(0.23,1,0.32,1);
   overflow: hidden;
   cursor: pointer;
 }
@@ -1673,7 +1671,7 @@ section {
   border-radius: 20px;
   padding: 36px 28px;
   text-align: center;
-  transition: all 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .engagement-card:hover {
@@ -1719,7 +1717,7 @@ section {
   border-radius: 16px;
   padding: 28px 24px;
   text-align: center;
-  transition: all 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cert-card:hover {
@@ -1767,7 +1765,7 @@ section {
   border: 1px solid var(--border);
   border-radius: 14px;
   overflow: hidden;
-  transition: border-color 0.3s;
+  transition: border-color 0.3s ease;
 }
 
 .faq-item.open {
@@ -2296,7 +2294,7 @@ footer {
   opacity: 0;
   visibility: hidden;
   transform: translateY(20px);
-  transition: all var(--transition-base);
+  transition: atransform var(--transition-base), opacity var(--transition-base), visibility var(--transition-base);
   z-index: 999;
   box-shadow: var(--shadow-glow-sm);
 }
