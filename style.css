@@ -979,10 +979,9 @@ section {
   border-radius: 20px;
   padding: 0 0 32px 0;
   /* padding top = 0 car image en haut */
-  transition: background 0.3s ease,
-    border-color 0.3s ease,
-    transform 0.35s cubic-bezier(0.23, 1, 0.32, 1),
-    box-shadow 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1),
+              box-shadow 0.35s cubic-bezier(0.23, 1, 0.32, 1),
+              opacity 0.3s ease;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -2191,7 +2190,7 @@ footer {
   .service-card-body {
     padding: 22px 24px 0;
   }
-  
+
   .hero-stats {
     flex-direction: column;
     align-items: center;
@@ -2200,7 +2199,8 @@ footer {
   }
 
   .hero-stat-divider {
-    display: none; /* Le séparateur vertical n'a plus de sens en colonne */
+    display: none;
+    /* Le séparateur vertical n'a plus de sens en colonne */
   }
 
   .hero-stat {
@@ -2209,7 +2209,8 @@ footer {
 
   /* ─── HERO TRUST ─── */
   .hero-trust {
-    align-items: center;   /* forcer le centrage en colonne */
+    align-items: center;
+    /* forcer le centrage en colonne */
     width: 100%;
   }
 
@@ -2450,6 +2451,7 @@ footer {
 
   .why-photo-wrap img {
     height: 320px;
+    aspect-ratio: 3 / 2;
   }
 
   .expertise-tabs {
@@ -2469,10 +2471,12 @@ footer {
 
   .expertise-tab-img {
     height: 200px;
+    aspect-ratio: 500 / 260;
   }
 
   .contact-side-img {
     height: 200px;
+    aspect-ratio: 600 / 280;
   }
 
   .contact-form {
@@ -2524,6 +2528,7 @@ footer {
     width: calc(100% + 48px);
     margin: -28px -24px 24px -24px;
     height: 180px;
+    aspect-ratio: 420 / 180;
   }
 
   .service-card {
@@ -2678,4 +2683,10 @@ footer {
   font-display: swap;
   src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-brands-400.woff2') format('woff2');
   font-weight: 400;
+}
+
+.fa-solid, .fa-brands, .fa-regular {
+  display: inline-block;
+  width: 1em;
+  min-height: 1em;
 }
