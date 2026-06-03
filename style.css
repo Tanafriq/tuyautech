@@ -2691,10 +2691,11 @@ footer {
   /* libérer après animation */
 }
 
+/* Forcer font-display swap sur Font Awesome */
 @font-face {
   font-family: 'Font Awesome 6 Free';
   font-display: swap;
-  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-solid-900.woff2') format('woff2');
+  src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-solid-900.woff2) format('woff2');
   font-weight: 900;
   unicode-range: U+F000-F8FF;
 }
@@ -2702,7 +2703,7 @@ footer {
 @font-face {
   font-family: 'Font Awesome 6 Brands';
   font-display: swap;
-  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-brands-400.woff2') format('woff2');
+  src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-brands-400.woff2) format('woff2');
   font-weight: 400;
 }
 
