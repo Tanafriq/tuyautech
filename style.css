@@ -2212,6 +2212,55 @@ footer {
   color: var(--accent-cyan);
 }
 
+/* Zones d'intervention */
+.footer-zones {
+  border-top: 1px solid var(--border);
+  padding: 28px 0 36px;
+  margin-bottom: 36px;
+}
+
+.footer-zones-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+
+.footer-zones-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px 28px;
+}
+
+.footer-zones-grid div {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.footer-zones-grid strong {
+  color: var(--text-secondary);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 2px;
+  font-size: 0.78rem;
+}
+
+@media (max-width: 1024px) {
+  .footer-zones-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-zones-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
 .footer-bottom {
   border-top: 1px solid var(--border);
   padding-top: 32px;

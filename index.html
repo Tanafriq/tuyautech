@@ -8,11 +8,11 @@
     <!-- ═══════════════════════════════════════════
        SEO PRINCIPAL
   ═══════════════════════════════════════════ -->
-    <title>TUYAUTECH - Génie Climatique CVC & Plomberie Île-de-France | Devis Gratuit</title>
+    <title>TUYAUTECH - CVC & Plomberie Paris Île-de-France | Expert Génie Climatique | Devis Gratuit</title>
     <meta name="description"
-        content="TUYAUTECH, expert en génie climatique CVC et plomberie en Île-de-France. Installation chauffage, climatisation, ventilation, désenfumage pour projets tertiaires, hôteliers et industriels. Certifié RGE Qualibat. Devis gratuit sous 24h.">
+        content="TUYAUTECH, expert CVC et plomberie à Paris et en Île-de-France (75, 92, 93, 94, 78, 91, 95, 77). Installation chauffage, climatisation, ventilation, désenfumage pour projets tertiaires, hôteliers et industriels. Certifié RGE Qualibat. Devis gratuit sous 24h.">
     <meta name="keywords"
-        content="génie climatique Île-de-France, CVC Paris, plomberie tertiaire, chauffage ventilation climatisation, entreprise CVC 92, installation CVC Paris, désenfumage Île-de-France, RE2020 CVC, Qualibat génie climatique, plomberie industrielle Paris, TUYAUTECH, CVC Bagneux, chauffage tertiaire Paris, climatisation hôtel Paris, ventilation désenfumage Île-de-France, installation pompe à chaleur, VRF multi-zones, VMC double flux, devis CVC Île-de-France">
+        content="génie climatique Paris, CVC Île-de-France, plomberie tertiaire Paris, chauffage ventilation climatisation Paris, entreprise CVC 92 93 94 75, installation CVC Paris, désenfumage Paris Île-de-France, RE2020 CVC, Qualibat génie climatique, plomberie industrielle Paris, TUYAUTECH, CVC Bagneux, CVC Nanterre, CVC Boulogne-Billancourt, chauffage tertiaire Paris, climatisation hôtel Paris, ventilation désenfumage Île-de-France, installation pompe à chaleur, VRF multi-zones, VMC double flux, devis CVC Paris, devis plomberie Île-de-France, génie climatique 92, génie climatique 93, génie climatique 94">
     <meta name="author" content="TUYAUTECH SARL">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="googlebot" content="index, follow">
@@ -55,6 +55,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#00d4ff">
+
+    <!-- ═══════════════════════════════════════════
+       PRELOAD LCP (hero image)
+  ═══════════════════════════════════════════ -->
+    <link rel="preload" as="image" href="images/hero-bg.webp" fetchpriority="high">
 
     <!-- ═══════════════════════════════════════════
        PRECONNECT
@@ -101,6 +106,20 @@
        DONNÉES STRUCTURÉES JSON-LD (SEO LOCAL + RICH RESULTS)
   ═══════════════════════════════════════════ -->
 
+    <!-- Schema 0 : WebSite -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://www.tuyautech.com/#website",
+    "url": "https://www.tuyautech.com",
+    "name": "TUYAUTECH",
+    "description": "Expert en génie climatique CVC et plomberie à Paris et en Île-de-France — Installation chauffage, climatisation, ventilation, désenfumage pour projets tertiaires, hôteliers et industriels.",
+    "inLanguage": "fr-FR",
+    "publisher": { "@id": "https://www.tuyautech.com/#business" }
+  }
+  </script>
+
     <!-- Schema 1 : LocalBusiness / HVACBusiness -->
     <script type="application/ld+json">
   {
@@ -109,7 +128,7 @@
     "@id": "https://www.tuyautech.com/#business",
     "name": "TUYAUTECH",
     "legalName": "TUYAUTECH SARL",
-    "description": "TUYAUTECH est une entreprise spécialisée en génie climatique CVC (Chauffage, Ventilation, Climatisation) et plomberie intervenant sur toute l'Île-de-France pour des projets tertiaires, hôteliers, industriels et de santé.",
+    "description": "TUYAUTECH est une entreprise spécialisée en génie climatique CVC (Chauffage, Ventilation, Climatisation) et plomberie intervenant sur Paris et toute l'Île-de-France pour des projets tertiaires, hôteliers, industriels et de santé.",
     "url": "https://www.tuyautech.com",
     "logo": "https://www.tuyautech.com/images/logo.png",
     "image": [
@@ -130,6 +149,34 @@
       "@type": "GeoCoordinates",
       "latitude": 48.7953,
       "longitude": 2.3077
+    },
+    "hasMap": "https://maps.google.com/?q=28+avenue+Victor+Hugo+92220+Bagneux",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+33621782698",
+      "email": "contact@tuyautech.com",
+      "contactType": "customer service",
+      "availableLanguage": "French",
+      "hoursAvailable": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      }
+    },
+    "serviceArea": {
+      "@type": "AdministrativeArea",
+      "name": "Île-de-France",
+      "containsPlace": [
+        { "@type": "AdministrativeArea", "name": "Paris" },
+        { "@type": "AdministrativeArea", "name": "Hauts-de-Seine" },
+        { "@type": "AdministrativeArea", "name": "Seine-Saint-Denis" },
+        { "@type": "AdministrativeArea", "name": "Val-de-Marne" },
+        { "@type": "AdministrativeArea", "name": "Yvelines" },
+        { "@type": "AdministrativeArea", "name": "Essonne" },
+        { "@type": "AdministrativeArea", "name": "Val-d'Oise" },
+        { "@type": "AdministrativeArea", "name": "Seine-et-Marne" }
+      ]
     },
     "areaServed": [
       { "@type": "City", "name": "Paris" },
@@ -152,6 +199,29 @@
       { "@type": "City", "name": "Neuilly-sur-Seine" },
       { "@type": "City", "name": "Colombes" },
       { "@type": "City", "name": "Rueil-Malmaison" },
+      { "@type": "City", "name": "Asnières-sur-Seine" },
+      { "@type": "City", "name": "Montrouge" },
+      { "@type": "City", "name": "Antony" },
+      { "@type": "City", "name": "Clamart" },
+      { "@type": "City", "name": "Aubervilliers" },
+      { "@type": "City", "name": "Aulnay-sous-Bois" },
+      { "@type": "City", "name": "Bobigny" },
+      { "@type": "City", "name": "Pantin" },
+      { "@type": "City", "name": "Ivry-sur-Seine" },
+      { "@type": "City", "name": "Vitry-sur-Seine" },
+      { "@type": "City", "name": "Champigny-sur-Marne" },
+      { "@type": "City", "name": "Saint-Maur-des-Fossés" },
+      { "@type": "City", "name": "Saint-Germain-en-Laye" },
+      { "@type": "City", "name": "Poissy" },
+      { "@type": "City", "name": "Sartrouville" },
+      { "@type": "City", "name": "Palaiseau" },
+      { "@type": "City", "name": "Massy" },
+      { "@type": "City", "name": "Corbeil-Essonnes" },
+      { "@type": "City", "name": "Pontoise" },
+      { "@type": "City", "name": "Sarcelles" },
+      { "@type": "City", "name": "Meaux" },
+      { "@type": "City", "name": "Chelles" },
+      { "@type": "City", "name": "Lagny-sur-Marne" },
       { "@type": "AdministrativeArea", "name": "Paris (75)" },
       { "@type": "AdministrativeArea", "name": "Hauts-de-Seine (92)" },
       { "@type": "AdministrativeArea", "name": "Seine-Saint-Denis (93)" },
@@ -303,6 +373,30 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "TUYAUTECH intervient dans toute l'Île-de-France : Paris (75), Hauts-de-Seine (92), Seine-Saint-Denis (93), Val-de-Marne (94), Yvelines (78), Essonne (91), Val-d'Oise (95) et Seine-et-Marne (77). Bagneux, Nanterre, Boulogne-Billancourt, Versailles, Créteil, Évry, Cergy, Marne-la-Vallée et toutes les communes de la région."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "TUYAUTECH intervient-il à Paris intramuros et en petite couronne ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, TUYAUTECH intervient dans tous les arrondissements de Paris (75001 à 75020) ainsi que dans toute la petite couronne : Hauts-de-Seine (92), Seine-Saint-Denis (93) et Val-de-Marne (94). Nos équipes interviennent également dans les départements de grande couronne : Yvelines (78), Essonne (91), Val-d'Oise (95) et Seine-et-Marne (77)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Proposez-vous des interventions d'urgence sur Paris et l'Île-de-France ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "TUYAUTECH assure une astreinte technique pour les urgences sur Paris et l'Île-de-France. Contactez-nous au +33 6 21 78 26 98 ou par email à contact@tuyautech.com pour toute situation urgente sur vos installations CVC ou plomberie."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quelle est la capacité de TUYAUTECH à gérer plusieurs chantiers simultanément en Île-de-France ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Notre organisation en équipes spécialisées nous permet de mener plusieurs projets en parallèle sur toute l'Île-de-France. Un chargé d'affaires dédié pilote chaque chantier pour garantir qualité d'exécution et respect des délais contractuels."
         }
       }
     ]
@@ -988,6 +1082,36 @@
                             email. Notre équipe répondra sous 24h avec proposition adaptée à votre projet.</div>
                     </div>
                 </div>
+                <div class="faq-item" role="listitem">
+                    <button type="button" class="faq-question" onclick="toggleFaq(this)"
+                        onkeydown="handleFaqKeydown(event,this)" aria-expanded="false">
+                        Intervenez-vous à Paris et dans toute l'Île-de-France ?
+                        <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Oui, TUYAUTECH intervient dans tous les arrondissements de Paris (75001–75020) ainsi que dans toute la petite couronne (92, 93, 94) et la grande couronne (78, 91, 95, 77). Notre siège est à Bagneux (92220) et nos équipes couvrent l'ensemble des communes d'Île-de-France.</div>
+                    </div>
+                </div>
+                <div class="faq-item" role="listitem">
+                    <button type="button" class="faq-question" onclick="toggleFaq(this)"
+                        onkeydown="handleFaqKeydown(event,this)" aria-expanded="false">
+                        Proposez-vous des interventions d'urgence ?
+                        <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">TUYAUTECH assure une astreinte technique pour les urgences sur Paris et l'Île-de-France. Contactez-nous au +33 6 21 78 26 98 pour toute situation urgente sur vos installations CVC ou plomberie.</div>
+                    </div>
+                </div>
+                <div class="faq-item" role="listitem">
+                    <button type="button" class="faq-question" onclick="toggleFaq(this)"
+                        onkeydown="handleFaqKeydown(event,this)" aria-expanded="false">
+                        Pouvez-vous gérer plusieurs chantiers simultanément ?
+                        <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Oui, notre organisation en équipes spécialisées nous permet de mener plusieurs projets en parallèle sur toute l'Île-de-France. Un chargé d'affaires dédié pilote chaque chantier pour garantir qualité et respect des délais.</div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -1249,6 +1373,20 @@
                 </ul>
             </div>
 
+        </div>
+
+        <div class="footer-zones">
+            <p class="footer-zones-title"><i class="fa-solid fa-location-dot" style="margin-right:6px;"></i>Zones d'intervention — Toute l'Île-de-France</p>
+            <div class="footer-zones-grid">
+                <div><strong>Paris (75)</strong>Tous arrondissements — du 1<sup>er</sup> au 20<sup>e</sup></div>
+                <div><strong>Hauts-de-Seine (92)</strong>Bagneux · Nanterre · Boulogne-Billancourt · Levallois-Perret · Neuilly-sur-Seine · Courbevoie · Issy-les-Moulineaux · Colombes · Rueil-Malmaison · Asnières · Montrouge · Antony · Clamart</div>
+                <div><strong>Seine-Saint-Denis (93)</strong>Saint-Denis · Montreuil · Aubervilliers · Aulnay-sous-Bois · Bobigny · Pantin · Noisy-le-Grand · Épinay-sur-Seine</div>
+                <div><strong>Val-de-Marne (94)</strong>Créteil · Vincennes · Ivry-sur-Seine · Champigny-sur-Marne · Vitry-sur-Seine · Saint-Maur-des-Fossés</div>
+                <div><strong>Yvelines (78)</strong>Versailles · Saint-Germain-en-Laye · Mantes-la-Jolie · Poissy · Sartrouville</div>
+                <div><strong>Essonne (91)</strong>Évry-Courcouronnes · Corbeil-Essonnes · Palaiseau · Massy · Les Ulis</div>
+                <div><strong>Val-d'Oise (95)</strong>Cergy · Argenteuil · Sarcelles · Pontoise · Garges-lès-Gonesse</div>
+                <div><strong>Seine-et-Marne (77)</strong>Melun · Meaux · Chelles · Marne-la-Vallée · Lagny-sur-Marne</div>
+            </div>
         </div>
 
         <div class="footer-bottom">
