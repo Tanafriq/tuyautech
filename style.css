@@ -48,26 +48,31 @@
        MODE CLAIR - LIGHT THEME
        ============================================ */
 [data-theme="light"] {
-  --bg-primary: #f4f6fb;
-  --bg-secondary: #eaecf4;
-  --bg-card: rgba(0, 0, 0, 0.03);
-  --bg-card-hover: rgba(0, 0, 0, 0.06);
+  /* Fonds : écart augmenté pour distinguer clairement les sections */
+  --bg-primary: #edf1f8;
+  --bg-secondary: #dde3ee;
+  /* Cartes blanches sur fond gris-bleu : lisibilité et profondeur */
+  --bg-card: rgba(255, 255, 255, 0.72);
+  --bg-card-hover: rgba(255, 255, 255, 0.95);
   --accent-blue: #1060c4;
-  --accent-cyan: #007fa8;
-  --accent-teal: #006e8a;
-  --accent-glow: rgba(0, 127, 168, 0.12);
+  /* Accent plus vif : passage de #007fa8 à #0096c7 */
+  --accent-cyan: #0096c7;
+  --accent-teal: #0080a8;
+  --accent-glow: rgba(0, 150, 199, 0.14);
   --text-primary: #0d1117;
   --text-secondary: #3d4a5c;
   --text-muted: #5a6578;
-  --border: rgba(0, 0, 0, 0.08);
-  --border-accent: rgba(0, 127, 168, 0.3);
+  /* Bordures légèrement plus marquées */
+  --border: rgba(0, 0, 0, 0.11);
+  --border-accent: rgba(0, 150, 199, 0.38);
   --success: #0e9562;
   --error: #c0392b;
-  --gradient-main: linear-gradient(135deg, #1060c4 0%, #007fa8 100%);
-  --gradient-hero: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0, 127, 168, 0.10) 0%, transparent 70%);
-  --shadow-glow-sm: 0 0 20px rgba(0, 127, 168, 0.15);
-  --shadow-glow-md: 0 0 40px rgba(0, 127, 168, 0.18);
-  --shadow-glow-lg: 0 8px 50px rgba(0, 127, 168, 0.28);
+  --gradient-main: linear-gradient(135deg, #1060c4 0%, #0096c7 100%);
+  --gradient-hero: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0, 150, 199, 0.12) 0%, transparent 70%);
+  /* Ombres réelles (décalage + couleur) au lieu d'un halo diffus invisible */
+  --shadow-glow-sm: 0 4px 20px rgba(0, 150, 199, 0.20);
+  --shadow-glow-md: 0 8px 40px rgba(0, 150, 199, 0.28);
+  --shadow-glow-lg: 0 12px 50px rgba(0, 150, 199, 0.40);
 }
 
 /* Overrides spécifiques en mode clair */
@@ -80,30 +85,30 @@
 
 /* Le point animé — adapter la couleur aussi */
 [data-theme="light"] .hero-badge::before {
-  background: #005f80;
+  background: #0080a8;
 }
 
 [data-theme="light"] .navbar {
-  background: rgba(244, 246, 251, 0.88);
+  background: rgba(237, 241, 248, 0.90);
 }
 
 [data-theme="light"] .navbar.scrolled {
-  background: rgba(244, 246, 251, 0.97);
-  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.10), 0 0 30px rgba(0, 127, 168, 0.05);
+  background: rgba(237, 241, 248, 0.97);
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.10), 0 0 24px rgba(0, 150, 199, 0.07);
 }
 
 [data-theme="light"] .mobile-menu {
-  background: rgba(244, 246, 251, 0.97);
+  background: rgba(237, 241, 248, 0.98);
 }
 
 [data-theme="light"] .secteur-card {
-  background: linear-gradient(145deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.01) 100%);
-  border-color: rgba(0, 0, 0, 0.09);
+  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(0, 0, 0, 0.10);
 }
 
 [data-theme="light"] .secteur-card:hover {
-  border-color: rgba(0, 127, 168, 0.3);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.10), 0 0 40px rgba(0, 127, 168, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  border-color: rgba(0, 150, 199, 0.35);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12), 0 0 30px rgba(0, 150, 199, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
 [data-theme="light"] .secteur-name {
@@ -111,16 +116,16 @@
 }
 
 [data-theme="light"] .secteur-icon {
-  color: #007fa8;
+  color: #0096c7;
 }
 
 [data-theme="light"] .secteur-card:hover .secteur-icon {
   color: #0d1117;
-  filter: drop-shadow(0 0 10px rgba(0, 127, 168, 0.5));
+  filter: drop-shadow(0 0 10px rgba(0, 150, 199, 0.5));
 }
 
 [data-theme="light"] .secteur-category {
-  color: #007fa8;
+  color: #0096c7;
 }
 
 [data-theme="light"] .secteur-description {
@@ -136,28 +141,28 @@
 }
 
 [data-theme="light"] .secteur-meta {
-  border-top-color: rgba(0, 0, 0, 0.07);
+  border-top-color: rgba(0, 0, 0, 0.08);
 }
 
 [data-theme="light"] .secteur-type {
-  color: #007fa8;
+  color: #0096c7;
 }
 
 [data-theme="light"] .expertise-visual {
-  background: rgba(0, 0, 0, 0.03);
-  border-color: rgba(0, 0, 0, 0.09);
+  background: rgba(255, 255, 255, 0.65);
+  border-color: rgba(0, 0, 0, 0.10);
 }
 
 [data-theme="light"] .expertise-spec {
-  background: rgba(0, 0, 0, 0.03);
-  border-color: rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.55);
+  border-color: rgba(0, 0, 0, 0.09);
 }
 
 [data-theme="light"] .form-group input,
 [data-theme="light"] .form-group select,
 [data-theme="light"] .form-group textarea {
-  background: rgba(0, 0, 0, 0.04);
-  border-color: rgba(0, 0, 0, 0.12);
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(0, 0, 0, 0.13);
   color: #0d1117;
 }
 
@@ -170,17 +175,17 @@
 [data-theme="light"] .form-group select:focus,
 [data-theme="light"] .form-group textarea:focus {
   border-color: var(--border-accent);
-  background: rgba(0, 127, 168, 0.04);
+  background: rgba(0, 150, 199, 0.04);
 }
 
 [data-theme="light"] .form-group select option {
-  background: #eaecf4;
+  background: #dde3ee;
   color: #0d1117;
 }
 
 [data-theme="light"] .contact-form {
-  background: rgba(0, 0, 0, 0.03);
-  border-color: rgba(0, 0, 0, 0.09);
+  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(0, 0, 0, 0.10);
 }
 
 [data-theme="light"] ::-webkit-scrollbar-track {
@@ -192,27 +197,26 @@
 }
 
 [data-theme="light"] ::selection {
-  background: rgba(0, 127, 168, 0.2);
+  background: rgba(0, 150, 199, 0.25);
   color: #0d1117;
 }
 
 [data-theme="light"] .hero {
   background-image: linear-gradient(to bottom,
-      rgba(244, 246, 251, 0.45) 0%,
-      /* ← était 0.55 */
-      rgba(244, 246, 251, 0.75) 60%,
-      rgba(244, 246, 251, 1) 100%), url(images/hero-bg.webp);
+      rgba(237, 241, 248, 0.22) 0%,
+      rgba(237, 241, 248, 0.52) 60%,
+      rgba(237, 241, 248, 1) 100%), url(images/hero-bg.webp);
 }
 
 [data-theme="light"] .gradient-text {
-  background: linear-gradient(135deg, #1060c4 0%, #005f80 100%);
+  background: linear-gradient(135deg, #1060c4 0%, #0080a8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 [data-theme="light"] .cta-section {
-  background: linear-gradient(135deg, rgba(16, 96, 196, 0.07) 0%, rgba(0, 127, 168, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(16, 96, 196, 0.10) 0%, rgba(0, 150, 199, 0.07) 100%);
 }
 
 [data-theme="light"] .hero-trust-item {
@@ -221,10 +225,11 @@
 
 [data-theme="light"] footer {
   background: var(--bg-secondary);
+  border-top-color: rgba(0, 0, 0, 0.12);
 }
 
 [data-theme="light"] .why-photo-overlay {
-  background: linear-gradient(to top, rgba(244, 246, 251, 0.95) 45%, transparent 100%);
+  background: linear-gradient(to top, rgba(237, 241, 248, 0.95) 45%, transparent 100%);
 }
 
 [data-theme="light"] .why-photo-stat-lbl {
@@ -232,20 +237,21 @@
 }
 
 [data-theme="light"] .section-badge {
-  color: #004f6a;
-  background: rgba(0, 127, 168, 0.10);
+  color: #005f80;
+  background: rgba(0, 150, 199, 0.11);
+  border-color: rgba(0, 150, 199, 0.32);
 }
 
 [data-theme="light"] .nav-links a {
-  color: #374151;
+  color: #3d4a5c;
 }
 
 [data-theme="light"] .expertise-tab {
-  color: #374151;
+  color: #3d4a5c;
 }
 
 [data-theme="light"] .secteur-description {
-  color: #374151;
+  color: #4a5568;
 }
 
 /* Transition douce au changement de thème */

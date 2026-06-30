@@ -1120,17 +1120,17 @@ document.getElementById('contactForm').addEventListener('submit', async function
       #cookieSettingsBox { padding: 32px 20px 32px; }
     }
     [data-theme="light"] #cookieBanner {
-      background: #ffffff !important;
-      border-top-color: rgba(0,127,168,0.3) !important;
+      background: rgba(237,241,248,0.98) !important;
+      border-top-color: rgba(0,150,199,0.35) !important;
       box-shadow: 0 -4px 24px rgba(0,0,0,0.08) !important;
     }
     [data-theme="light"] #cookieBanner p,
-    [data-theme="light"] #cookieBannerText p { color: #374151 !important; }
-    [data-theme="light"] #cookieBanner strong { color: #1a202c !important; }
+    [data-theme="light"] #cookieBannerText p { color: #3d4a5c !important; }
+    [data-theme="light"] #cookieBanner strong { color: #0d1117 !important; }
     [data-theme="light"] #cookiePolicyLink,
-    [data-theme="light"] #cookieBanner a { color: #004f6a !important; font-weight: 600; }
-    [data-theme="light"] .cookie-btn-refuse { color: #004f6a !important; border-color: rgba(0,79,106,0.4) !important; }
-    [data-theme="light"] .cookie-btn-settings { color: #374151 !important; border-color: rgba(0,0,0,0.2) !important; }
+    [data-theme="light"] #cookieBanner a { color: #005f80 !important; font-weight: 600; }
+    [data-theme="light"] .cookie-btn-refuse { color: #005f80 !important; border-color: rgba(0,150,199,0.4) !important; }
+    [data-theme="light"] .cookie-btn-settings { color: #3d4a5c !important; border-color: rgba(0,0,0,0.18) !important; }
   `;
   document.head.appendChild(style);
 
