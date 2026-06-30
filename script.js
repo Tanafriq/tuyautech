@@ -439,7 +439,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
         <p><strong>Raison sociale :</strong> TUYAUTECH SARL<br>
         <strong>Siège social :</strong> 28 avenue Victor Hugo, 92220 Bagneux<br>
         <strong>Téléphone :</strong> +33 6 21 78 26 98<br>
-        <strong>Email :</strong> contact@tuyautech.fr<br>
+        <strong>Email :</strong> contact@tuyautech.com<br>
         <strong>Forme juridique :</strong> Société à responsabilité limitée (SARL)<br>
         <strong>Capital social :</strong> 1 000,00 € (fixe)<br>
         <strong>SIRET :</strong> 931 138 143 00017<br>
@@ -449,9 +449,9 @@ document.getElementById('contactForm').addEventListener('submit', async function
         <p>Mohamed YATTA, en qualité de gérant de TUYAUTECH SARL.</p>
 
         <h3>Hébergement</h3>
-        <p><strong>Hébergeur :</strong> OVHcloud<br>
-        <strong>Adresse :</strong> 2 Rue Kellermann, 59100 Roubaix, France<br>
-        <strong>Site :</strong> https://www.ovhcloud.com</p>
+        <p><strong>Hébergeur :</strong> GitHub Pages — GitHub, Inc.<br>
+        <strong>Adresse :</strong> 88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis<br>
+        <strong>Site :</strong> https://pages.github.com</p>
 
         <h3>Propriété intellectuelle</h3>
         <p>L'ensemble du contenu de ce site (textes, images, logos, graphismes) est la propriété exclusive de TUYAUTECH SARL et est protégé par les lois françaises et internationales relatives à la propriété intellectuelle. Toute reproduction, même partielle, est interdite sans autorisation préalable écrite.</p>
@@ -468,7 +468,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
       icon: 'fa-solid fa-shield-halved',
       body: `
         <h3>1. Responsable du traitement</h3>
-        <p>TUYAUTECH SARL, 28 avenue Victor Hugo, 92220 Bagneux - contact@tuyautech.fr</p>
+        <p>TUYAUTECH SARL, 28 avenue Victor Hugo, 92220 Bagneux - contact@tuyautech.com</p>
 
         <h3>2. Données collectées</h3>
         <p>Lors de l'utilisation de notre formulaire de contact, nous collectons les données suivantes :</p>
@@ -503,11 +503,11 @@ document.getElementById('contactForm').addEventListener('submit', async function
           <li><strong>Droit d'opposition</strong> : vous opposer au traitement de vos données</li>
           <li><strong>Droit à la portabilité</strong> : recevoir vos données dans un format structuré</li>
         </ul>
-        <p>Pour exercer ces droits, contactez-nous à : <strong>contact@tuyautech.fr</strong><br>
+        <p>Pour exercer ces droits, contactez-nous à : <strong>contact@tuyautech.com</strong><br>
         Vous pouvez également introduire une réclamation auprès de la <strong>CNIL</strong> : <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a></p>
 
         <h3>7. Cookies</h3>
-        <p>Ce site n'utilise pas de cookies de traçage ou publicitaires. Des cookies techniques strictement nécessaires au bon fonctionnement du site peuvent être déposés.</p>
+        <p>Ce site utilise uniquement des cookies techniques strictement nécessaires à son fonctionnement (mémorisation de vos préférences de thème et de consentement). Aucun outil analytique ou publicitaire tiers n'est actuellement activé. Si vous acceptez les cookies optionnels via notre bandeau, votre choix est enregistré localement pendant 180 jours. Vous pouvez modifier vos préférences à tout moment via le lien "Paramétrer les cookies" en bas de page.</p>
 
         <h3>8. Sécurité</h3>
         <p>TUYAUTECH SARL met en œuvre les mesures techniques et organisationnelles appropriées pour protéger vos données contre tout accès non autorisé, perte ou destruction.</p>
@@ -542,7 +542,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
         <ul>
           <li><strong>Garantie de parfait achèvement :</strong> 1 an à compter de la réception (art. 1792-6 C. civ.)</li>
           <li><strong>Garantie biennale :</strong> 2 ans sur les équipements dissociables</li>
-          <li><strong>Garantie décennale :</strong> 10 ans sur les ouvrages (art. 1792 C. civ.) - assurance souscrite auprès de notre assurance</li>
+          <li><strong>Garantie décennale :</strong> 10 ans sur les ouvrages (art. 1792 C. civ.) — assurance souscrite auprès de <strong>[NOM ASSUREUR]</strong>, police n° <strong>[NUMÉRO DE POLICE]</strong></li>
         </ul>
 
         <h3>7. Responsabilité</h3>
