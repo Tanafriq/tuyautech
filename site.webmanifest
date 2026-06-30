@@ -1,0 +1,23 @@
+{
+  "name": "TUYAUTECH",
+  "short_name": "TUYAUTECH",
+  "description": "Expert en génie climatique CVC & plomberie en Île-de-France",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#06080f",
+  "theme_color": "#00d4ff",
+  "lang": "fr",
+  "icons": [
+    {
+      "src": "/images/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

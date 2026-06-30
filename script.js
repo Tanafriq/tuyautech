@@ -15,10 +15,15 @@ document.addEventListener('DOMContentLoaded', () => {
 const navbar = document.getElementById('navbar');
 const backToTop = document.getElementById('backToTop');
 
+const heroScrollIndicator = document.querySelector('.hero-scroll-indicator');
+
 window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
   navbar.classList.toggle('scrolled', scrollY > 50);
   backToTop.classList.toggle('visible', scrollY > 400);
+  if (heroScrollIndicator) {
+    heroScrollIndicator.classList.toggle('hidden', scrollY > 80);
+  }
 }, { passive: true });
 
 backToTop.addEventListener('click', () => {
@@ -101,6 +106,28 @@ function handleFaqKeydown(e, btn) {
     toggleFaq(btn);
   }
 }
+
+
+/* ============================================
+   NAV ACTIVE LINK AU SCROLL
+   ============================================ */
+(function () {
+  const sections = document.querySelectorAll('main section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+        });
+      }
+    });
+  }, { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
+
+  sections.forEach(section => observer.observe(section));
+})();
 
 
 /* ============================================
@@ -290,7 +317,10 @@ function validateForm() {
   return valid;
 }
 
-document.getElementById('contactForm').addEventListener('submit', function (e) {
+/* Remplacer YOUR_FORMSPREE_ID par l'ID obtenu sur https://formspree.io */
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORMSPREE_ID';
+
+document.getElementById('contactForm').addEventListener('submit', async function (e) {
   e.preventDefault();
   if (!validateForm()) {
     const firstError = this.querySelector('.form-group.error');
@@ -299,25 +329,46 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
   }
 
   const btn = document.getElementById('formSubmitBtn');
+  const successMsg = document.getElementById('form-success-msg');
   btn.disabled = true;
   btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin" style="margin-right:8px;"></i>Envoi en cours...';
 
-  setTimeout(() => {
-    btn.innerHTML = '<i class="fa-solid fa-circle-check" style="margin-right:8px;"></i>Message envoyé !';
-    btn.style.background = 'var(--success)';
+  try {
+    const data = new FormData(this);
+    const response = await fetch(FORMSPREE_ENDPOINT, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
 
-    const successMsg = document.getElementById('form-success-msg');
-    if (successMsg) successMsg.style.display = 'block';
+    if (response.ok) {
+      btn.innerHTML = '<i class="fa-solid fa-circle-check" style="margin-right:8px;"></i>Message envoyé !';
+      btn.style.background = 'var(--success)';
+      if (successMsg) successMsg.style.display = 'block';
 
-    setTimeout(() => {
-      document.getElementById('contactForm').reset();
-      document.querySelectorAll('.form-group').forEach(g => g.classList.remove('error', 'success'));
-      btn.disabled = false;
-      btn.innerHTML = '<i class="fa-solid fa-paper-plane" style="margin-right:8px;"></i>Envoyer ma demande';
-      btn.style.background = '';
-      if (successMsg) successMsg.style.display = 'none';
-    }, 5000);
-  }, 1500);
+      setTimeout(() => {
+        this.reset();
+        document.querySelectorAll('.form-group').forEach(g => g.classList.remove('error', 'success'));
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-paper-plane" style="margin-right:8px;"></i>Envoyer ma demande';
+        btn.style.background = '';
+        if (successMsg) successMsg.style.display = 'none';
+      }, 5000);
+    } else {
+      throw new Error('Erreur serveur');
+    }
+  } catch {
+    btn.disabled = false;
+    btn.innerHTML = '<i class="fa-solid fa-paper-plane" style="margin-right:8px;"></i>Envoyer ma demande';
+    const errEl = document.getElementById('form-success-msg');
+    if (errEl) {
+      errEl.style.display = 'block';
+      errEl.style.background = 'rgba(239,68,68,0.1)';
+      errEl.style.borderColor = 'rgba(239,68,68,0.3)';
+      errEl.style.color = 'var(--error)';
+      errEl.innerHTML = '<i class="fa-solid fa-circle-xmark" style="margin-right:8px;"></i>Une erreur est survenue. Veuillez nous contacter par téléphone ou email.';
+    }
+  }
 });
 
 

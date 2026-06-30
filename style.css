@@ -845,6 +845,49 @@ body {
   background-repeat: no-repeat;
 }
 
+/* Hero scroll indicator */
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--border-accent);
+  color: var(--accent-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 0.95rem;
+  animation: bounce-arrow 2.2s ease-in-out infinite;
+  transition: background var(--transition-fast), opacity var(--transition-base);
+  opacity: 0.7;
+  z-index: 2;
+}
+
+.hero-scroll-indicator:hover {
+  background: var(--accent-glow);
+  opacity: 1;
+}
+
+.hero-scroll-indicator.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes bounce-arrow {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(7px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-scroll-indicator {
+    animation: none;
+  }
+}
+
 /* ============================================
        SECTIONS COMMUNES
        ============================================ */
@@ -1260,7 +1303,7 @@ section {
   color: var(--accent-cyan);
 }
 
-.why-feature-text h4 {
+.why-feature-text h3 {
   font-family: var(--font-display);
   font-size: 1.05rem;
   font-weight: 700;
@@ -1907,6 +1950,11 @@ section {
   font-weight: 600;
   color: var(--text-primary);
   text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a.contact-detail-val:hover {
+  color: var(--accent-cyan);
 }
 
 .contact-side-img {
@@ -2294,7 +2342,7 @@ footer {
   opacity: 0;
   visibility: hidden;
   transform: translateY(20px);
-  transition: atransform var(--transition-base), opacity var(--transition-base), visibility var(--transition-base);
+  transition: transform var(--transition-base), opacity var(--transition-base), visibility var(--transition-base);
   z-index: 999;
   box-shadow: var(--shadow-glow-sm);
 }
