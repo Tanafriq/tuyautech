@@ -358,6 +358,13 @@ p { text-wrap: pretty; }
 
 /* ---------- Pourquoi TUYAUTECH (bande sombre) ---------- */
 .section-ink { background: var(--band); color: var(--band-ink); }
+.section-ink.has-bg { position: relative; overflow: hidden; isolation: isolate; }
+.section-bg { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
+.section-ink.has-bg::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(90deg, rgba(10, 16, 28, .92) 0%, rgba(10, 16, 28, .78) 45%, rgba(10, 16, 28, .55) 100%);
+}
+.section-ink.has-bg .why-features i { background: rgba(255, 255, 255, .08); backdrop-filter: blur(4px); }
 .section-ink h2, .section-ink h3 { color: var(--band-ink); }
 .section-ink .section-sub, .section-ink .section-index { color: var(--band-muted); }
 .section-ink .section-index span { color: var(--hot); }
@@ -452,6 +459,7 @@ p { text-wrap: pretty; }
 .contact-list span { display: block; font-family: var(--font-mono); font-size: .72rem; color: var(--muted); margin-bottom: 2px; }
 .contact-list div { font-weight: 500; }
 .contact-list a:hover { color: var(--cold); }
+.contact-side-img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--radius-lg); margin-top: 32px; }
 
 .contact-form { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 36px; }
 .form-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 28px; }
