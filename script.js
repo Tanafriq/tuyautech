@@ -1,15 +1,4 @@
 /* ============================================
-     PAGE LOADER
-     ============================================ */
-document.addEventListener('DOMContentLoaded', () => {
-  const loader = document.getElementById('pageLoader');
-  if (loader) {
-    loader.classList.add('hidden'); // immédiat, pas de délai
-  }
-});
-
-
-/* ============================================
    NAVBAR SCROLL
    ============================================ */
 const navbar = document.getElementById('navbar');
@@ -55,6 +44,12 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
 });
 
 
+document.addEventListener('keydown', (e) => {
+  const menu = document.getElementById('mobileMenu');
+  if (e.key === 'Escape' && menu.classList.contains('open')) toggleMenu();
+});
+
+
 /* ============================================
    EXPERTISE TABS
    ============================================ */
@@ -70,41 +65,6 @@ function switchTab(btn, tabId) {
   btn.setAttribute('aria-selected', 'true');
   const target = document.getElementById(tabId);
   if (target) target.classList.add('active');
-}
-
-
-/* ============================================
-   FAQ ACCORDION
-   ============================================ */
-function toggleFaq(btn) {
-  const item = btn.closest('.faq-item');
-  const answer = item.querySelector('.faq-answer');
-  const isOpen = item.classList.contains('open');
-
-  const heights = {};
-  document.querySelectorAll('.faq-item.open').forEach(openItem => {
-    heights[openItem.dataset.faqId] = openItem.querySelector('.faq-answer').scrollHeight;
-  });
-  const newHeight = answer.scrollHeight;
-
-  document.querySelectorAll('.faq-item.open').forEach(openItem => {
-    openItem.classList.remove('open');
-    openItem.querySelector('.faq-answer').style.maxHeight = '0';
-    openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
-  });
-
-  if (!isOpen) {
-    item.classList.add('open');
-    answer.style.maxHeight = newHeight + 'px';
-    btn.setAttribute('aria-expanded', 'true');
-  }
-}
-
-function handleFaqKeydown(e, btn) {
-  if (e.key === 'Enter' || e.key === ' ') {
-    e.preventDefault();
-    toggleFaq(btn);
-  }
 }
 
 
@@ -127,72 +87,6 @@ function handleFaqKeydown(e, btn) {
   }, { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
 
   sections.forEach(section => observer.observe(section));
-})();
-
-
-/* ============================================
-   PARTICULES CANVAS
-   ============================================ */
-(function initParticles() {
-  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (prefersReduced) return;
-
-  const canvas = document.getElementById('particle-canvas');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-  let particles = [];
-
-  function resize() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }
-
-  class Particle {
-    constructor() { this.reset(); }
-    reset() {
-      this.x = Math.random() * canvas.width;
-      this.y = Math.random() * canvas.height;
-      this.size = Math.random() * 1.5 + 0.3;
-      this.speedX = (Math.random() - 0.5) * 0.4;
-      this.speedY = (Math.random() - 0.5) * 0.4;
-      this.opacity = Math.random() * 0.4 + 0.1;
-      this.life = 0;
-      this.maxLife = Math.random() * 200 + 100;
-    }
-    update() {
-      this.x += this.speedX;
-      this.y += this.speedY;
-      this.life++;
-      if (this.life > this.maxLife || this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
-        this.reset();
-      }
-    }
-    draw() {
-      ctx.save();
-      ctx.globalAlpha = this.opacity * (1 - this.life / this.maxLife);
-      ctx.fillStyle = '#00d4ff';
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-      ctx.fill();
-      ctx.restore();
-    }
-  }
-
-  function init() {
-    resize();
-    const particleCount = window.innerWidth < 768 ? 20 : 60;
-    particles = Array.from({ length: particleCount }, () => new Particle());
-  }
-
-  function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particles.forEach(p => { p.update(); p.draw(); });
-    requestAnimationFrame(animate);
-  }
-
-  window.addEventListener('resize', resize, { passive: true });
-  init();
-  animate();
 })();
 
 
@@ -381,7 +275,9 @@ document.getElementById('contactForm').addEventListener('submit', async function
   const themeIcon = document.getElementById('themeIcon');
 
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  let currentTheme = prefersDark ? 'dark' : 'light';
+  let saved = null;
+  try { saved = localStorage.getItem('tuyautech_theme'); } catch { /* stockage indisponible */ }
+  let currentTheme = saved === 'dark' || saved === 'light' ? saved : (prefersDark ? 'dark' : 'light');
 
   function applyTheme(theme) {
     html.setAttribute('data-theme', theme);
@@ -416,10 +312,13 @@ document.getElementById('contactForm').addEventListener('submit', async function
 
   toggleBtn.addEventListener('click', function () {
     applyTheme(currentTheme === 'dark' ? 'light' : 'dark');
+    try { localStorage.setItem('tuyautech_theme', currentTheme); } catch { /* ignore */ }
   });
 
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
-    applyTheme(e.matches ? 'dark' : 'light');
+    let stored = null;
+    try { stored = localStorage.getItem('tuyautech_theme'); } catch { /* ignore */ }
+    if (!stored) applyTheme(e.matches ? 'dark' : 'light');
   });
 })();
 
@@ -812,7 +711,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
 
   // ── Vérifier si déjà consenti ────────────────────────────────────────────
   const existing = getCookie(COOKIE_KEY);
-  if (existing) return; // déjà répondu, ne rien afficher
+  // Si déjà répondu, le bandeau reste masqué mais la modale « Paramètres » reste accessible
 
   // ── Injecter le CSS ──────────────────────────────────────────────────────
   const style = document.createElement('style');
@@ -1161,6 +1060,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
     </div>
   `;
   document.body.appendChild(banner);
+  if (existing) banner.style.display = 'none';
 
   // ── Créer la modale Paramètres ───────────────────────────────────────────
   const settingsModal = document.createElement('div');
